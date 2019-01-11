@@ -1,0 +1,15 @@
+<protein>
+  <proteome>mgg_70-15_8.fasta</proteome>
+  <id>MGG_16787T0</id>
+  <class>dom_AT</class>
+  <sequence>MAAAYAAGFLTALNAVRMAYYRGNFCKLGRSPNVDCASGTATLKKARGHFGSQLTMLPRSVILNGGLVKVRKMQNLLSEKKNVSVRMLRVVKAYHSPRISVFGDALREVWHGISSRDRPRDQRAKRLGVHGFHRLASFDQRK</sequence>
+  <length>142</length>
+  <domain>
+    <name>AT</name>
+    <length>118</length>
+    <from>1</from>
+    <to>118</to>
+    <score>76.5</score>
+    <i-eval>4.4e-25</i-eval>
+  </domain>
+</protein>

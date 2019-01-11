@@ -1,0 +1,104 @@
+---------------------------------------- Starting hmmbuilder ----------------------------------------
+
+python ../hmmbuilder.py -seqdb /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/mgg_70-15_8.fasta -fasta /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/PP.msa -dir . -ival 1e-3 -cval 1e-3 -identity 0.9
+
+---------------------------------------- Running hmmbuilder iteration 1 ----------------------------------------
+
+Running usearch -sort length -cluster_fast /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/PP.msa -id 0.9 -centroids /media/home/nicolas/herbiFun_project/hmmbuilder/datas/PP_hmmbuild_2018-08-14_15-41-31/runs_output/PP-1_nr.msa -quiet
+Running muscle -in /media/home/nicolas/herbiFun_project/hmmbuilder/datas/PP_hmmbuild_2018-08-14_15-41-31/runs_output/PP-1_nr.msa -out /media/home/nicolas/herbiFun_project/hmmbuilder/datas/PP_hmmbuild_2018-08-14_15-41-31/runs_output/PP-1_nr.clw -clw -quiet
+Running hmmbuild -o /dev/null -n PP /media/home/nicolas/herbiFun_project/hmmbuilder/datas/PP_hmmbuild_2018-08-14_15-41-31/runs_output/PP-1_nr.hmm /media/home/nicolas/herbiFun_project/hmmbuilder/datas/PP_hmmbuild_2018-08-14_15-41-31/runs_output/PP-1_nr.clw
+Running hmmsearch -o /dev/null --domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/PP_hmmbuild_2018-08-14_15-41-31/runs_output/PP-1_nr.domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/PP_hmmbuild_2018-08-14_15-41-31/runs_output/PP-1_nr.hmm /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/mgg_70-15_8.fasta
+Parsing /media/home/nicolas/herbiFun_project/hmmbuilder/datas/PP_hmmbuild_2018-08-14_15-41-31/runs_output/PP-1_nr.domtblout searching for domains meeting the following criteria:
+  - envlen >= qlen * 0.0 & dom_cval <= 0.001 & dom_ival <= 0.001 & acc >= 0.6
+
+ACCEPTED -> name: MGG_02351T0_1	cval: 3e-15	ival: 8.3e-13	score: 47.8	acc: 0.96	envlen: 62	alilen: 57	hmmlen: 58	qlen: 70
+ACCEPTED -> name: MGG_02351T0_2	cval: 2.7e-19	ival: 7.3e-17	score: 60.8	acc: 0.98	envlen: 69	alilen: 68	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_02351T0_3	cval: 2.1e-17	ival: 5.7e-15	score: 54.7	acc: 0.97	envlen: 68	alilen: 66	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_02351T0_4	cval: 6.8e-17	ival: 1.9e-14	score: 53.1	acc: 0.97	envlen: 69	alilen: 65	hmmlen: 66	qlen: 70
+ACCEPTED -> name: MGG_02351T0_5	cval: 2.7e-18	ival: 7.5e-16	score: 57.6	acc: 0.97	envlen: 69	alilen: 67	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_12175T0_1	cval: 5.6e-14	ival: 1.6e-11	score: 43.7	acc: 0.96	envlen: 66	alilen: 65	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_12175T0_2	cval: 1.3e-14	ival: 3.5e-12	score: 45.8	acc: 0.96	envlen: 70	alilen: 68	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_12175T0_3	cval: 7.5e-17	ival: 2.1e-14	score: 53.0	acc: 0.97	envlen: 69	alilen: 67	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_12175T0_4	cval: 1.3e-09	ival: 3.5e-07	score: 29.8	acc: 0.88	envlen: 71	alilen: 68	hmmlen: 67	qlen: 70
+ACCEPTED -> name: MGG_12175T0_5	cval: 3.6e-11	ival: 9.8e-09	score: 34.8	acc: 0.94	envlen: 67	alilen: 64	hmmlen: 65	qlen: 70
+ACCEPTED -> name: MGG_12175T0_6	cval: 1.1e-13	ival: 3.1e-11	score: 42.8	acc: 0.97	envlen: 68	alilen: 66	hmmlen: 67	qlen: 70
+ACCEPTED -> name: MGG_07858T0_1	cval: 1.2e-18	ival: 3.2e-16	score: 58.8	acc: 0.95	envlen: 71	alilen: 70	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_07858T0_2	cval: 2.2e-16	ival: 6.1e-14	score: 51.4	acc: 0.96	envlen: 71	alilen: 67	hmmlen: 66	qlen: 70
+ACCEPTED -> name: MGG_07858T0_3	cval: 3.3e-17	ival: 9.2e-15	score: 54.1	acc: 0.97	envlen: 69	alilen: 66	hmmlen: 67	qlen: 70
+ACCEPTED -> name: MGG_07858T0_4	cval: 1.4e-16	ival: 3.8e-14	score: 52.1	acc: 0.96	envlen: 69	alilen: 68	hmmlen: 69	qlen: 70
+REJECTED -> name: MGG_14967T0_1	cval: 0.066	ival: 18.0	score: 5.1	acc: 0.89	envlen: 66	alilen: 64	hmmlen: 67	qlen: 70
+ACCEPTED -> name: MGG_14967T0_2	cval: 1.5e-16	ival: 4.3e-14	score: 52.0	acc: 0.95	envlen: 70	alilen: 66	hmmlen: 66	qlen: 70
+ACCEPTED -> name: MGG_14967T0_3	cval: 2e-12	ival: 5.6e-10	score: 38.8	acc: 0.94	envlen: 72	alilen: 70	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_14967T0_4	cval: 5.9e-12	ival: 1.6e-09	score: 37.3	acc: 0.89	envlen: 69	alilen: 66	hmmlen: 67	qlen: 70
+ACCEPTED -> name: MGG_14967T0_5	cval: 6e-14	ival: 1.7e-11	score: 43.7	acc: 0.93	envlen: 75	alilen: 72	hmmlen: 67	qlen: 70
+ACCEPTED -> name: MGG_00022T0_1	cval: 3.6e-16	ival: 9.9e-14	score: 50.8	acc: 0.96	envlen: 70	alilen: 68	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_00022T0_2	cval: 4.7e-14	ival: 1.3e-11	score: 44.0	acc: 0.95	envlen: 67	alilen: 67	hmmlen: 70	qlen: 70
+ACCEPTED -> name: MGG_00022T0_3	cval: 6.4e-17	ival: 1.8e-14	score: 53.2	acc: 0.96	envlen: 68	alilen: 66	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_14897T0_1	cval: 2.5e-22	ival: 6.9e-20	score: 70.5	acc: 0.97	envlen: 70	alilen: 67	hmmlen: 67	qlen: 70
+ACCEPTED -> name: MGG_14897T0_2	cval: 1.5e-16	ival: 4.1e-14	score: 52.0	acc: 0.93	envlen: 76	alilen: 75	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_09589T0_1	cval: 7e-20	ival: 1.9e-17	score: 62.7	acc: 0.96	envlen: 69	alilen: 66	hmmlen: 66	qlen: 70
+ACCEPTED -> name: MGG_09589T0_2	cval: 1.6e-18	ival: 4.4e-16	score: 58.3	acc: 0.91	envlen: 76	alilen: 75	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_14767T0_1	cval: 4.1e-19	ival: 1.1e-16	score: 60.2	acc: 0.97	envlen: 68	alilen: 66	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_14767T0_2	cval: 2.5e-19	ival: 6.8e-17	score: 60.9	acc: 0.97	envlen: 69	alilen: 66	hmmlen: 67	qlen: 70
+ACCEPTED -> name: MGG_03810T0_1	cval: 7.7e-21	ival: 2.1e-18	score: 65.7	acc: 0.97	envlen: 75	alilen: 74	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_03810T0_2	cval: 2.2e-17	ival: 6e-15	score: 54.7	acc: 0.91	envlen: 74	alilen: 72	hmmlen: 66	qlen: 70
+ACCEPTED -> name: MGG_03401T0_1	cval: 8.2e-13	ival: 2.3e-10	score: 40.0	acc: 0.96	envlen: 69	alilen: 66	hmmlen: 67	qlen: 70
+ACCEPTED -> name: MGG_03401T0_2	cval: 3.4e-14	ival: 9.3e-12	score: 44.5	acc: 0.97	envlen: 69	alilen: 67	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_03401T0_3	cval: 1.2e-12	ival: 3.3e-10	score: 39.5	acc: 0.96	envlen: 70	alilen: 67	hmmlen: 67	qlen: 70
+REJECTED -> name: MGG_03401T0_4	cval: 8.2	ival: 2300.0	score: -1.6	acc: 0.7	envlen: 46	alilen: 38	hmmlen: 28	qlen: 70
+ACCEPTED -> name: MGG_12447T0_1	cval: 5.5e-19	ival: 1.5e-16	score: 59.8	acc: 0.91	envlen: 70	alilen: 69	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_12447T0_2	cval: 1.4e-16	ival: 3.9e-14	score: 52.1	acc: 0.94	envlen: 71	alilen: 70	hmmlen: 67	qlen: 70
+ACCEPTED -> name: MGG_15097T0_1	cval: 6.4e-16	ival: 1.8e-13	score: 50.0	acc: 0.89	envlen: 70	alilen: 68	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_15097T0_2	cval: 1.8e-17	ival: 4.9e-15	score: 55.0	acc: 0.96	envlen: 73	alilen: 72	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_14943T0_1	cval: 9.6e-17	ival: 2.7e-14	score: 52.6	acc: 0.95	envlen: 75	alilen: 72	hmmlen: 67	qlen: 70
+ACCEPTED -> name: MGG_14943T0_2	cval: 1.6e-15	ival: 4.4e-13	score: 48.7	acc: 0.95	envlen: 71	alilen: 69	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_07219T0_1	cval: 1.4e-18	ival: 3.9e-16	score: 58.5	acc: 0.9	envlen: 77	alilen: 76	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_07219T0_2	cval: 7.8e-13	ival: 2.2e-10	score: 40.1	acc: 0.95	envlen: 70	alilen: 65	hmmlen: 65	qlen: 70
+ACCEPTED -> name: MGG_15248T0_1	cval: 3.7e-12	ival: 1e-09	score: 37.9	acc: 0.95	envlen: 68	alilen: 64	hmmlen: 65	qlen: 70
+ACCEPTED -> name: MGG_15248T0_2	cval: 1.1e-13	ival: 3.1e-11	score: 42.8	acc: 0.96	envlen: 72	alilen: 71	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_08285T0_1	cval: 4.3e-22	ival: 1.2e-19	score: 69.7	acc: 0.97	envlen: 70	alilen: 68	hmmlen: 68	qlen: 70
+REJECTED -> name: MGG_00806T0_1	cval: 7.8	ival: 2100.0	score: -1.6	acc: 0.89	envlen: 27	alilen: 22	hmmlen: 22	qlen: 70
+ACCEPTED -> name: MGG_00806T0_2	cval: 2.9e-21	ival: 8.1e-19	score: 67.1	acc: 0.97	envlen: 70	alilen: 69	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_14831T0_1	cval: 1.4e-20	ival: 3.8e-18	score: 64.9	acc: 0.97	envlen: 69	alilen: 69	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_13767T0_1	cval: 3.7e-20	ival: 1e-17	score: 63.6	acc: 0.97	envlen: 70	alilen: 69	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_13591T0_1	cval: 3e-19	ival: 8.2e-17	score: 60.7	acc: 0.97	envlen: 70	alilen: 68	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_08236T0_1	cval: 2.9e-19	ival: 8.1e-17	score: 60.7	acc: 0.97	envlen: 70	alilen: 69	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_00233T0_1	cval: 5.5e-19	ival: 1.5e-16	score: 59.8	acc: 0.97	envlen: 70	alilen: 70	hmmlen: 70	qlen: 70
+ACCEPTED -> name: MGG_04775T1_1	cval: 8.9e-18	ival: 2.5e-15	score: 55.9	acc: 0.97	envlen: 70	alilen: 68	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_12214T0_1	cval: 8.2e-18	ival: 2.3e-15	score: 56.0	acc: 0.95	envlen: 70	alilen: 68	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_04775T0_1	cval: 1e-17	ival: 2.8e-15	score: 55.7	acc: 0.97	envlen: 70	alilen: 68	hmmlen: 68	qlen: 70
+ACCEPTED -> name: MGG_05589T0_1	cval: 3.5e-17	ival: 9.8e-15	score: 54.0	acc: 0.97	envlen: 70	alilen: 69	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_03484T0_1	cval: 4e-17	ival: 1.1e-14	score: 53.8	acc: 0.97	envlen: 67	alilen: 65	hmmlen: 66	qlen: 70
+ACCEPTED -> name: MGG_15272T0_1	cval: 2.2e-16	ival: 6.2e-14	score: 51.4	acc: 0.97	envlen: 70	alilen: 68	hmmlen: 67	qlen: 70
+ACCEPTED -> name: MGG_02611T0_1	cval: 2.3e-16	ival: 6.4e-14	score: 51.4	acc: 0.93	envlen: 71	alilen: 68	hmmlen: 67	qlen: 70
+ACCEPTED -> name: MGG_03290T0_1	cval: 3.4e-16	ival: 9.5e-14	score: 50.8	acc: 0.95	envlen: 69	alilen: 66	hmmlen: 66	qlen: 70
+ACCEPTED -> name: MGG_15100T0_1	cval: 5.5e-16	ival: 1.5e-13	score: 50.2	acc: 0.97	envlen: 71	alilen: 70	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_14042T0_1	cval: 6.9e-16	ival: 1.9e-13	score: 49.9	acc: 0.93	envlen: 68	alilen: 60	hmmlen: 60	qlen: 70
+ACCEPTED -> name: MGG_07723T0_1	cval: 7.6e-16	ival: 2.1e-13	score: 49.7	acc: 0.97	envlen: 68	alilen: 65	hmmlen: 65	qlen: 70
+ACCEPTED -> name: MGG_11638T0_1	cval: 1.3e-15	ival: 3.6e-13	score: 49.0	acc: 0.96	envlen: 71	alilen: 70	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_00385T0_1	cval: 2.4e-15	ival: 6.5e-13	score: 48.2	acc: 0.96	envlen: 81	alilen: 80	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_05491T0_1	cval: 5.6e-15	ival: 1.6e-12	score: 46.9	acc: 0.97	envlen: 80	alilen: 77	hmmlen: 67	qlen: 70
+ACCEPTED -> name: MGG_16971T0_1	cval: 5.6e-14	ival: 1.6e-11	score: 43.7	acc: 0.87	envlen: 70	alilen: 67	hmmlen: 66	qlen: 70
+ACCEPTED -> name: MGG_09645T0_1	cval: 6.4e-14	ival: 1.8e-11	score: 43.6	acc: 0.85	envlen: 76	alilen: 72	hmmlen: 66	qlen: 70
+ACCEPTED -> name: MGG_10912T0_1	cval: 9e-14	ival: 2.5e-11	score: 43.1	acc: 0.92	envlen: 71	alilen: 67	hmmlen: 66	qlen: 70
+ACCEPTED -> name: MGG_08281T0_1	cval: 1e-13	ival: 2.8e-11	score: 42.9	acc: 0.95	envlen: 70	alilen: 65	hmmlen: 65	qlen: 70
+ACCEPTED -> name: MGG_10011T0_1	cval: 1.6e-13	ival: 4.5e-11	score: 42.3	acc: 0.97	envlen: 70	alilen: 69	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_07803T0_1	cval: 1.6e-12	ival: 4.4e-10	score: 39.1	acc: 0.88	envlen: 71	alilen: 67	hmmlen: 66	qlen: 70
+ACCEPTED -> name: MGG_00017T0_1	cval: 1.3e-12	ival: 3.7e-10	score: 39.3	acc: 0.95	envlen: 71	alilen: 70	hmmlen: 69	qlen: 70
+ACCEPTED -> name: MGG_00241T0_1	cval: 4.2e-12	ival: 1.1e-09	score: 37.8	acc: 0.96	envlen: 70	alilen: 66	hmmlen: 66	qlen: 70
+ACCEPTED -> name: MGG_00428T0_1	cval: 2.4e-11	ival: 6.5e-09	score: 35.4	acc: 0.9	envlen: 71	alilen: 66	hmmlen: 65	qlen: 70
+REJECTED -> name: MGG_12613T0_1	cval: 5.6	ival: 1500.0	score: -1.1	acc: 0.89	envlen: 21	alilen: 17	hmmlen: 17	qlen: 70
+ACCEPTED -> name: MGG_12613T0_2	cval: 7.1e-09	ival: 2e-06	score: 27.4	acc: 0.9	envlen: 60	alilen: 50	hmmlen: 52	qlen: 70
+REJECTED -> name: MGG_05816T0_1	cval: 0.00035	ival: 0.096	score: 12.4	acc: 0.92	envlen: 52	alilen: 45	hmmlen: 43	qlen: 70
+
+Running usearch -sort length -cluster_fast /media/home/nicolas/herbiFun_project/hmmbuilder/datas/PP_hmmbuild_2018-08-14_15-41-31/runs_output/PP-2_hybrid.msa -id 0.9 -centroids /media/home/nicolas/herbiFun_project/hmmbuilder/datas/PP_hmmbuild_2018-08-14_15-41-31/runs_output/PP-2_nr.msa -quiet
+
+73 hits found and accepted (73 in the previous iteration)
+
+---------------------------------------- Computation has finished ! No new hits have been found ----------------------------------------
+
+Output files:
+	- HMM profile: /media/home/nicolas/herbiFun_project/hmmbuilder/datas/PP_hmmbuild_2018-08-14_15-41-31/PP.hmm
+	- Seeds'alignment: /media/home/nicolas/herbiFun_project/hmmbuilder/datas/PP_hmmbuild_2018-08-14_15-41-31/PP.seed
+	- Seed sequences: /media/home/nicolas/herbiFun_project/hmmbuilder/datas/PP_hmmbuild_2018-08-14_15-41-31/PP.msa
+

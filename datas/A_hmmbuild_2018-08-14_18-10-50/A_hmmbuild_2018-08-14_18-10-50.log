@@ -1,0 +1,1271 @@
+---------------------------------------- Starting hmmbuilder ----------------------------------------
+
+python ../hmmbuilder.py -seqdb /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/mgg_70-15_8.fasta -fasta /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/A.msa -dir . -ival 1e-3 -cval 1e-3 -identity 0.9
+
+---------------------------------------- Running hmmbuilder iteration 1 ----------------------------------------
+
+Running usearch -sort length -cluster_fast /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/A.msa -id 0.9 -centroids /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-1_nr.msa -quiet
+Running muscle -in /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-1_nr.msa -out /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-1_nr.clw -clw -quiet
+Running hmmbuild -o /dev/null -n A /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-1_nr.hmm /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-1_nr.clw
+Running hmmsearch -o /dev/null --domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-1_nr.domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-1_nr.hmm /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/mgg_70-15_8.fasta
+Parsing /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-1_nr.domtblout searching for domains meeting the following criteria:
+  - envlen >= qlen * 0.0 & dom_cval <= 0.001 & dom_ival <= 0.001 & acc >= 0.6
+
+ACCEPTED -> name: MGG_09589T0_1	cval: 0.0	ival: 0.0	score: 1232.4	acc: 1.0	envlen: 519	alilen: 519	hmmlen: 519	qlen: 519
+ACCEPTED -> name: MGG_07858T0_1	cval: 5.6e-28	ival: 1.8e-25	score: 88.8	acc: 0.75	envlen: 504	alilen: 494	hmmlen: 506	qlen: 519
+ACCEPTED -> name: MGG_07858T0_2	cval: 6.5e-08	ival: 2.1e-05	score: 22.6	acc: 0.76	envlen: 194	alilen: 115	hmmlen: 119	qlen: 519
+ACCEPTED -> name: MGG_07858T0_3	cval: 1.2e-22	ival: 4e-20	score: 71.2	acc: 0.77	envlen: 261	alilen: 234	hmmlen: 223	qlen: 519
+ACCEPTED -> name: MGG_07858T0_4	cval: 6.4e-12	ival: 2.1e-09	score: 35.8	acc: 0.81	envlen: 223	alilen: 211	hmmlen: 212	qlen: 519
+ACCEPTED -> name: MGG_07858T0_5	cval: 1.4e-19	ival: 4.4e-17	score: 61.2	acc: 0.7	envlen: 254	alilen: 234	hmmlen: 225	qlen: 519
+ACCEPTED -> name: MGG_07858T0_6	cval: 2.7e-14	ival: 8.8e-12	score: 43.7	acc: 0.85	envlen: 214	alilen: 166	hmmlen: 169	qlen: 519
+ACCEPTED -> name: MGG_07858T0_7	cval: 1.5e-15	ival: 4.9e-13	score: 47.8	acc: 0.67	envlen: 248	alilen: 193	hmmlen: 177	qlen: 519
+ACCEPTED -> name: MGG_14897T0_1	cval: 2.2e-113	ival: 7.3e-111	score: 370.6	acc: 0.83	envlen: 542	alilen: 505	hmmlen: 485	qlen: 519
+ACCEPTED -> name: MGG_02351T0_1	cval: 4e-09	ival: 1.3e-06	score: 26.6	acc: 0.81	envlen: 237	alilen: 175	hmmlen: 176	qlen: 519
+ACCEPTED -> name: MGG_02351T0_2	cval: 1.6e-15	ival: 5.1e-13	score: 47.7	acc: 0.78	envlen: 203	alilen: 150	hmmlen: 147	qlen: 519
+ACCEPTED -> name: MGG_02351T0_3	cval: 1.5e-11	ival: 4.9e-09	score: 34.6	acc: 0.81	envlen: 231	alilen: 207	hmmlen: 213	qlen: 519
+ACCEPTED -> name: MGG_02351T0_4	cval: 1.2e-08	ival: 3.9e-06	score: 25.1	acc: 0.69	envlen: 259	alilen: 137	hmmlen: 129	qlen: 519
+REJECTED -> name: MGG_02351T0_5	cval: 1.5e-05	ival: 0.0048	score: 14.8	acc: 0.79	envlen: 187	alilen: 86	hmmlen: 87	qlen: 519
+ACCEPTED -> name: MGG_02351T0_6	cval: 6.8e-11	ival: 2.2e-08	score: 32.5	acc: 0.76	envlen: 215	alilen: 191	hmmlen: 171	qlen: 519
+ACCEPTED -> name: MGG_02351T0_7	cval: 7.3e-13	ival: 2.4e-10	score: 39.0	acc: 0.81	envlen: 246	alilen: 191	hmmlen: 181	qlen: 519
+ACCEPTED -> name: MGG_02351T0_8	cval: 3.4e-19	ival: 1.1e-16	score: 59.8	acc: 0.75	envlen: 233	alilen: 194	hmmlen: 179	qlen: 519
+ACCEPTED -> name: MGG_02351T0_9	cval: 1.3e-16	ival: 4.2e-14	score: 51.3	acc: 0.87	envlen: 209	alilen: 178	hmmlen: 177	qlen: 519
+ACCEPTED -> name: MGG_02351T0_10	cval: 3.8e-12	ival: 1.2e-09	score: 36.6	acc: 0.74	envlen: 261	alilen: 211	hmmlen: 192	qlen: 519
+ACCEPTED -> name: MGG_12175T0_1	cval: 6.2e-11	ival: 2e-08	score: 32.6	acc: 0.74	envlen: 240	alilen: 176	hmmlen: 176	qlen: 519
+ACCEPTED -> name: MGG_12175T0_2	cval: 5.1e-21	ival: 1.7e-18	score: 65.9	acc: 0.87	envlen: 164	alilen: 157	hmmlen: 168	qlen: 519
+ACCEPTED -> name: MGG_12175T0_3	cval: 7.3e-13	ival: 2.4e-10	score: 38.9	acc: 0.84	envlen: 239	alilen: 205	hmmlen: 206	qlen: 519
+ACCEPTED -> name: MGG_12175T0_4	cval: 1.8e-26	ival: 5.9e-24	score: 83.8	acc: 0.73	envlen: 236	alilen: 224	hmmlen: 218	qlen: 519
+ACCEPTED -> name: MGG_12175T0_5	cval: 2.4e-07	ival: 7.7e-05	score: 20.8	acc: 0.83	envlen: 199	alilen: 168	hmmlen: 168	qlen: 519
+ACCEPTED -> name: MGG_12175T0_6	cval: 4.3e-19	ival: 1.4e-16	score: 59.5	acc: 0.77	envlen: 240	alilen: 227	hmmlen: 223	qlen: 519
+ACCEPTED -> name: MGG_14967T0_1	cval: 5.5e-10	ival: 1.8e-07	score: 29.5	acc: 0.76	envlen: 235	alilen: 174	hmmlen: 174	qlen: 519
+ACCEPTED -> name: MGG_14967T0_2	cval: 4.4e-15	ival: 1.4e-12	score: 46.3	acc: 0.81	envlen: 225	alilen: 189	hmmlen: 186	qlen: 519
+ACCEPTED -> name: MGG_14967T0_3	cval: 1.7e-13	ival: 5.4e-11	score: 41.1	acc: 0.82	envlen: 238	alilen: 221	hmmlen: 221	qlen: 519
+ACCEPTED -> name: MGG_14967T0_4	cval: 4.8e-10	ival: 1.5e-07	score: 29.7	acc: 0.76	envlen: 234	alilen: 207	hmmlen: 222	qlen: 519
+ACCEPTED -> name: MGG_14967T0_5	cval: 7.7e-08	ival: 2.5e-05	score: 22.4	acc: 0.76	envlen: 235	alilen: 177	hmmlen: 164	qlen: 519
+ACCEPTED -> name: MGG_14967T0_6	cval: 4.6e-13	ival: 1.5e-10	score: 39.6	acc: 0.73	envlen: 258	alilen: 145	hmmlen: 155	qlen: 519
+ACCEPTED -> name: MGG_14967T0_7	cval: 6.5e-10	ival: 2.1e-07	score: 29.2	acc: 0.78	envlen: 236	alilen: 208	hmmlen: 203	qlen: 519
+ACCEPTED -> name: MGG_14967T0_8	cval: 6.7e-20	ival: 2.2e-17	score: 62.2	acc: 0.84	envlen: 254	alilen: 166	hmmlen: 176	qlen: 519
+ACCEPTED -> name: MGG_00022T0_1	cval: 4.2e-11	ival: 1.4e-08	score: 33.1	acc: 0.77	envlen: 236	alilen: 220	hmmlen: 218	qlen: 519
+ACCEPTED -> name: MGG_00022T0_2	cval: 1.7e-13	ival: 5.4e-11	score: 41.1	acc: 0.71	envlen: 262	alilen: 198	hmmlen: 178	qlen: 519
+ACCEPTED -> name: MGG_00022T0_3	cval: 4.1e-08	ival: 1.3e-05	score: 23.3	acc: 0.74	envlen: 262	alilen: 255	hmmlen: 244	qlen: 519
+ACCEPTED -> name: MGG_00022T0_4	cval: 2.9e-17	ival: 9.3e-15	score: 53.5	acc: 0.82	envlen: 200	alilen: 170	hmmlen: 174	qlen: 519
+REJECTED -> name: MGG_00022T0_5	cval: 0.00073	ival: 0.24	score: 9.3	acc: 0.82	envlen: 48	alilen: 30	hmmlen: 30	qlen: 519
+ACCEPTED -> name: MGG_00022T0_6	cval: 8.3e-26	ival: 2.7e-23	score: 81.7	acc: 0.8	envlen: 498	alilen: 496	hmmlen: 517	qlen: 519
+ACCEPTED -> name: MGG_15097T0_1	cval: 4.6e-65	ival: 1.5e-62	score: 211.2	acc: 0.84	envlen: 501	alilen: 498	hmmlen: 516	qlen: 519
+ACCEPTED -> name: MGG_12447T0_1	cval: 1.1e-64	ival: 3.6e-62	score: 209.9	acc: 0.86	envlen: 502	alilen: 494	hmmlen: 510	qlen: 519
+ACCEPTED -> name: MGG_14943T0_1	cval: 8.1e-51	ival: 2.6e-48	score: 164.2	acc: 0.81	envlen: 482	alilen: 465	hmmlen: 471	qlen: 519
+ACCEPTED -> name: MGG_03810T0_1	cval: 6.3e-48	ival: 2.1e-45	score: 154.6	acc: 0.78	envlen: 528	alilen: 487	hmmlen: 476	qlen: 519
+ACCEPTED -> name: MGG_03290T0_1	cval: 6.2e-33	ival: 2e-30	score: 105.2	acc: 0.8	envlen: 495	alilen: 492	hmmlen: 516	qlen: 519
+ACCEPTED -> name: MGG_14767T0_1	cval: 6.6e-32	ival: 2.1e-29	score: 101.8	acc: 0.72	envlen: 536	alilen: 382	hmmlen: 386	qlen: 519
+REJECTED -> name: MGG_14767T0_2	cval: 3.8	ival: 1200.0	score: -3.0	acc: 0.67	envlen: 85	alilen: 64	hmmlen: 65	qlen: 519
+ACCEPTED -> name: MGG_15248T0_1	cval: 2.6e-13	ival: 8.4e-11	score: 40.4	acc: 0.8	envlen: 214	alilen: 202	hmmlen: 206	qlen: 519
+ACCEPTED -> name: MGG_15248T0_2	cval: 1.2e-21	ival: 4e-19	score: 67.9	acc: 0.81	envlen: 227	alilen: 206	hmmlen: 227	qlen: 519
+REJECTED -> name: MGG_07803T0_1	cval: 4.3e-06	ival: 0.0014	score: 16.6	acc: 0.79	envlen: 147	alilen: 108	hmmlen: 109	qlen: 519
+ACCEPTED -> name: MGG_07803T0_2	cval: 5.6e-18	ival: 1.8e-15	score: 55.8	acc: 0.84	envlen: 189	alilen: 145	hmmlen: 145	qlen: 519
+ACCEPTED -> name: MGG_15682T0_1	cval: 1.3e-22	ival: 4.4e-20	score: 71.1	acc: 0.79	envlen: 201	alilen: 117	hmmlen: 121	qlen: 519
+REJECTED -> name: MGG_02611T0_1	cval: 0.013	ival: 4.2	score: 5.2	acc: 0.74	envlen: 126	alilen: 83	hmmlen: 84	qlen: 519
+ACCEPTED -> name: MGG_02611T0_2	cval: 1.1e-11	ival: 3.5e-09	score: 35.1	acc: 0.76	envlen: 238	alilen: 198	hmmlen: 171	qlen: 519
+REJECTED -> name: MGG_02611T0_3	cval: 0.3	ival: 97.0	score: 0.6	acc: 0.88	envlen: 43	alilen: 28	hmmlen: 28	qlen: 519
+REJECTED -> name: MGG_06199T0_1	cval: 0.0023	ival: 0.74	score: 7.6	acc: 0.64	envlen: 186	alilen: 131	hmmlen: 116	qlen: 519
+ACCEPTED -> name: MGG_06199T0_2	cval: 7.3e-12	ival: 2.4e-09	score: 35.7	acc: 0.71	envlen: 174	alilen: 162	hmmlen: 177	qlen: 519
+ACCEPTED -> name: MGG_09647T0_1	cval: 4.6e-07	ival: 0.00015	score: 19.8	acc: 0.62	envlen: 221	alilen: 153	hmmlen: 144	qlen: 519
+ACCEPTED -> name: MGG_09647T0_2	cval: 2.4e-08	ival: 7.8e-06	score: 24.1	acc: 0.89	envlen: 171	alilen: 76	hmmlen: 77	qlen: 519
+ACCEPTED -> name: MGG_04646T0_1	cval: 4.3e-13	ival: 1.4e-10	score: 39.7	acc: 0.83	envlen: 177	alilen: 161	hmmlen: 157	qlen: 519
+REJECTED -> name: MGG_08288T0_1	cval: 0.071	ival: 23.0	score: 2.7	acc: 0.77	envlen: 94	alilen: 44	hmmlen: 42	qlen: 519
+REJECTED -> name: MGG_08288T0_2	cval: 0.00074	ival: 0.24	score: 9.2	acc: 0.87	envlen: 100	alilen: 29	hmmlen: 29	qlen: 519
+ACCEPTED -> name: MGG_08288T0_3	cval: 1.7e-08	ival: 5.7e-06	score: 24.5	acc: 0.89	envlen: 116	alilen: 85	hmmlen: 88	qlen: 519
+ACCEPTED -> name: MGG_00689T0_1	cval: 2.5e-11	ival: 8.1e-09	score: 33.9	acc: 0.78	envlen: 396	alilen: 318	hmmlen: 308	qlen: 519
+REJECTED -> name: MGG_03401T0_1	cval: 3.7e-05	ival: 0.012	score: 13.5	acc: 0.81	envlen: 224	alilen: 174	hmmlen: 178	qlen: 519
+REJECTED -> name: MGG_03401T0_2	cval: 3.9e-05	ival: 0.013	score: 13.5	acc: 0.67	envlen: 236	alilen: 201	hmmlen: 186	qlen: 519
+REJECTED -> name: MGG_05025T0_1	cval: 0.0018	ival: 0.6	score: 7.9	acc: 0.8	envlen: 60	alilen: 32	hmmlen: 33	qlen: 519
+ACCEPTED -> name: MGG_05025T0_2	cval: 1e-06	ival: 0.00033	score: 18.7	acc: 0.78	envlen: 168	alilen: 141	hmmlen: 146	qlen: 519
+ACCEPTED -> name: MGG_08257T0_1	cval: 3e-06	ival: 0.00097	score: 17.1	acc: 0.81	envlen: 218	alilen: 45	hmmlen: 45	qlen: 519
+REJECTED -> name: MGG_08257T0_2	cval: 0.00099	ival: 0.32	score: 8.8	acc: 0.81	envlen: 164	alilen: 72	hmmlen: 75	qlen: 519
+ACCEPTED -> name: MGG_08257T1_1	cval: 3e-06	ival: 0.00097	score: 17.1	acc: 0.81	envlen: 218	alilen: 45	hmmlen: 45	qlen: 519
+REJECTED -> name: MGG_08257T1_2	cval: 0.00099	ival: 0.32	score: 8.8	acc: 0.81	envlen: 164	alilen: 72	hmmlen: 75	qlen: 519
+REJECTED -> name: MGG_07019T0_1	cval: 4.7e-05	ival: 0.015	score: 13.2	acc: 0.82	envlen: 57	alilen: 38	hmmlen: 37	qlen: 519
+REJECTED -> name: MGG_07019T0_2	cval: 0.00019	ival: 0.062	score: 11.2	acc: 0.83	envlen: 172	alilen: 92	hmmlen: 98	qlen: 519
+REJECTED -> name: MGG_04590T0_1	cval: 0.0049	ival: 1.6	score: 6.5	acc: 0.76	envlen: 92	alilen: 55	hmmlen: 58	qlen: 519
+REJECTED -> name: MGG_04590T0_2	cval: 0.0024	ival: 0.79	score: 7.5	acc: 0.78	envlen: 50	alilen: 35	hmmlen: 32	qlen: 519
+REJECTED -> name: MGG_04590T0_3	cval: 0.00076	ival: 0.25	score: 9.2	acc: 0.77	envlen: 144	alilen: 128	hmmlen: 133	qlen: 519
+REJECTED -> name: MGG_03201T0_1	cval: 0.012	ival: 3.9	score: 5.3	acc: 0.72	envlen: 92	alilen: 57	hmmlen: 60	qlen: 519
+REJECTED -> name: MGG_03201T0_2	cval: 0.0018	ival: 0.59	score: 8.0	acc: 0.85	envlen: 45	alilen: 27	hmmlen: 27	qlen: 519
+REJECTED -> name: MGG_03201T0_3	cval: 1.3	ival: 430.0	score: -1.5	acc: 0.68	envlen: 56	alilen: 27	hmmlen: 27	qlen: 519
+REJECTED -> name: MGG_03201T0_4	cval: 0.0019	ival: 0.62	score: 7.9	acc: 0.82	envlen: 144	alilen: 123	hmmlen: 127	qlen: 519
+ACCEPTED -> name: MGG_15681T0_1	cval: 4.9e-08	ival: 1.6e-05	score: 23.0	acc: 0.9	envlen: 151	alilen: 81	hmmlen: 82	qlen: 519
+REJECTED -> name: MGG_04548T0_1	cval: 0.00015	ival: 0.05	score: 11.5	acc: 0.62	envlen: 153	alilen: 32	hmmlen: 32	qlen: 519
+REJECTED -> name: MGG_04548T0_2	cval: 0.0033	ival: 1.1	score: 7.1	acc: 0.77	envlen: 131	alilen: 61	hmmlen: 65	qlen: 519
+REJECTED -> name: MGG_04956T0_1	cval: 0.00016	ival: 0.05	score: 11.5	acc: 0.84	envlen: 96	alilen: 36	hmmlen: 36	qlen: 519
+REJECTED -> name: MGG_04956T0_2	cval: 0.0021	ival: 0.67	score: 7.8	acc: 0.76	envlen: 201	alilen: 80	hmmlen: 88	qlen: 519
+REJECTED -> name: MGG_12589T0_1	cval: 0.057	ival: 18.0	score: 3.0	acc: 0.83	envlen: 52	alilen: 28	hmmlen: 28	qlen: 519
+REJECTED -> name: MGG_12589T0_2	cval: 6e-05	ival: 0.019	score: 12.9	acc: 0.81	envlen: 128	alilen: 86	hmmlen: 85	qlen: 519
+REJECTED -> name: MGG_02862T0_1	cval: 0.00022	ival: 0.071	score: 11.0	acc: 0.71	envlen: 281	alilen: 250	hmmlen: 261	qlen: 519
+REJECTED -> name: MGG_02862T0_2	cval: 0.058	ival: 19.0	score: 3.0	acc: 0.85	envlen: 49	alilen: 21	hmmlen: 21	qlen: 519
+REJECTED -> name: MGG_02862T0_3	cval: 2.9	ival: 930.0	score: -2.6	acc: 0.82	envlen: 30	alilen: 24	hmmlen: 24	qlen: 519
+REJECTED -> name: MGG_04203T0_1	cval: 0.0004	ival: 0.13	score: 10.1	acc: 0.78	envlen: 81	alilen: 37	hmmlen: 37	qlen: 519
+REJECTED -> name: MGG_04203T0_2	cval: 0.0089	ival: 2.9	score: 5.7	acc: 0.71	envlen: 159	alilen: 99	hmmlen: 99	qlen: 519
+REJECTED -> name: MGG_11685T0_1	cval: 0.05	ival: 16.0	score: 3.2	acc: 0.78	envlen: 71	alilen: 26	hmmlen: 26	qlen: 519
+REJECTED -> name: MGG_11685T0_2	cval: 0.00011	ival: 0.037	score: 11.9	acc: 0.81	envlen: 190	alilen: 79	hmmlen: 81	qlen: 519
+REJECTED -> name: MGG_01551T0_1	cval: 4.9e-05	ival: 0.016	score: 13.1	acc: 0.82	envlen: 49	alilen: 32	hmmlen: 32	qlen: 519
+REJECTED -> name: MGG_01551T0_2	cval: 0.7	ival: 230.0	score: -0.6	acc: 0.68	envlen: 120	alilen: 71	hmmlen: 79	qlen: 519
+REJECTED -> name: MGG_12999T0_1	cval: 0.00011	ival: 0.036	score: 12.0	acc: 0.77	envlen: 130	alilen: 96	hmmlen: 96	qlen: 519
+REJECTED -> name: MGG_07197T0_1	cval: 0.00025	ival: 0.082	score: 10.8	acc: 0.77	envlen: 83	alilen: 34	hmmlen: 33	qlen: 519
+REJECTED -> name: MGG_05196T0_1	cval: 0.0044	ival: 1.4	score: 6.7	acc: 0.78	envlen: 150	alilen: 22	hmmlen: 22	qlen: 519
+REJECTED -> name: MGG_05196T0_2	cval: 0.14	ival: 44.0	score: 1.8	acc: 0.8	envlen: 120	alilen: 63	hmmlen: 64	qlen: 519
+
+Running usearch -sort length -cluster_fast /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-2_hybrid.msa -id 0.9 -centroids /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-2_nr.msa -quiet
+
+57 hits found and accepted (1 in the previous iteration)
+
+---------------------------------------- Running hmmbuilder iteration 2 ----------------------------------------
+
+Running muscle -in /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-2_nr.msa -out /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-2_nr.clw -clw -quiet
+Running hmmbuild -o /dev/null -n A /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-2_nr.hmm /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-2_nr.clw
+Running hmmsearch -o /dev/null --domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-2_nr.domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-2_nr.hmm /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/mgg_70-15_8.fasta
+Parsing /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-2_nr.domtblout searching for domains meeting the following criteria:
+  - envlen >= qlen * 0.0 & dom_cval <= 0.001 & dom_ival <= 0.001 & acc >= 0.6
+
+ACCEPTED -> name: MGG_02351T0_1	cval: 2.1e-45	ival: 5.6e-43	score: 146.9	acc: 0.89	envlen: 225	alilen: 218	hmmlen: 223	qlen: 272
+ACCEPTED -> name: MGG_02351T0_2	cval: 2.8e-31	ival: 7.6e-29	score: 100.5	acc: 0.91	envlen: 202	alilen: 156	hmmlen: 153	qlen: 272
+ACCEPTED -> name: MGG_02351T0_3	cval: 5.5e-36	ival: 1.5e-33	score: 115.9	acc: 0.88	envlen: 248	alilen: 220	hmmlen: 226	qlen: 272
+ACCEPTED -> name: MGG_02351T0_4	cval: 6.1e-39	ival: 1.7e-36	score: 125.6	acc: 0.89	envlen: 233	alilen: 214	hmmlen: 214	qlen: 272
+ACCEPTED -> name: MGG_02351T0_5	cval: 2e-31	ival: 5.5e-29	score: 101.0	acc: 0.87	envlen: 252	alilen: 230	hmmlen: 233	qlen: 272
+ACCEPTED -> name: MGG_02351T0_6	cval: 4.4e-41	ival: 1.2e-38	score: 132.7	acc: 0.88	envlen: 225	alilen: 207	hmmlen: 202	qlen: 272
+ACCEPTED -> name: MGG_02351T0_7	cval: 2.7e-46	ival: 7.4e-44	score: 149.7	acc: 0.91	envlen: 241	alilen: 233	hmmlen: 226	qlen: 272
+ACCEPTED -> name: MGG_02351T0_8	cval: 4.6e-51	ival: 1.2e-48	score: 165.4	acc: 0.92	envlen: 259	alilen: 249	hmmlen: 259	qlen: 272
+ACCEPTED -> name: MGG_02351T0_9	cval: 2.3e-44	ival: 6.3e-42	score: 143.4	acc: 0.92	envlen: 221	alilen: 204	hmmlen: 206	qlen: 272
+ACCEPTED -> name: MGG_02351T0_10	cval: 2e-40	ival: 5.5e-38	score: 130.5	acc: 0.87	envlen: 251	alilen: 219	hmmlen: 223	qlen: 272
+ACCEPTED -> name: MGG_07858T0_1	cval: 4e-66	ival: 1.1e-63	score: 214.8	acc: 0.95	envlen: 236	alilen: 222	hmmlen: 230	qlen: 272
+ACCEPTED -> name: MGG_07858T0_2	cval: 1.4e-36	ival: 3.8e-34	score: 117.9	acc: 0.85	envlen: 249	alilen: 219	hmmlen: 213	qlen: 272
+ACCEPTED -> name: MGG_07858T0_3	cval: 3.6e-40	ival: 9.9e-38	score: 129.6	acc: 0.9	envlen: 231	alilen: 220	hmmlen: 228	qlen: 272
+ACCEPTED -> name: MGG_07858T0_4	cval: 6.3e-47	ival: 1.7e-44	score: 151.8	acc: 0.93	envlen: 250	alilen: 231	hmmlen: 242	qlen: 272
+ACCEPTED -> name: MGG_07858T0_5	cval: 2.4e-49	ival: 6.5e-47	score: 159.7	acc: 0.95	envlen: 221	alilen: 204	hmmlen: 205	qlen: 272
+ACCEPTED -> name: MGG_07858T0_6	cval: 8.2e-51	ival: 2.2e-48	score: 164.6	acc: 0.89	envlen: 255	alilen: 244	hmmlen: 257	qlen: 272
+ACCEPTED -> name: MGG_07858T0_7	cval: 1.6e-47	ival: 4.3e-45	score: 153.8	acc: 0.91	envlen: 235	alilen: 225	hmmlen: 233	qlen: 272
+ACCEPTED -> name: MGG_07858T0_8	cval: 8.1e-54	ival: 2.2e-51	score: 174.4	acc: 0.91	envlen: 262	alilen: 259	hmmlen: 268	qlen: 272
+ACCEPTED -> name: MGG_14967T0_1	cval: 3.9e-36	ival: 1.1e-33	score: 116.4	acc: 0.83	envlen: 274	alilen: 223	hmmlen: 226	qlen: 272
+ACCEPTED -> name: MGG_14967T0_2	cval: 5.3e-25	ival: 1.4e-22	score: 79.9	acc: 0.78	envlen: 206	alilen: 192	hmmlen: 212	qlen: 272
+ACCEPTED -> name: MGG_14967T0_3	cval: 1.8e-43	ival: 4.8e-41	score: 140.5	acc: 0.94	envlen: 230	alilen: 221	hmmlen: 222	qlen: 272
+ACCEPTED -> name: MGG_14967T0_4	cval: 9.8e-25	ival: 2.6e-22	score: 79.0	acc: 0.92	envlen: 226	alilen: 210	hmmlen: 247	qlen: 272
+ACCEPTED -> name: MGG_14967T0_5	cval: 3.1e-47	ival: 8.5e-45	score: 152.8	acc: 0.92	envlen: 262	alilen: 245	hmmlen: 227	qlen: 272
+ACCEPTED -> name: MGG_14967T0_6	cval: 6.1e-33	ival: 1.6e-30	score: 106.0	acc: 0.88	envlen: 257	alilen: 245	hmmlen: 255	qlen: 272
+ACCEPTED -> name: MGG_14967T0_7	cval: 2.9e-38	ival: 7.9e-36	score: 123.4	acc: 0.91	envlen: 231	alilen: 217	hmmlen: 212	qlen: 272
+ACCEPTED -> name: MGG_14967T0_8	cval: 2e-30	ival: 5.4e-28	score: 97.7	acc: 0.89	envlen: 248	alilen: 231	hmmlen: 250	qlen: 272
+ACCEPTED -> name: MGG_00022T0_1	cval: 3.2e-43	ival: 8.5e-41	score: 139.7	acc: 0.88	envlen: 240	alilen: 227	hmmlen: 228	qlen: 272
+ACCEPTED -> name: MGG_00022T0_2	cval: 1.6e-37	ival: 4.4e-35	score: 121.0	acc: 0.91	envlen: 261	alilen: 202	hmmlen: 203	qlen: 272
+ACCEPTED -> name: MGG_00022T0_3	cval: 1.5e-45	ival: 4e-43	score: 147.3	acc: 0.84	envlen: 258	alilen: 242	hmmlen: 232	qlen: 272
+ACCEPTED -> name: MGG_00022T0_4	cval: 1.8e-29	ival: 4.9e-27	score: 94.6	acc: 0.94	envlen: 703	alilen: 700	hmmlen: 254	qlen: 272
+ACCEPTED -> name: MGG_00022T0_5	cval: 3.6e-62	ival: 9.7e-60	score: 201.8	acc: 0.93	envlen: 271	alilen: 238	hmmlen: 232	qlen: 272
+ACCEPTED -> name: MGG_00022T0_6	cval: 1.7e-23	ival: 4.5e-21	score: 75.0	acc: 0.87	envlen: 193	alilen: 189	hmmlen: 210	qlen: 272
+ACCEPTED -> name: MGG_12175T0_1	cval: 2.6e-43	ival: 7e-41	score: 140.0	acc: 0.88	envlen: 239	alilen: 223	hmmlen: 220	qlen: 272
+ACCEPTED -> name: MGG_12175T0_2	cval: 5.2e-31	ival: 1.4e-28	score: 99.6	acc: 0.85	envlen: 231	alilen: 216	hmmlen: 239	qlen: 272
+ACCEPTED -> name: MGG_12175T0_3	cval: 2.4e-43	ival: 6.6e-41	score: 140.1	acc: 0.93	envlen: 229	alilen: 225	hmmlen: 227	qlen: 272
+ACCEPTED -> name: MGG_12175T0_4	cval: 1.4e-44	ival: 3.7e-42	score: 144.2	acc: 0.89	envlen: 245	alilen: 220	hmmlen: 239	qlen: 272
+ACCEPTED -> name: MGG_12175T0_5	cval: 1.4e-32	ival: 3.9e-30	score: 104.7	acc: 0.79	envlen: 226	alilen: 210	hmmlen: 214	qlen: 272
+ACCEPTED -> name: MGG_12175T0_6	cval: 1.1e-35	ival: 3.1e-33	score: 114.9	acc: 0.93	envlen: 256	alilen: 235	hmmlen: 253	qlen: 272
+ACCEPTED -> name: MGG_14767T0_1	cval: 6e-41	ival: 1.6e-38	score: 132.2	acc: 0.89	envlen: 247	alilen: 241	hmmlen: 224	qlen: 272
+ACCEPTED -> name: MGG_14767T0_2	cval: 6.7e-100	ival: 1.8e-97	score: 325.5	acc: 0.97	envlen: 287	alilen: 276	hmmlen: 240	qlen: 272
+REJECTED -> name: MGG_14767T0_3	cval: 9.3e-05	ival: 0.025	score: 13.5	acc: 0.72	envlen: 212	alilen: 79	hmmlen: 79	qlen: 272
+ACCEPTED -> name: MGG_09589T0_1	cval: 5.2e-71	ival: 1.4e-68	score: 230.8	acc: 0.94	envlen: 278	alilen: 233	hmmlen: 234	qlen: 272
+ACCEPTED -> name: MGG_09589T0_2	cval: 1.5e-33	ival: 4.1e-31	score: 108.0	acc: 0.8	envlen: 241	alilen: 177	hmmlen: 196	qlen: 272
+ACCEPTED -> name: MGG_14897T0_1	cval: 6.4e-60	ival: 1.7e-57	score: 194.4	acc: 0.91	envlen: 331	alilen: 237	hmmlen: 217	qlen: 272
+ACCEPTED -> name: MGG_14897T0_2	cval: 5.5e-28	ival: 1.5e-25	score: 89.7	acc: 0.95	envlen: 185	alilen: 172	hmmlen: 186	qlen: 272
+REJECTED -> name: MGG_14897T0_3	cval: 2.3	ival: 620.0	score: -0.9	acc: 0.87	envlen: 87	alilen: 55	hmmlen: 55	qlen: 272
+REJECTED -> name: MGG_15097T0_1	cval: 4.5	ival: 1200.0	score: -1.8	acc: 0.84	envlen: 46	alilen: 39	hmmlen: 39	qlen: 272
+ACCEPTED -> name: MGG_15097T0_2	cval: 2.6e-81	ival: 6.9e-79	score: 264.6	acc: 0.96	envlen: 487	alilen: 486	hmmlen: 271	qlen: 272
+REJECTED -> name: MGG_12447T0_1	cval: 10.0	ival: 2700.0	score: -3.0	acc: 0.72	envlen: 64	alilen: 44	hmmlen: 46	qlen: 272
+ACCEPTED -> name: MGG_12447T0_2	cval: 5.2e-56	ival: 1.4e-53	score: 181.6	acc: 0.9	envlen: 240	alilen: 227	hmmlen: 232	qlen: 272
+ACCEPTED -> name: MGG_12447T0_3	cval: 8e-27	ival: 2.2e-24	score: 85.9	acc: 0.78	envlen: 234	alilen: 180	hmmlen: 191	qlen: 272
+ACCEPTED -> name: MGG_03290T0_1	cval: 2.9e-56	ival: 7.7e-54	score: 182.5	acc: 0.97	envlen: 237	alilen: 234	hmmlen: 246	qlen: 272
+ACCEPTED -> name: MGG_03290T0_2	cval: 3e-25	ival: 8.1e-23	score: 80.7	acc: 0.88	envlen: 184	alilen: 169	hmmlen: 185	qlen: 272
+ACCEPTED -> name: MGG_03810T0_1	cval: 6.8e-61	ival: 1.8e-58	score: 197.6	acc: 0.93	envlen: 303	alilen: 230	hmmlen: 229	qlen: 272
+ACCEPTED -> name: MGG_03810T0_2	cval: 1.5e-20	ival: 4.1e-18	score: 65.3	acc: 0.81	envlen: 228	alilen: 192	hmmlen: 192	qlen: 272
+ACCEPTED -> name: MGG_14943T0_1	cval: 2.2e-51	ival: 5.9e-49	score: 166.5	acc: 0.91	envlen: 245	alilen: 196	hmmlen: 201	qlen: 272
+ACCEPTED -> name: MGG_14943T0_2	cval: 2.1e-24	ival: 5.8e-22	score: 77.9	acc: 0.82	envlen: 246	alilen: 234	hmmlen: 245	qlen: 272
+ACCEPTED -> name: MGG_15248T0_1	cval: 2e-37	ival: 5.4e-35	score: 120.7	acc: 0.92	envlen: 209	alilen: 194	hmmlen: 198	qlen: 272
+ACCEPTED -> name: MGG_15248T0_2	cval: 9.4e-30	ival: 2.5e-27	score: 95.5	acc: 0.86	envlen: 223	alilen: 214	hmmlen: 257	qlen: 272
+ACCEPTED -> name: MGG_02611T0_1	cval: 1.3e-19	ival: 3.6e-17	score: 62.2	acc: 0.76	envlen: 252	alilen: 245	hmmlen: 224	qlen: 272
+ACCEPTED -> name: MGG_02611T0_2	cval: 7.8e-40	ival: 2.1e-37	score: 128.6	acc: 0.87	envlen: 291	alilen: 279	hmmlen: 253	qlen: 272
+ACCEPTED -> name: MGG_07803T0_1	cval: 2.7e-31	ival: 7.2e-29	score: 100.6	acc: 0.9	envlen: 229	alilen: 219	hmmlen: 228	qlen: 272
+ACCEPTED -> name: MGG_07803T0_2	cval: 1.2e-26	ival: 3.2e-24	score: 85.3	acc: 0.89	envlen: 236	alilen: 212	hmmlen: 248	qlen: 272
+REJECTED -> name: MGG_03401T0_1	cval: 0.13	ival: 34.0	score: 3.3	acc: 0.78	envlen: 119	alilen: 89	hmmlen: 94	qlen: 272
+ACCEPTED -> name: MGG_03401T0_2	cval: 9.3e-25	ival: 2.5e-22	score: 79.1	acc: 0.88	envlen: 228	alilen: 220	hmmlen: 227	qlen: 272
+ACCEPTED -> name: MGG_03401T0_3	cval: 4.9e-21	ival: 1.3e-18	score: 66.9	acc: 0.82	envlen: 221	alilen: 203	hmmlen: 211	qlen: 272
+ACCEPTED -> name: MGG_00689T0_1	cval: 1.2e-08	ival: 3.2e-06	score: 26.3	acc: 0.72	envlen: 175	alilen: 172	hmmlen: 141	qlen: 272
+ACCEPTED -> name: MGG_00689T0_2	cval: 2.3e-37	ival: 6.2e-35	score: 120.5	acc: 0.96	envlen: 297	alilen: 295	hmmlen: 269	qlen: 272
+REJECTED -> name: MGG_00689T0_3	cval: 0.00023	ival: 0.063	score: 12.2	acc: 0.83	envlen: 92	alilen: 58	hmmlen: 57	qlen: 272
+ACCEPTED -> name: MGG_04646T0_1	cval: 2.4e-29	ival: 6.5e-27	score: 94.2	acc: 0.88	envlen: 197	alilen: 170	hmmlen: 167	qlen: 272
+ACCEPTED -> name: MGG_04646T0_2	cval: 3.6e-07	ival: 9.8e-05	score: 21.4	acc: 0.83	envlen: 144	alilen: 117	hmmlen: 107	qlen: 272
+REJECTED -> name: MGG_04646T0_3	cval: 7.5e-05	ival: 0.02	score: 13.8	acc: 0.91	envlen: 92	alilen: 35	hmmlen: 35	qlen: 272
+ACCEPTED -> name: MGG_09647T0_1	cval: 5.9e-25	ival: 1.6e-22	score: 79.8	acc: 0.84	envlen: 219	alilen: 205	hmmlen: 198	qlen: 272
+ACCEPTED -> name: MGG_09647T0_2	cval: 4.6e-11	ival: 1.2e-08	score: 34.2	acc: 0.83	envlen: 178	alilen: 107	hmmlen: 114	qlen: 272
+REJECTED -> name: MGG_09647T0_3	cval: 0.17	ival: 46.0	score: 2.8	acc: 0.93	envlen: 33	alilen: 22	hmmlen: 22	qlen: 272
+ACCEPTED -> name: MGG_15681T0_1	cval: 4.5e-33	ival: 1.2e-30	score: 106.4	acc: 0.85	envlen: 210	alilen: 205	hmmlen: 195	qlen: 272
+ACCEPTED -> name: MGG_08288T0_1	cval: 5.9e-18	ival: 1.6e-15	score: 56.8	acc: 0.74	envlen: 282	alilen: 240	hmmlen: 226	qlen: 272
+ACCEPTED -> name: MGG_08288T0_2	cval: 1.7e-14	ival: 4.6e-12	score: 45.5	acc: 0.91	envlen: 148	alilen: 113	hmmlen: 119	qlen: 272
+ACCEPTED -> name: MGG_02862T0_1	cval: 7.4e-16	ival: 2e-13	score: 49.9	acc: 0.79	envlen: 304	alilen: 299	hmmlen: 249	qlen: 272
+ACCEPTED -> name: MGG_02862T0_2	cval: 3e-15	ival: 8.1e-13	score: 47.9	acc: 0.81	envlen: 264	alilen: 239	hmmlen: 213	qlen: 272
+ACCEPTED -> name: MGG_06199T0_1	cval: 9.7e-12	ival: 2.6e-09	score: 36.4	acc: 0.81	envlen: 210	alilen: 180	hmmlen: 168	qlen: 272
+ACCEPTED -> name: MGG_06199T0_2	cval: 2.1e-16	ival: 5.8e-14	score: 51.7	acc: 0.82	envlen: 166	alilen: 151	hmmlen: 185	qlen: 272
+ACCEPTED -> name: MGG_05025T0_1	cval: 2.4e-13	ival: 6.6e-11	score: 41.7	acc: 0.81	envlen: 235	alilen: 152	hmmlen: 145	qlen: 272
+ACCEPTED -> name: MGG_05025T0_2	cval: 2.9e-11	ival: 7.8e-09	score: 34.9	acc: 0.9	envlen: 165	alilen: 158	hmmlen: 182	qlen: 272
+ACCEPTED -> name: MGG_15682T0_1	cval: 4.7e-18	ival: 1.3e-15	score: 57.1	acc: 0.78	envlen: 157	alilen: 122	hmmlen: 132	qlen: 272
+REJECTED -> name: MGG_15682T0_2	cval: 2.9e-05	ival: 0.0077	score: 15.2	acc: 0.9	envlen: 53	alilen: 45	hmmlen: 45	qlen: 272
+ACCEPTED -> name: MGG_07019T0_1	cval: 2.2e-09	ival: 5.8e-07	score: 28.7	acc: 0.76	envlen: 205	alilen: 165	hmmlen: 142	qlen: 272
+ACCEPTED -> name: MGG_07019T0_2	cval: 1.4e-10	ival: 3.8e-08	score: 32.6	acc: 0.84	envlen: 155	alilen: 118	hmmlen: 126	qlen: 272
+ACCEPTED -> name: MGG_12589T0_1	cval: 3.1e-10	ival: 8.3e-08	score: 31.5	acc: 0.77	envlen: 185	alilen: 168	hmmlen: 143	qlen: 272
+ACCEPTED -> name: MGG_12589T0_2	cval: 1.9e-09	ival: 5e-07	score: 28.9	acc: 0.85	envlen: 192	alilen: 113	hmmlen: 114	qlen: 272
+ACCEPTED -> name: MGG_04548T0_1	cval: 1.5e-10	ival: 4.1e-08	score: 32.5	acc: 0.78	envlen: 160	alilen: 148	hmmlen: 132	qlen: 272
+ACCEPTED -> name: MGG_04548T0_2	cval: 1.2e-08	ival: 3.4e-06	score: 26.2	acc: 0.78	envlen: 166	alilen: 120	hmmlen: 128	qlen: 272
+REJECTED -> name: MGG_04548T0_3	cval: 2.1	ival: 560.0	score: -0.7	acc: 0.85	envlen: 20	alilen: 16	hmmlen: 16	qlen: 272
+ACCEPTED -> name: MGG_04590T0_1	cval: 2.5e-15	ival: 6.6e-13	score: 48.2	acc: 0.81	envlen: 199	alilen: 187	hmmlen: 156	qlen: 272
+REJECTED -> name: MGG_04590T0_2	cval: 0.0019	ival: 0.52	score: 9.2	acc: 0.7	envlen: 156	alilen: 119	hmmlen: 142	qlen: 272
+ACCEPTED -> name: MGG_03201T0_1	cval: 8.9e-15	ival: 2.4e-12	score: 46.4	acc: 0.8	envlen: 198	alilen: 182	hmmlen: 159	qlen: 272
+REJECTED -> name: MGG_03201T0_2	cval: 0.00031	ival: 0.085	score: 11.8	acc: 0.83	envlen: 147	alilen: 120	hmmlen: 142	qlen: 272
+ACCEPTED -> name: MGG_11685T0_1	cval: 1.9e-06	ival: 0.00051	score: 19.1	acc: 0.67	envlen: 190	alilen: 169	hmmlen: 140	qlen: 272
+ACCEPTED -> name: MGG_11685T0_2	cval: 3e-11	ival: 8e-09	score: 34.8	acc: 0.81	envlen: 205	alilen: 145	hmmlen: 121	qlen: 272
+ACCEPTED -> name: MGG_04203T0_1	cval: 8.8e-10	ival: 2.4e-07	score: 30.0	acc: 0.76	envlen: 215	alilen: 177	hmmlen: 149	qlen: 272
+ACCEPTED -> name: MGG_04203T0_2	cval: 1.1e-06	ival: 0.00028	score: 19.9	acc: 0.84	envlen: 154	alilen: 124	hmmlen: 124	qlen: 272
+REJECTED -> name: MGG_04203T0_3	cval: 0.58	ival: 160.0	score: 1.1	acc: 0.88	envlen: 20	alilen: 15	hmmlen: 15	qlen: 272
+ACCEPTED -> name: MGG_04956T0_1	cval: 4.6e-09	ival: 1.3e-06	score: 27.6	acc: 0.66	envlen: 210	alilen: 82	hmmlen: 70	qlen: 272
+ACCEPTED -> name: MGG_04956T0_2	cval: 2e-07	ival: 5.3e-05	score: 22.3	acc: 0.83	envlen: 160	alilen: 62	hmmlen: 68	qlen: 272
+ACCEPTED -> name: MGG_01551T0_1	cval: 1.6e-08	ival: 4.2e-06	score: 25.9	acc: 0.74	envlen: 190	alilen: 36	hmmlen: 36	qlen: 272
+ACCEPTED -> name: MGG_01551T0_2	cval: 1.2e-06	ival: 0.00032	score: 19.8	acc: 0.83	envlen: 130	alilen: 99	hmmlen: 104	qlen: 272
+ACCEPTED -> name: MGG_08257T0_1	cval: 3.8e-10	ival: 1e-07	score: 31.2	acc: 0.78	envlen: 209	alilen: 153	hmmlen: 148	qlen: 272
+REJECTED -> name: MGG_08257T0_2	cval: 0.00039	ival: 0.11	score: 11.5	acc: 0.79	envlen: 168	alilen: 137	hmmlen: 158	qlen: 272
+ACCEPTED -> name: MGG_08257T1_1	cval: 3.8e-10	ival: 1e-07	score: 31.2	acc: 0.78	envlen: 209	alilen: 153	hmmlen: 148	qlen: 272
+REJECTED -> name: MGG_08257T1_2	cval: 0.00039	ival: 0.11	score: 11.5	acc: 0.79	envlen: 168	alilen: 137	hmmlen: 158	qlen: 272
+ACCEPTED -> name: MGG_12999T0_1	cval: 1.1e-12	ival: 2.8e-10	score: 39.6	acc: 0.88	envlen: 526	alilen: 520	hmmlen: 264	qlen: 272
+ACCEPTED -> name: MGG_01951T0_1	cval: 3.8e-06	ival: 0.001	score: 18.1	acc: 0.78	envlen: 192	alilen: 165	hmmlen: 140	qlen: 272
+REJECTED -> name: MGG_01951T0_2	cval: 5.9e-05	ival: 0.016	score: 14.2	acc: 0.85	envlen: 175	alilen: 91	hmmlen: 91	qlen: 272
+ACCEPTED -> name: MGG_10188T0_1	cval: 1.4e-08	ival: 3.7e-06	score: 26.1	acc: 0.71	envlen: 183	alilen: 148	hmmlen: 127	qlen: 272
+REJECTED -> name: MGG_10188T0_2	cval: 0.29	ival: 79.0	score: 2.1	acc: 0.78	envlen: 137	alilen: 76	hmmlen: 84	qlen: 272
+REJECTED -> name: MGG_10188T0_3	cval: 0.039	ival: 10.0	score: 4.9	acc: 0.9	envlen: 34	alilen: 24	hmmlen: 24	qlen: 272
+ACCEPTED -> name: MGG_13662T0_1	cval: 1.4e-06	ival: 0.00038	score: 19.5	acc: 0.77	envlen: 181	alilen: 150	hmmlen: 132	qlen: 272
+REJECTED -> name: MGG_13662T0_2	cval: 0.0015	ival: 0.4	score: 9.6	acc: 0.77	envlen: 175	alilen: 89	hmmlen: 90	qlen: 272
+REJECTED -> name: MGG_13662T0_3	cval: 7.7	ival: 2100.0	score: -2.6	acc: 0.87	envlen: 17	alilen: 14	hmmlen: 14	qlen: 272
+REJECTED -> name: MGG_07197T0_1	cval: 5.5e-06	ival: 0.0015	score: 17.6	acc: 0.77	envlen: 88	alilen: 39	hmmlen: 43	qlen: 272
+REJECTED -> name: MGG_07197T0_2	cval: 0.0018	ival: 0.49	score: 9.3	acc: 0.84	envlen: 100	alilen: 61	hmmlen: 67	qlen: 272
+REJECTED -> name: MGG_07705T0_1	cval: 0.16	ival: 42.0	score: 3.0	acc: 0.68	envlen: 170	alilen: 67	hmmlen: 68	qlen: 272
+REJECTED -> name: MGG_07705T0_2	cval: 0.00032	ival: 0.086	score: 11.8	acc: 0.81	envlen: 164	alilen: 102	hmmlen: 94	qlen: 272
+REJECTED -> name: MGG_07705T0_3	cval: 0.047	ival: 13.0	score: 4.7	acc: 0.78	envlen: 125	alilen: 57	hmmlen: 56	qlen: 272
+REJECTED -> name: MGG_07705T0_4	cval: 0.64	ival: 170.0	score: 0.9	acc: 0.74	envlen: 101	alilen: 65	hmmlen: 65	qlen: 272
+ACCEPTED -> name: MGG_16971T0_1	cval: 2.9e-08	ival: 7.9e-06	score: 25.0	acc: 0.79	envlen: 172	alilen: 155	hmmlen: 145	qlen: 272
+ACCEPTED -> name: MGG_17747T0_1	cval: 1.8e-06	ival: 0.0005	score: 19.1	acc: 0.74	envlen: 252	alilen: 210	hmmlen: 190	qlen: 272
+REJECTED -> name: MGG_17747T0_2	cval: 0.29	ival: 79.0	score: 2.1	acc: 0.6	envlen: 151	alilen: 118	hmmlen: 137	qlen: 272
+ACCEPTED -> name: MGG_05196T0_1	cval: 4.4e-07	ival: 0.00012	score: 21.2	acc: 0.85	envlen: 528	alilen: 180	hmmlen: 142	qlen: 272
+REJECTED -> name: MGG_00385T0_1	cval: 0.0002	ival: 0.053	score: 12.5	acc: 0.76	envlen: 196	alilen: 127	hmmlen: 118	qlen: 272
+REJECTED -> name: MGG_00385T0_2	cval: 1.6	ival: 430.0	score: -0.4	acc: 0.86	envlen: 65	alilen: 40	hmmlen: 40	qlen: 272
+REJECTED -> name: MGG_05491T0_1	cval: 0.0025	ival: 0.69	score: 8.8	acc: 0.63	envlen: 165	alilen: 123	hmmlen: 119	qlen: 272
+REJECTED -> name: MGG_05491T0_2	cval: 4.3	ival: 1200.0	score: -1.8	acc: 0.75	envlen: 71	alilen: 56	hmmlen: 58	qlen: 272
+REJECTED -> name: MGG_05491T0_3	cval: 3.0	ival: 810.0	score: -1.3	acc: 0.82	envlen: 95	alilen: 39	hmmlen: 39	qlen: 272
+
+Running usearch -sort length -cluster_fast /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-3_hybrid.msa -id 0.9 -centroids /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-3_nr.msa -quiet
+
+100 hits found and accepted (57 in the previous iteration)
+
+---------------------------------------- Running hmmbuilder iteration 3 ----------------------------------------
+
+Running muscle -in /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-3_nr.msa -out /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-3_nr.clw -clw -quiet
+Running hmmbuild -o /dev/null -n A /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-3_nr.hmm /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-3_nr.clw
+Running hmmsearch -o /dev/null --domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-3_nr.domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-3_nr.hmm /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/mgg_70-15_8.fasta
+Parsing /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-3_nr.domtblout searching for domains meeting the following criteria:
+  - envlen >= qlen * 0.0 & dom_cval <= 0.001 & dom_ival <= 0.001 & acc >= 0.6
+
+ACCEPTED -> name: MGG_02351T0_1	cval: 5.2e-26	ival: 1.4e-23	score: 83.2	acc: 0.89	envlen: 202	alilen: 193	hmmlen: 212	qlen: 232
+ACCEPTED -> name: MGG_02351T0_2	cval: 4.2e-23	ival: 1.1e-20	score: 73.7	acc: 0.89	envlen: 242	alilen: 151	hmmlen: 127	qlen: 232
+ACCEPTED -> name: MGG_02351T0_3	cval: 4.7e-19	ival: 1.2e-16	score: 60.4	acc: 0.86	envlen: 197	alilen: 193	hmmlen: 213	qlen: 232
+ACCEPTED -> name: MGG_02351T0_4	cval: 2.2e-21	ival: 5.8e-19	score: 68.1	acc: 0.79	envlen: 232	alilen: 208	hmmlen: 206	qlen: 232
+ACCEPTED -> name: MGG_02351T0_5	cval: 1.6e-25	ival: 4.4e-23	score: 81.6	acc: 0.9	envlen: 212	alilen: 198	hmmlen: 215	qlen: 232
+ACCEPTED -> name: MGG_02351T0_6	cval: 1.1e-24	ival: 2.9e-22	score: 78.9	acc: 0.83	envlen: 233	alilen: 203	hmmlen: 206	qlen: 232
+ACCEPTED -> name: MGG_02351T0_7	cval: 9.4e-18	ival: 2.5e-15	score: 56.2	acc: 0.86	envlen: 215	alilen: 210	hmmlen: 217	qlen: 232
+ACCEPTED -> name: MGG_02351T0_8	cval: 5.1e-40	ival: 1.4e-37	score: 129.0	acc: 0.95	envlen: 232	alilen: 227	hmmlen: 226	qlen: 232
+ACCEPTED -> name: MGG_02351T0_9	cval: 1.8e-27	ival: 4.7e-25	score: 88.0	acc: 0.95	envlen: 213	alilen: 195	hmmlen: 211	qlen: 232
+ACCEPTED -> name: MGG_02351T0_10	cval: 1.9e-22	ival: 4.9e-20	score: 71.6	acc: 0.71	envlen: 229	alilen: 207	hmmlen: 215	qlen: 232
+ACCEPTED -> name: MGG_07858T0_1	cval: 2.1e-26	ival: 5.6e-24	score: 84.5	acc: 0.92	envlen: 210	alilen: 209	hmmlen: 231	qlen: 232
+ACCEPTED -> name: MGG_07858T0_2	cval: 1.9e-29	ival: 4.9e-27	score: 94.5	acc: 0.86	envlen: 241	alilen: 211	hmmlen: 206	qlen: 232
+ACCEPTED -> name: MGG_07858T0_3	cval: 5.5e-23	ival: 1.5e-20	score: 73.3	acc: 0.9	envlen: 209	alilen: 173	hmmlen: 195	qlen: 232
+ACCEPTED -> name: MGG_07858T0_4	cval: 2.4e-30	ival: 6.3e-28	score: 97.4	acc: 0.91	envlen: 234	alilen: 232	hmmlen: 229	qlen: 232
+ACCEPTED -> name: MGG_07858T0_5	cval: 1.1e-27	ival: 2.8e-25	score: 88.7	acc: 0.84	envlen: 216	alilen: 213	hmmlen: 228	qlen: 232
+ACCEPTED -> name: MGG_07858T0_6	cval: 6.3e-38	ival: 1.7e-35	score: 122.2	acc: 0.88	envlen: 233	alilen: 230	hmmlen: 229	qlen: 232
+ACCEPTED -> name: MGG_07858T0_7	cval: 7.3e-26	ival: 1.9e-23	score: 82.7	acc: 0.9	envlen: 195	alilen: 191	hmmlen: 210	qlen: 232
+ACCEPTED -> name: MGG_07858T0_8	cval: 1.7e-36	ival: 4.6e-34	score: 117.5	acc: 0.86	envlen: 235	alilen: 233	hmmlen: 230	qlen: 232
+ACCEPTED -> name: MGG_00022T0_1	cval: 1.3e-24	ival: 3.4e-22	score: 78.6	acc: 0.88	envlen: 220	alilen: 219	hmmlen: 231	qlen: 232
+ACCEPTED -> name: MGG_00022T0_2	cval: 1.5e-20	ival: 4e-18	score: 65.3	acc: 0.76	envlen: 236	alilen: 197	hmmlen: 205	qlen: 232
+ACCEPTED -> name: MGG_00022T0_3	cval: 1.9e-21	ival: 5e-19	score: 68.3	acc: 0.8	envlen: 213	alilen: 206	hmmlen: 209	qlen: 232
+ACCEPTED -> name: MGG_00022T0_4	cval: 6.1e-101	ival: 1.6e-98	score: 328.4	acc: 0.95	envlen: 692	alilen: 692	hmmlen: 232	qlen: 232
+ACCEPTED -> name: MGG_00022T0_5	cval: 1.2e-24	ival: 3.2e-22	score: 78.7	acc: 0.91	envlen: 215	alilen: 202	hmmlen: 215	qlen: 232
+ACCEPTED -> name: MGG_00022T0_6	cval: 1.4e-35	ival: 3.7e-33	score: 114.5	acc: 0.89	envlen: 220	alilen: 218	hmmlen: 228	qlen: 232
+ACCEPTED -> name: MGG_12175T0_1	cval: 9.1e-20	ival: 2.4e-17	score: 62.8	acc: 0.78	envlen: 220	alilen: 209	hmmlen: 220	qlen: 232
+ACCEPTED -> name: MGG_12175T0_2	cval: 5.4e-40	ival: 1.4e-37	score: 129.0	acc: 0.96	envlen: 220	alilen: 216	hmmlen: 225	qlen: 232
+ACCEPTED -> name: MGG_12175T0_3	cval: 3.3e-20	ival: 8.7e-18	score: 64.2	acc: 0.85	envlen: 205	alilen: 191	hmmlen: 207	qlen: 232
+ACCEPTED -> name: MGG_12175T0_4	cval: 9.1e-38	ival: 2.4e-35	score: 121.7	acc: 0.87	envlen: 227	alilen: 225	hmmlen: 227	qlen: 232
+ACCEPTED -> name: MGG_12175T0_5	cval: 5.4e-21	ival: 1.4e-18	score: 66.8	acc: 0.91	envlen: 214	alilen: 210	hmmlen: 228	qlen: 232
+ACCEPTED -> name: MGG_12175T0_6	cval: 1.8e-31	ival: 4.8e-29	score: 101.1	acc: 0.9	envlen: 226	alilen: 222	hmmlen: 226	qlen: 232
+ACCEPTED -> name: MGG_14967T0_1	cval: 1.4e-20	ival: 3.7e-18	score: 65.4	acc: 0.88	envlen: 215	alilen: 211	hmmlen: 228	qlen: 232
+ACCEPTED -> name: MGG_14967T0_2	cval: 8.4e-20	ival: 2.2e-17	score: 62.9	acc: 0.85	envlen: 218	alilen: 214	hmmlen: 227	qlen: 232
+ACCEPTED -> name: MGG_14967T0_3	cval: 4.9e-20	ival: 1.3e-17	score: 63.7	acc: 0.91	envlen: 216	alilen: 208	hmmlen: 223	qlen: 232
+ACCEPTED -> name: MGG_14967T0_4	cval: 1.7e-18	ival: 4.6e-16	score: 58.6	acc: 0.84	envlen: 203	alilen: 187	hmmlen: 214	qlen: 232
+ACCEPTED -> name: MGG_14967T0_5	cval: 1.3e-22	ival: 3.5e-20	score: 72.1	acc: 0.88	envlen: 234	alilen: 210	hmmlen: 206	qlen: 232
+ACCEPTED -> name: MGG_14967T0_6	cval: 1.2e-28	ival: 3.2e-26	score: 91.8	acc: 0.84	envlen: 235	alilen: 232	hmmlen: 228	qlen: 232
+ACCEPTED -> name: MGG_14967T0_7	cval: 4.4e-18	ival: 1.2e-15	score: 57.3	acc: 0.83	envlen: 212	alilen: 193	hmmlen: 207	qlen: 232
+ACCEPTED -> name: MGG_14967T0_8	cval: 3.1e-23	ival: 8.1e-21	score: 74.1	acc: 0.89	envlen: 227	alilen: 223	hmmlen: 228	qlen: 232
+ACCEPTED -> name: MGG_14767T0_1	cval: 2e-30	ival: 5.2e-28	score: 97.7	acc: 0.87	envlen: 228	alilen: 222	hmmlen: 216	qlen: 232
+REJECTED -> name: MGG_14767T0_2	cval: 1.6	ival: 440.0	score: -0.2	acc: 0.78	envlen: 65	alilen: 41	hmmlen: 42	qlen: 232
+ACCEPTED -> name: MGG_14767T0_3	cval: 1.8e-45	ival: 4.9e-43	score: 146.9	acc: 0.9	envlen: 246	alilen: 240	hmmlen: 226	qlen: 232
+REJECTED -> name: MGG_14767T0_4	cval: 0.53	ival: 140.0	score: 1.4	acc: 0.76	envlen: 276	alilen: 105	hmmlen: 97	qlen: 232
+ACCEPTED -> name: MGG_09589T0_1	cval: 6.3e-70	ival: 1.7e-67	score: 226.9	acc: 0.97	envlen: 506	alilen: 505	hmmlen: 231	qlen: 232
+ACCEPTED -> name: MGG_15097T0_1	cval: 1e-33	ival: 2.7e-31	score: 108.4	acc: 0.84	envlen: 203	alilen: 199	hmmlen: 216	qlen: 232
+ACCEPTED -> name: MGG_15097T0_2	cval: 4.8e-28	ival: 1.3e-25	score: 89.9	acc: 0.93	envlen: 303	alilen: 297	hmmlen: 129	qlen: 232
+ACCEPTED -> name: MGG_12999T0_1	cval: 1.1e-52	ival: 2.8e-50	score: 170.5	acc: 0.91	envlen: 525	alilen: 523	hmmlen: 227	qlen: 232
+REJECTED -> name: MGG_14897T0_1	cval: 3.5	ival: 940.0	score: -1.3	acc: 0.8	envlen: 149	alilen: 39	hmmlen: 41	qlen: 232
+ACCEPTED -> name: MGG_14897T0_2	cval: 1.6e-29	ival: 4.2e-27	score: 94.7	acc: 0.89	envlen: 232	alilen: 226	hmmlen: 214	qlen: 232
+ACCEPTED -> name: MGG_14897T0_3	cval: 3.5e-20	ival: 9.3e-18	score: 64.1	acc: 0.73	envlen: 229	alilen: 222	hmmlen: 224	qlen: 232
+ACCEPTED -> name: MGG_07803T0_1	cval: 9.2e-23	ival: 2.4e-20	score: 72.6	acc: 0.91	envlen: 201	alilen: 190	hmmlen: 212	qlen: 232
+ACCEPTED -> name: MGG_07803T0_2	cval: 1.4e-22	ival: 3.6e-20	score: 72.0	acc: 0.92	envlen: 210	alilen: 207	hmmlen: 229	qlen: 232
+ACCEPTED -> name: MGG_02611T0_1	cval: 8e-16	ival: 2.1e-13	score: 49.9	acc: 0.84	envlen: 230	alilen: 222	hmmlen: 213	qlen: 232
+ACCEPTED -> name: MGG_02611T0_2	cval: 9e-29	ival: 2.4e-26	score: 92.2	acc: 0.9	envlen: 274	alilen: 269	hmmlen: 225	qlen: 232
+REJECTED -> name: MGG_15248T0_1	cval: 6.3	ival: 1700.0	score: -2.1	acc: 0.79	envlen: 117	alilen: 28	hmmlen: 27	qlen: 232
+ACCEPTED -> name: MGG_15248T0_2	cval: 3e-20	ival: 8.1e-18	score: 64.3	acc: 0.92	envlen: 199	alilen: 191	hmmlen: 209	qlen: 232
+ACCEPTED -> name: MGG_15248T0_3	cval: 1.9e-24	ival: 5e-22	score: 78.1	acc: 0.9	envlen: 202	alilen: 200	hmmlen: 229	qlen: 232
+ACCEPTED -> name: MGG_12447T0_1	cval: 4.5e-22	ival: 1.2e-19	score: 70.3	acc: 0.88	envlen: 202	alilen: 197	hmmlen: 215	qlen: 232
+ACCEPTED -> name: MGG_12447T0_2	cval: 1.8e-21	ival: 4.9e-19	score: 68.3	acc: 0.78	envlen: 226	alilen: 222	hmmlen: 226	qlen: 232
+ACCEPTED -> name: MGG_03290T0_1	cval: 2.7e-23	ival: 7.2e-21	score: 74.3	acc: 0.87	envlen: 211	alilen: 194	hmmlen: 215	qlen: 232
+ACCEPTED -> name: MGG_03290T0_2	cval: 3.3e-20	ival: 8.7e-18	score: 64.2	acc: 0.86	envlen: 223	alilen: 219	hmmlen: 228	qlen: 232
+ACCEPTED -> name: MGG_02862T0_1	cval: 4.3e-28	ival: 1.1e-25	score: 90.0	acc: 0.86	envlen: 268	alilen: 264	hmmlen: 228	qlen: 232
+ACCEPTED -> name: MGG_02862T0_2	cval: 7.7e-14	ival: 2e-11	score: 43.4	acc: 0.78	envlen: 245	alilen: 240	hmmlen: 225	qlen: 232
+ACCEPTED -> name: MGG_14943T0_1	cval: 1.1e-17	ival: 2.9e-15	score: 56.0	acc: 0.85	envlen: 196	alilen: 164	hmmlen: 182	qlen: 232
+ACCEPTED -> name: MGG_14943T0_2	cval: 8.8e-23	ival: 2.3e-20	score: 72.6	acc: 0.83	envlen: 234	alilen: 232	hmmlen: 229	qlen: 232
+ACCEPTED -> name: MGG_08288T0_1	cval: 8.5e-26	ival: 2.3e-23	score: 82.5	acc: 0.86	envlen: 228	alilen: 212	hmmlen: 209	qlen: 232
+ACCEPTED -> name: MGG_08288T0_2	cval: 3.6e-14	ival: 9.5e-12	score: 44.5	acc: 0.8	envlen: 206	alilen: 140	hmmlen: 128	qlen: 232
+ACCEPTED -> name: MGG_04548T0_1	cval: 5e-21	ival: 1.3e-18	score: 66.9	acc: 0.85	envlen: 177	alilen: 155	hmmlen: 154	qlen: 232
+ACCEPTED -> name: MGG_04548T0_2	cval: 2.2e-16	ival: 5.7e-14	score: 51.7	acc: 0.85	envlen: 188	alilen: 117	hmmlen: 113	qlen: 232
+ACCEPTED -> name: MGG_03810T0_1	cval: 1.6e-18	ival: 4.3e-16	score: 58.7	acc: 0.9	envlen: 224	alilen: 154	hmmlen: 168	qlen: 232
+ACCEPTED -> name: MGG_03810T0_2	cval: 2.4e-19	ival: 6.3e-17	score: 61.4	acc: 0.72	envlen: 222	alilen: 191	hmmlen: 200	qlen: 232
+ACCEPTED -> name: MGG_04203T0_1	cval: 5.6e-22	ival: 1.5e-19	score: 70.0	acc: 0.86	envlen: 266	alilen: 184	hmmlen: 171	qlen: 232
+ACCEPTED -> name: MGG_04203T0_2	cval: 1.5e-13	ival: 4.1e-11	score: 42.4	acc: 0.84	envlen: 155	alilen: 97	hmmlen: 97	qlen: 232
+REJECTED -> name: MGG_04203T0_3	cval: 2.4	ival: 650.0	score: -0.8	acc: 0.88	envlen: 19	alilen: 15	hmmlen: 15	qlen: 232
+ACCEPTED -> name: MGG_11685T0_1	cval: 1.3e-15	ival: 3.3e-13	score: 49.2	acc: 0.81	envlen: 201	alilen: 177	hmmlen: 163	qlen: 232
+ACCEPTED -> name: MGG_11685T0_2	cval: 7.9e-18	ival: 2.1e-15	score: 56.4	acc: 0.8	envlen: 192	alilen: 140	hmmlen: 115	qlen: 232
+REJECTED -> name: MGG_11685T0_3	cval: 9.2	ival: 2400.0	score: -2.7	acc: 0.88	envlen: 18	alilen: 15	hmmlen: 15	qlen: 232
+ACCEPTED -> name: MGG_03201T0_1	cval: 8e-28	ival: 2.1e-25	score: 89.1	acc: 0.84	envlen: 193	alilen: 184	hmmlen: 176	qlen: 232
+REJECTED -> name: MGG_03201T0_2	cval: 0.00025	ival: 0.067	score: 12.2	acc: 0.74	envlen: 118	alilen: 101	hmmlen: 132	qlen: 232
+ACCEPTED -> name: MGG_06199T0_1	cval: 1.4e-18	ival: 3.6e-16	score: 58.9	acc: 0.79	envlen: 279	alilen: 184	hmmlen: 187	qlen: 232
+ACCEPTED -> name: MGG_06199T0_2	cval: 9.3e-12	ival: 2.5e-09	score: 36.6	acc: 0.81	envlen: 181	alilen: 161	hmmlen: 204	qlen: 232
+ACCEPTED -> name: MGG_04590T0_1	cval: 1.4e-25	ival: 3.6e-23	score: 81.8	acc: 0.86	envlen: 249	alilen: 191	hmmlen: 175	qlen: 232
+REJECTED -> name: MGG_04590T0_2	cval: 0.00019	ival: 0.051	score: 12.6	acc: 0.72	envlen: 162	alilen: 115	hmmlen: 149	qlen: 232
+REJECTED -> name: MGG_03401T0_1	cval: 3.6	ival: 950.0	score: -1.3	acc: 0.76	envlen: 138	alilen: 49	hmmlen: 45	qlen: 232
+ACCEPTED -> name: MGG_03401T0_2	cval: 2.5e-15	ival: 6.6e-13	score: 48.3	acc: 0.88	envlen: 211	alilen: 208	hmmlen: 229	qlen: 232
+ACCEPTED -> name: MGG_03401T0_3	cval: 3.7e-13	ival: 9.8e-11	score: 41.2	acc: 0.84	envlen: 208	alilen: 206	hmmlen: 218	qlen: 232
+ACCEPTED -> name: MGG_12589T0_1	cval: 3.6e-14	ival: 9.5e-12	score: 44.5	acc: 0.72	envlen: 180	alilen: 155	hmmlen: 146	qlen: 232
+ACCEPTED -> name: MGG_12589T0_2	cval: 1.8e-14	ival: 4.9e-12	score: 45.4	acc: 0.73	envlen: 207	alilen: 130	hmmlen: 121	qlen: 232
+ACCEPTED -> name: MGG_09647T0_1	cval: 1.3e-19	ival: 3.5e-17	score: 62.2	acc: 0.84	envlen: 244	alilen: 233	hmmlen: 215	qlen: 232
+ACCEPTED -> name: MGG_09647T0_2	cval: 1.5e-08	ival: 3.9e-06	score: 26.1	acc: 0.81	envlen: 159	alilen: 111	hmmlen: 113	qlen: 232
+REJECTED -> name: MGG_09647T0_3	cval: 3.3	ival: 870.0	score: -1.2	acc: 0.9	envlen: 49	alilen: 22	hmmlen: 22	qlen: 232
+ACCEPTED -> name: MGG_05196T0_1	cval: 1.4e-21	ival: 3.8e-19	score: 68.7	acc: 0.84	envlen: 527	alilen: 514	hmmlen: 216	qlen: 232
+ACCEPTED -> name: MGG_15682T0_1	cval: 1.5e-19	ival: 4e-17	score: 62.1	acc: 0.9	envlen: 141	alilen: 132	hmmlen: 121	qlen: 232
+REJECTED -> name: MGG_15682T0_2	cval: 0.00033	ival: 0.088	score: 11.9	acc: 0.88	envlen: 39	alilen: 34	hmmlen: 34	qlen: 232
+ACCEPTED -> name: MGG_07019T0_1	cval: 6.4e-10	ival: 1.7e-07	score: 30.6	acc: 0.77	envlen: 189	alilen: 160	hmmlen: 151	qlen: 232
+ACCEPTED -> name: MGG_07019T0_2	cval: 8.7e-14	ival: 2.3e-11	score: 43.2	acc: 0.86	envlen: 188	alilen: 122	hmmlen: 116	qlen: 232
+ACCEPTED -> name: MGG_13662T0_1	cval: 2.8e-15	ival: 7.3e-13	score: 48.1	acc: 0.85	envlen: 190	alilen: 177	hmmlen: 166	qlen: 232
+ACCEPTED -> name: MGG_13662T0_2	cval: 6.4e-08	ival: 1.7e-05	score: 24.0	acc: 0.81	envlen: 203	alilen: 73	hmmlen: 63	qlen: 232
+ACCEPTED -> name: MGG_01951T0_1	cval: 1.1e-12	ival: 2.8e-10	score: 39.7	acc: 0.78	envlen: 193	alilen: 161	hmmlen: 151	qlen: 232
+ACCEPTED -> name: MGG_01951T0_2	cval: 1.8e-09	ival: 4.8e-07	score: 29.1	acc: 0.8	envlen: 102	alilen: 86	hmmlen: 87	qlen: 232
+REJECTED -> name: MGG_01951T0_3	cval: 7.6	ival: 2000.0	score: -2.4	acc: 0.86	envlen: 19	alilen: 14	hmmlen: 14	qlen: 232
+ACCEPTED -> name: MGG_04646T0_1	cval: 2.8e-15	ival: 7.5e-13	score: 48.1	acc: 0.71	envlen: 272	alilen: 179	hmmlen: 178	qlen: 232
+REJECTED -> name: MGG_04646T0_2	cval: 4.5e-06	ival: 0.0012	score: 18.0	acc: 0.68	envlen: 249	alilen: 220	hmmlen: 205	qlen: 232
+ACCEPTED -> name: MGG_15681T0_1	cval: 2e-20	ival: 5.2e-18	score: 64.9	acc: 0.85	envlen: 216	alilen: 212	hmmlen: 216	qlen: 232
+ACCEPTED -> name: MGG_00689T0_1	cval: 2.9e-15	ival: 7.7e-13	score: 48.0	acc: 0.83	envlen: 183	alilen: 173	hmmlen: 157	qlen: 232
+REJECTED -> name: MGG_00689T0_2	cval: 0.0014	ival: 0.36	score: 9.8	acc: 0.85	envlen: 329	alilen: 108	hmmlen: 110	qlen: 232
+ACCEPTED -> name: MGG_01551T0_1	cval: 1.4e-10	ival: 3.7e-08	score: 32.7	acc: 0.72	envlen: 191	alilen: 183	hmmlen: 175	qlen: 232
+ACCEPTED -> name: MGG_01551T0_2	cval: 3.9e-07	ival: 0.0001	score: 21.4	acc: 0.84	envlen: 134	alilen: 78	hmmlen: 85	qlen: 232
+ACCEPTED -> name: MGG_05025T0_1	cval: 2.2e-10	ival: 5.9e-08	score: 32.1	acc: 0.77	envlen: 225	alilen: 175	hmmlen: 182	qlen: 232
+REJECTED -> name: MGG_05025T0_2	cval: 6.3e-06	ival: 0.0017	score: 17.5	acc: 0.65	envlen: 153	alilen: 102	hmmlen: 125	qlen: 232
+ACCEPTED -> name: MGG_10188T0_1	cval: 5.7e-11	ival: 1.5e-08	score: 34.0	acc: 0.69	envlen: 175	alilen: 144	hmmlen: 138	qlen: 232
+REJECTED -> name: MGG_10188T0_2	cval: 0.00013	ival: 0.033	score: 13.2	acc: 0.71	envlen: 175	alilen: 151	hmmlen: 189	qlen: 232
+ACCEPTED -> name: MGG_04956T0_1	cval: 2.8e-08	ival: 7.5e-06	score: 25.2	acc: 0.69	envlen: 258	alilen: 45	hmmlen: 45	qlen: 232
+ACCEPTED -> name: MGG_04956T0_2	cval: 3e-07	ival: 7.9e-05	score: 21.8	acc: 0.86	envlen: 132	alilen: 71	hmmlen: 78	qlen: 232
+ACCEPTED -> name: MGG_08257T0_1	cval: 1.9e-10	ival: 5e-08	score: 32.3	acc: 0.87	envlen: 220	alilen: 144	hmmlen: 153	qlen: 232
+REJECTED -> name: MGG_08257T0_2	cval: 0.031	ival: 8.1	score: 5.4	acc: 0.58	envlen: 155	alilen: 65	hmmlen: 67	qlen: 232
+ACCEPTED -> name: MGG_08257T1_1	cval: 1.9e-10	ival: 5e-08	score: 32.3	acc: 0.87	envlen: 220	alilen: 144	hmmlen: 153	qlen: 232
+REJECTED -> name: MGG_08257T1_2	cval: 0.031	ival: 8.1	score: 5.4	acc: 0.58	envlen: 155	alilen: 65	hmmlen: 67	qlen: 232
+ACCEPTED -> name: MGG_07197T0_1	cval: 6.1e-07	ival: 0.00016	score: 20.8	acc: 0.74	envlen: 208	alilen: 49	hmmlen: 53	qlen: 232
+REJECTED -> name: MGG_07197T0_2	cval: 4.9e-06	ival: 0.0013	score: 17.8	acc: 0.85	envlen: 241	alilen: 79	hmmlen: 82	qlen: 232
+ACCEPTED -> name: MGG_17747T0_1	cval: 1.7e-07	ival: 4.6e-05	score: 22.6	acc: 0.78	envlen: 272	alilen: 200	hmmlen: 186	qlen: 232
+REJECTED -> name: MGG_17747T0_2	cval: 0.001	ival: 0.27	score: 10.2	acc: 0.75	envlen: 138	alilen: 53	hmmlen: 59	qlen: 232
+ACCEPTED -> name: MGG_16971T0_1	cval: 2.3e-08	ival: 6.2e-06	score: 25.4	acc: 0.85	envlen: 171	alilen: 167	hmmlen: 172	qlen: 232
+REJECTED -> name: MGG_05491T0_1	cval: 2.7e-05	ival: 0.0071	score: 15.4	acc: 0.8	envlen: 161	alilen: 155	hmmlen: 162	qlen: 232
+REJECTED -> name: MGG_05491T0_2	cval: 0.021	ival: 5.5	score: 6.0	acc: 0.86	envlen: 294	alilen: 66	hmmlen: 65	qlen: 232
+REJECTED -> name: MGG_14828T0_1	cval: 3.8e-05	ival: 0.01	score: 14.9	acc: 0.81	envlen: 68	alilen: 38	hmmlen: 38	qlen: 232
+REJECTED -> name: MGG_15439T0_1	cval: 4.6e-05	ival: 0.012	score: 14.7	acc: 0.89	envlen: 142	alilen: 80	hmmlen: 75	qlen: 232
+REJECTED -> name: MGG_03831T0_1	cval: 0.0035	ival: 0.92	score: 8.5	acc: 0.7	envlen: 204	alilen: 54	hmmlen: 60	qlen: 232
+REJECTED -> name: MGG_03831T0_2	cval: 0.24	ival: 64.0	score: 2.5	acc: 0.66	envlen: 249	alilen: 138	hmmlen: 94	qlen: 232
+
+Running usearch -sort length -cluster_fast /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-4_hybrid.msa -id 0.9 -centroids /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-4_nr.msa -quiet
+
+101 hits found and accepted (100 in the previous iteration)
+
+---------------------------------------- Running hmmbuilder iteration 4 ----------------------------------------
+
+Running muscle -in /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-4_nr.msa -out /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-4_nr.clw -clw -quiet
+Running hmmbuild -o /dev/null -n A /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-4_nr.hmm /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-4_nr.clw
+Running hmmsearch -o /dev/null --domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-4_nr.domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-4_nr.hmm /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/mgg_70-15_8.fasta
+Parsing /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-4_nr.domtblout searching for domains meeting the following criteria:
+  - envlen >= qlen * 0.0 & dom_cval <= 0.001 & dom_ival <= 0.001 & acc >= 0.6
+
+ACCEPTED -> name: MGG_02351T0_1	cval: 5.2e-23	ival: 1.3e-20	score: 73.4	acc: 0.92	envlen: 199	alilen: 194	hmmlen: 210	qlen: 218
+ACCEPTED -> name: MGG_02351T0_2	cval: 4e-24	ival: 1e-21	score: 77.0	acc: 0.89	envlen: 170	alilen: 141	hmmlen: 129	qlen: 218
+ACCEPTED -> name: MGG_02351T0_3	cval: 5e-24	ival: 1.3e-21	score: 76.7	acc: 0.93	envlen: 200	alilen: 196	hmmlen: 213	qlen: 218
+ACCEPTED -> name: MGG_02351T0_4	cval: 1.9e-25	ival: 4.8e-23	score: 81.3	acc: 0.88	envlen: 239	alilen: 237	hmmlen: 216	qlen: 218
+ACCEPTED -> name: MGG_02351T0_5	cval: 1.2e-25	ival: 2.9e-23	score: 82.0	acc: 0.87	envlen: 203	alilen: 198	hmmlen: 212	qlen: 218
+ACCEPTED -> name: MGG_02351T0_6	cval: 4.6e-26	ival: 1.2e-23	score: 83.3	acc: 0.85	envlen: 219	alilen: 200	hmmlen: 189	qlen: 218
+ACCEPTED -> name: MGG_02351T0_7	cval: 4.5e-25	ival: 1.1e-22	score: 80.1	acc: 0.92	envlen: 213	alilen: 209	hmmlen: 213	qlen: 218
+ACCEPTED -> name: MGG_02351T0_8	cval: 4e-37	ival: 1e-34	score: 119.5	acc: 0.89	envlen: 228	alilen: 226	hmmlen: 215	qlen: 218
+ACCEPTED -> name: MGG_02351T0_9	cval: 2.8e-32	ival: 7.2e-30	score: 103.7	acc: 0.91	envlen: 204	alilen: 199	hmmlen: 212	qlen: 218
+ACCEPTED -> name: MGG_02351T0_10	cval: 2.1e-25	ival: 5.3e-23	score: 81.2	acc: 0.8	envlen: 230	alilen: 208	hmmlen: 194	qlen: 218
+ACCEPTED -> name: MGG_07858T0_1	cval: 6.8e-23	ival: 1.7e-20	score: 73.0	acc: 0.88	envlen: 197	alilen: 192	hmmlen: 211	qlen: 218
+ACCEPTED -> name: MGG_07858T0_2	cval: 4.9e-29	ival: 1.3e-26	score: 93.1	acc: 0.78	envlen: 241	alilen: 214	hmmlen: 190	qlen: 218
+ACCEPTED -> name: MGG_07858T0_3	cval: 2.6e-17	ival: 6.6e-15	score: 54.7	acc: 0.8	envlen: 204	alilen: 171	hmmlen: 190	qlen: 218
+ACCEPTED -> name: MGG_07858T0_4	cval: 9.1e-36	ival: 2.3e-33	score: 115.1	acc: 0.86	envlen: 231	alilen: 230	hmmlen: 217	qlen: 218
+ACCEPTED -> name: MGG_07858T0_5	cval: 9.1e-24	ival: 2.3e-21	score: 75.8	acc: 0.91	envlen: 206	alilen: 204	hmmlen: 216	qlen: 218
+ACCEPTED -> name: MGG_07858T0_6	cval: 3.4e-36	ival: 8.6e-34	score: 116.5	acc: 0.86	envlen: 228	alilen: 225	hmmlen: 214	qlen: 218
+ACCEPTED -> name: MGG_07858T0_7	cval: 3.9e-27	ival: 1e-24	score: 86.8	acc: 0.94	envlen: 200	alilen: 192	hmmlen: 208	qlen: 218
+ACCEPTED -> name: MGG_07858T0_8	cval: 1.1e-33	ival: 2.7e-31	score: 108.3	acc: 0.87	envlen: 230	alilen: 227	hmmlen: 215	qlen: 218
+ACCEPTED -> name: MGG_00022T0_1	cval: 3.6e-28	ival: 9.2e-26	score: 90.2	acc: 0.95	envlen: 208	alilen: 203	hmmlen: 212	qlen: 218
+ACCEPTED -> name: MGG_00022T0_2	cval: 2e-21	ival: 5.1e-19	score: 68.2	acc: 0.89	envlen: 222	alilen: 196	hmmlen: 187	qlen: 218
+ACCEPTED -> name: MGG_00022T0_3	cval: 5.3e-21	ival: 1.4e-18	score: 66.8	acc: 0.86	envlen: 210	alilen: 206	hmmlen: 206	qlen: 218
+ACCEPTED -> name: MGG_00022T0_4	cval: 7.3e-82	ival: 1.9e-79	score: 265.8	acc: 0.98	envlen: 688	alilen: 688	hmmlen: 218	qlen: 218
+ACCEPTED -> name: MGG_00022T0_5	cval: 4.8e-19	ival: 1.2e-16	score: 60.4	acc: 0.86	envlen: 202	alilen: 197	hmmlen: 207	qlen: 218
+ACCEPTED -> name: MGG_00022T0_6	cval: 2e-38	ival: 5e-36	score: 123.8	acc: 0.89	envlen: 217	alilen: 214	hmmlen: 215	qlen: 218
+ACCEPTED -> name: MGG_14967T0_1	cval: 7.3e-19	ival: 1.9e-16	score: 59.8	acc: 0.89	envlen: 202	alilen: 197	hmmlen: 211	qlen: 218
+ACCEPTED -> name: MGG_14967T0_2	cval: 2.3e-24	ival: 6e-22	score: 77.8	acc: 0.94	envlen: 214	alilen: 205	hmmlen: 207	qlen: 218
+ACCEPTED -> name: MGG_14967T0_3	cval: 2.6e-23	ival: 6.7e-21	score: 74.3	acc: 0.88	envlen: 205	alilen: 201	hmmlen: 213	qlen: 218
+ACCEPTED -> name: MGG_14967T0_4	cval: 8.9e-23	ival: 2.3e-20	score: 72.6	acc: 0.83	envlen: 202	alilen: 177	hmmlen: 190	qlen: 218
+ACCEPTED -> name: MGG_14967T0_5	cval: 2.3e-21	ival: 5.9e-19	score: 68.0	acc: 0.84	envlen: 221	alilen: 215	hmmlen: 208	qlen: 218
+ACCEPTED -> name: MGG_14967T0_6	cval: 1.3e-25	ival: 3.4e-23	score: 81.8	acc: 0.89	envlen: 232	alilen: 230	hmmlen: 216	qlen: 218
+ACCEPTED -> name: MGG_14967T0_7	cval: 5.2e-18	ival: 1.3e-15	score: 57.0	acc: 0.82	envlen: 210	alilen: 178	hmmlen: 186	qlen: 218
+ACCEPTED -> name: MGG_14967T0_8	cval: 8.4e-26	ival: 2.1e-23	score: 82.5	acc: 0.93	envlen: 209	alilen: 200	hmmlen: 195	qlen: 218
+ACCEPTED -> name: MGG_12175T0_1	cval: 2.7e-24	ival: 7e-22	score: 77.5	acc: 0.87	envlen: 205	alilen: 199	hmmlen: 207	qlen: 218
+ACCEPTED -> name: MGG_12175T0_2	cval: 1.4e-36	ival: 3.4e-34	score: 117.8	acc: 0.94	envlen: 218	alilen: 216	hmmlen: 216	qlen: 218
+ACCEPTED -> name: MGG_12175T0_3	cval: 1.4e-19	ival: 3.5e-17	score: 62.2	acc: 0.84	envlen: 201	alilen: 196	hmmlen: 209	qlen: 218
+ACCEPTED -> name: MGG_12175T0_4	cval: 1.9e-37	ival: 4.9e-35	score: 120.5	acc: 0.87	envlen: 224	alilen: 177	hmmlen: 176	qlen: 218
+ACCEPTED -> name: MGG_12175T0_5	cval: 1.6e-19	ival: 4.1e-17	score: 61.9	acc: 0.9	envlen: 199	alilen: 192	hmmlen: 207	qlen: 218
+ACCEPTED -> name: MGG_12175T0_6	cval: 1.9e-27	ival: 4.8e-25	score: 87.9	acc: 0.85	envlen: 222	alilen: 217	hmmlen: 212	qlen: 218
+ACCEPTED -> name: MGG_09589T0_1	cval: 4.7e-89	ival: 1.2e-86	score: 289.3	acc: 0.99	envlen: 207	alilen: 207	hmmlen: 218	qlen: 218
+ACCEPTED -> name: MGG_09589T0_2	cval: 2.7e-30	ival: 6.8e-28	score: 97.2	acc: 0.81	envlen: 219	alilen: 215	hmmlen: 214	qlen: 218
+ACCEPTED -> name: MGG_15097T0_1	cval: 8.5e-27	ival: 2.2e-24	score: 85.7	acc: 0.92	envlen: 204	alilen: 198	hmmlen: 212	qlen: 218
+ACCEPTED -> name: MGG_15097T0_2	cval: 2.8e-66	ival: 7.2e-64	score: 214.8	acc: 0.98	envlen: 218	alilen: 217	hmmlen: 217	qlen: 218
+ACCEPTED -> name: MGG_14767T0_1	cval: 3.1e-32	ival: 8e-30	score: 103.5	acc: 0.92	envlen: 227	alilen: 223	hmmlen: 214	qlen: 218
+ACCEPTED -> name: MGG_14767T0_2	cval: 2e-37	ival: 5.2e-35	score: 120.4	acc: 0.79	envlen: 241	alilen: 238	hmmlen: 214	qlen: 218
+REJECTED -> name: MGG_14767T0_3	cval: 0.00025	ival: 0.064	score: 12.3	acc: 0.78	envlen: 130	alilen: 101	hmmlen: 98	qlen: 218
+ACCEPTED -> name: MGG_14897T0_1	cval: 9.5e-37	ival: 2.4e-34	score: 118.3	acc: 0.87	envlen: 232	alilen: 231	hmmlen: 216	qlen: 218
+ACCEPTED -> name: MGG_14897T0_2	cval: 6.9e-27	ival: 1.8e-24	score: 86.0	acc: 0.8	envlen: 225	alilen: 212	hmmlen: 208	qlen: 218
+ACCEPTED -> name: MGG_12999T0_1	cval: 2.3e-60	ival: 5.8e-58	score: 195.5	acc: 0.96	envlen: 370	alilen: 366	hmmlen: 214	qlen: 218
+REJECTED -> name: MGG_12999T0_2	cval: 0.86	ival: 220.0	score: 0.7	acc: 0.69	envlen: 120	alilen: 44	hmmlen: 28	qlen: 218
+ACCEPTED -> name: MGG_12447T0_1	cval: 3.2e-22	ival: 8.1e-20	score: 70.8	acc: 0.87	envlen: 202	alilen: 197	hmmlen: 212	qlen: 218
+ACCEPTED -> name: MGG_12447T0_2	cval: 2.9e-30	ival: 7.4e-28	score: 97.1	acc: 0.89	envlen: 223	alilen: 222	hmmlen: 217	qlen: 218
+ACCEPTED -> name: MGG_14943T0_1	cval: 1.2e-20	ival: 3e-18	score: 65.7	acc: 0.86	envlen: 193	alilen: 168	hmmlen: 180	qlen: 218
+ACCEPTED -> name: MGG_14943T0_2	cval: 1.5e-29	ival: 3.9e-27	score: 94.7	acc: 0.89	envlen: 231	alilen: 229	hmmlen: 216	qlen: 218
+ACCEPTED -> name: MGG_03290T0_1	cval: 8.7e-26	ival: 2.2e-23	score: 82.4	acc: 0.81	envlen: 225	alilen: 190	hmmlen: 208	qlen: 218
+ACCEPTED -> name: MGG_03290T0_2	cval: 4.5e-23	ival: 1.2e-20	score: 73.5	acc: 0.9	envlen: 212	alilen: 198	hmmlen: 201	qlen: 218
+ACCEPTED -> name: MGG_15248T0_1	cval: 3.7e-24	ival: 9.4e-22	score: 77.1	acc: 0.95	envlen: 198	alilen: 194	hmmlen: 209	qlen: 218
+ACCEPTED -> name: MGG_15248T0_2	cval: 1.3e-24	ival: 3.3e-22	score: 78.6	acc: 0.92	envlen: 199	alilen: 199	hmmlen: 218	qlen: 218
+ACCEPTED -> name: MGG_05196T0_1	cval: 1.9e-47	ival: 4.9e-45	score: 153.2	acc: 0.96	envlen: 472	alilen: 469	hmmlen: 215	qlen: 218
+ACCEPTED -> name: MGG_02611T0_1	cval: 2.4e-14	ival: 6.2e-12	score: 45.0	acc: 0.86	envlen: 291	alilen: 223	hmmlen: 211	qlen: 218
+ACCEPTED -> name: MGG_02611T0_2	cval: 3.7e-31	ival: 9.4e-29	score: 100.0	acc: 0.92	envlen: 247	alilen: 232	hmmlen: 192	qlen: 218
+ACCEPTED -> name: MGG_03810T0_1	cval: 1.9e-19	ival: 4.8e-17	score: 61.7	acc: 0.82	envlen: 209	alilen: 200	hmmlen: 209	qlen: 218
+ACCEPTED -> name: MGG_03810T0_2	cval: 7e-26	ival: 1.8e-23	score: 82.7	acc: 0.88	envlen: 217	alilen: 200	hmmlen: 190	qlen: 218
+ACCEPTED -> name: MGG_02862T0_1	cval: 8e-23	ival: 2e-20	score: 72.7	acc: 0.93	envlen: 256	alilen: 241	hmmlen: 200	qlen: 218
+ACCEPTED -> name: MGG_02862T0_2	cval: 1.4e-19	ival: 3.6e-17	score: 62.1	acc: 0.9	envlen: 246	alilen: 240	hmmlen: 209	qlen: 218
+ACCEPTED -> name: MGG_08288T0_1	cval: 6.7e-25	ival: 1.7e-22	score: 79.5	acc: 0.87	envlen: 230	alilen: 182	hmmlen: 176	qlen: 218
+ACCEPTED -> name: MGG_08288T0_2	cval: 1.9e-14	ival: 4.9e-12	score: 45.3	acc: 0.91	envlen: 189	alilen: 117	hmmlen: 124	qlen: 218
+ACCEPTED -> name: MGG_03401T0_1	cval: 2.2e-23	ival: 5.7e-21	score: 74.6	acc: 0.92	envlen: 198	alilen: 195	hmmlen: 213	qlen: 218
+ACCEPTED -> name: MGG_03401T0_2	cval: 1.3e-15	ival: 3.2e-13	score: 49.2	acc: 0.83	envlen: 210	alilen: 200	hmmlen: 190	qlen: 218
+ACCEPTED -> name: MGG_11685T0_1	cval: 2.3e-19	ival: 5.8e-17	score: 61.5	acc: 0.85	envlen: 325	alilen: 182	hmmlen: 164	qlen: 218
+ACCEPTED -> name: MGG_11685T0_2	cval: 6e-20	ival: 1.5e-17	score: 63.3	acc: 0.9	envlen: 157	alilen: 118	hmmlen: 121	qlen: 218
+ACCEPTED -> name: MGG_07803T0_1	cval: 3.7e-17	ival: 9.3e-15	score: 54.2	acc: 0.84	envlen: 196	alilen: 191	hmmlen: 210	qlen: 218
+ACCEPTED -> name: MGG_07803T0_2	cval: 6.7e-21	ival: 1.7e-18	score: 66.5	acc: 0.88	envlen: 204	alilen: 149	hmmlen: 172	qlen: 218
+ACCEPTED -> name: MGG_09647T0_1	cval: 3.9e-21	ival: 9.9e-19	score: 67.2	acc: 0.76	envlen: 265	alilen: 213	hmmlen: 183	qlen: 218
+ACCEPTED -> name: MGG_09647T0_2	cval: 2e-15	ival: 5.1e-13	score: 48.6	acc: 0.76	envlen: 189	alilen: 138	hmmlen: 144	qlen: 218
+ACCEPTED -> name: MGG_04590T0_1	cval: 1.8e-21	ival: 4.5e-19	score: 68.4	acc: 0.92	envlen: 200	alilen: 183	hmmlen: 163	qlen: 218
+ACCEPTED -> name: MGG_04590T0_2	cval: 7.9e-14	ival: 2e-11	score: 43.3	acc: 0.8	envlen: 156	alilen: 151	hmmlen: 162	qlen: 218
+ACCEPTED -> name: MGG_04203T0_1	cval: 4.5e-22	ival: 1.2e-19	score: 70.3	acc: 0.89	envlen: 229	alilen: 222	hmmlen: 205	qlen: 218
+ACCEPTED -> name: MGG_04203T0_2	cval: 4.2e-13	ival: 1.1e-10	score: 41.0	acc: 0.84	envlen: 191	alilen: 109	hmmlen: 112	qlen: 218
+ACCEPTED -> name: MGG_06199T0_1	cval: 3.4e-16	ival: 8.7e-14	score: 51.1	acc: 0.83	envlen: 253	alilen: 184	hmmlen: 183	qlen: 218
+ACCEPTED -> name: MGG_06199T0_2	cval: 6.6e-17	ival: 1.7e-14	score: 53.4	acc: 0.93	envlen: 189	alilen: 164	hmmlen: 188	qlen: 218
+ACCEPTED -> name: MGG_12589T0_1	cval: 6e-16	ival: 1.5e-13	score: 50.3	acc: 0.88	envlen: 182	alilen: 163	hmmlen: 149	qlen: 218
+ACCEPTED -> name: MGG_12589T0_2	cval: 1.7e-17	ival: 4.4e-15	score: 55.3	acc: 0.9	envlen: 179	alilen: 139	hmmlen: 141	qlen: 218
+ACCEPTED -> name: MGG_03201T0_1	cval: 1e-23	ival: 2.7e-21	score: 75.6	acc: 0.9	envlen: 195	alilen: 176	hmmlen: 164	qlen: 218
+ACCEPTED -> name: MGG_03201T0_2	cval: 6.2e-09	ival: 1.6e-06	score: 27.3	acc: 0.86	envlen: 144	alilen: 120	hmmlen: 131	qlen: 218
+ACCEPTED -> name: MGG_04548T0_1	cval: 8.4e-19	ival: 2.1e-16	score: 59.6	acc: 0.82	envlen: 183	alilen: 160	hmmlen: 154	qlen: 218
+ACCEPTED -> name: MGG_04548T0_2	cval: 2.2e-12	ival: 5.5e-10	score: 38.6	acc: 0.9	envlen: 151	alilen: 87	hmmlen: 98	qlen: 218
+ACCEPTED -> name: MGG_01951T0_1	cval: 4.4e-17	ival: 1.1e-14	score: 54.0	acc: 0.91	envlen: 218	alilen: 185	hmmlen: 164	qlen: 218
+ACCEPTED -> name: MGG_01951T0_2	cval: 2e-13	ival: 5.2e-11	score: 42.0	acc: 0.86	envlen: 200	alilen: 100	hmmlen: 103	qlen: 218
+ACCEPTED -> name: MGG_13662T0_1	cval: 2.8e-20	ival: 7.1e-18	score: 64.4	acc: 0.95	envlen: 186	alilen: 178	hmmlen: 163	qlen: 218
+ACCEPTED -> name: MGG_13662T0_2	cval: 9e-10	ival: 2.3e-07	score: 30.1	acc: 0.83	envlen: 142	alilen: 90	hmmlen: 85	qlen: 218
+ACCEPTED -> name: MGG_04646T0_1	cval: 2.8e-19	ival: 7e-17	score: 61.2	acc: 0.88	envlen: 207	alilen: 164	hmmlen: 171	qlen: 218
+ACCEPTED -> name: MGG_04646T0_2	cval: 2.5e-08	ival: 6.4e-06	score: 25.4	acc: 0.87	envlen: 187	alilen: 185	hmmlen: 170	qlen: 218
+ACCEPTED -> name: MGG_07019T0_1	cval: 8.2e-13	ival: 2.1e-10	score: 40.0	acc: 0.84	envlen: 238	alilen: 174	hmmlen: 157	qlen: 218
+ACCEPTED -> name: MGG_07019T0_2	cval: 1e-13	ival: 2.6e-11	score: 43.0	acc: 0.88	envlen: 184	alilen: 133	hmmlen: 137	qlen: 218
+ACCEPTED -> name: MGG_15682T0_1	cval: 6.6e-23	ival: 1.7e-20	score: 73.0	acc: 0.86	envlen: 142	alilen: 124	hmmlen: 125	qlen: 218
+REJECTED -> name: MGG_15682T0_2	cval: 0.0013	ival: 0.33	score: 10.0	acc: 0.91	envlen: 43	alilen: 27	hmmlen: 27	qlen: 218
+ACCEPTED -> name: MGG_10188T0_1	cval: 5.7e-14	ival: 1.5e-11	score: 43.8	acc: 0.86	envlen: 191	alilen: 167	hmmlen: 160	qlen: 218
+ACCEPTED -> name: MGG_10188T0_2	cval: 1.2e-08	ival: 3.1e-06	score: 26.4	acc: 0.86	envlen: 155	alilen: 150	hmmlen: 169	qlen: 218
+ACCEPTED -> name: MGG_00689T0_1	cval: 7.8e-14	ival: 2e-11	score: 43.4	acc: 0.87	envlen: 234	alilen: 177	hmmlen: 157	qlen: 218
+ACCEPTED -> name: MGG_00689T0_2	cval: 4.5e-08	ival: 1.1e-05	score: 24.5	acc: 0.83	envlen: 202	alilen: 135	hmmlen: 132	qlen: 218
+ACCEPTED -> name: MGG_15681T0_1	cval: 2.1e-21	ival: 5.4e-19	score: 68.1	acc: 0.81	envlen: 213	alilen: 205	hmmlen: 206	qlen: 218
+ACCEPTED -> name: MGG_04956T0_1	cval: 5.2e-11	ival: 1.3e-08	score: 34.1	acc: 0.75	envlen: 245	alilen: 193	hmmlen: 176	qlen: 218
+ACCEPTED -> name: MGG_04956T0_2	cval: 1.2e-10	ival: 2.9e-08	score: 33.0	acc: 0.68	envlen: 179	alilen: 99	hmmlen: 111	qlen: 218
+ACCEPTED -> name: MGG_08257T0_1	cval: 3.9e-15	ival: 1e-12	score: 47.6	acc: 0.88	envlen: 200	alilen: 180	hmmlen: 192	qlen: 218
+REJECTED -> name: MGG_08257T0_2	cval: 4.5e-06	ival: 0.0012	score: 18.0	acc: 0.78	envlen: 136	alilen: 112	hmmlen: 114	qlen: 218
+ACCEPTED -> name: MGG_08257T1_1	cval: 3.9e-15	ival: 1e-12	score: 47.6	acc: 0.88	envlen: 200	alilen: 180	hmmlen: 192	qlen: 218
+REJECTED -> name: MGG_08257T1_2	cval: 4.5e-06	ival: 0.0012	score: 18.0	acc: 0.78	envlen: 136	alilen: 112	hmmlen: 114	qlen: 218
+ACCEPTED -> name: MGG_01551T0_1	cval: 4.5e-12	ival: 1.2e-09	score: 37.6	acc: 0.86	envlen: 189	alilen: 183	hmmlen: 171	qlen: 218
+REJECTED -> name: MGG_01551T0_2	cval: 4.5e-06	ival: 0.0012	score: 18.0	acc: 0.81	envlen: 170	alilen: 127	hmmlen: 135	qlen: 218
+ACCEPTED -> name: MGG_05025T0_1	cval: 9.3e-13	ival: 2.4e-10	score: 39.8	acc: 0.76	envlen: 219	alilen: 167	hmmlen: 158	qlen: 218
+REJECTED -> name: MGG_05025T0_2	cval: 9.2e-05	ival: 0.023	score: 13.7	acc: 0.74	envlen: 152	alilen: 78	hmmlen: 85	qlen: 218
+ACCEPTED -> name: MGG_07197T0_1	cval: 8.7e-07	ival: 0.00022	score: 20.3	acc: 0.85	envlen: 103	alilen: 42	hmmlen: 37	qlen: 218
+ACCEPTED -> name: MGG_07197T0_2	cval: 2.9e-07	ival: 7.5e-05	score: 21.9	acc: 0.91	envlen: 166	alilen: 96	hmmlen: 109	qlen: 218
+ACCEPTED -> name: MGG_17747T0_1	cval: 2.6e-08	ival: 6.7e-06	score: 25.3	acc: 0.83	envlen: 209	alilen: 160	hmmlen: 151	qlen: 218
+REJECTED -> name: MGG_17747T0_2	cval: 4.8e-05	ival: 0.012	score: 14.6	acc: 0.83	envlen: 112	alilen: 53	hmmlen: 49	qlen: 218
+ACCEPTED -> name: MGG_16971T0_1	cval: 1.5e-09	ival: 3.8e-07	score: 29.4	acc: 0.8	envlen: 226	alilen: 136	hmmlen: 136	qlen: 218
+ACCEPTED -> name: MGG_05491T0_1	cval: 5.4e-08	ival: 1.4e-05	score: 24.3	acc: 0.78	envlen: 167	alilen: 157	hmmlen: 160	qlen: 218
+REJECTED -> name: MGG_05491T0_2	cval: 1.3	ival: 330.0	score: 0.1	acc: 0.73	envlen: 86	alilen: 32	hmmlen: 32	qlen: 218
+ACCEPTED -> name: MGG_00385T0_1	cval: 3.4e-07	ival: 8.6e-05	score: 21.7	acc: 0.88	envlen: 283	alilen: 137	hmmlen: 136	qlen: 218
+REJECTED -> name: MGG_07705T0_1	cval: 0.0019	ival: 0.49	score: 9.4	acc: 0.86	envlen: 206	alilen: 81	hmmlen: 81	qlen: 218
+REJECTED -> name: MGG_07705T0_2	cval: 0.045	ival: 11.0	score: 4.9	acc: 0.9	envlen: 69	alilen: 58	hmmlen: 61	qlen: 218
+REJECTED -> name: MGG_03831T0_1	cval: 8.7e-06	ival: 0.0022	score: 17.0	acc: 0.89	envlen: 161	alilen: 33	hmmlen: 33	qlen: 218
+REJECTED -> name: MGG_03422T0_1	cval: 1.3	ival: 340.0	score: 0.1	acc: 0.85	envlen: 66	alilen: 40	hmmlen: 41	qlen: 218
+REJECTED -> name: MGG_03422T0_2	cval: 0.00025	ival: 0.064	score: 12.3	acc: 0.88	envlen: 218	alilen: 29	hmmlen: 28	qlen: 218
+REJECTED -> name: MGG_03422T0_3	cval: 6.7	ival: 1700.0	score: -2.2	acc: 0.7	envlen: 62	alilen: 33	hmmlen: 39	qlen: 218
+REJECTED -> name: MGG_09542T0_1	cval: 0.0048	ival: 1.2	score: 8.1	acc: 0.9	envlen: 76	alilen: 41	hmmlen: 43	qlen: 218
+REJECTED -> name: MGG_09542T0_2	cval: 0.092	ival: 23.0	score: 3.9	acc: 0.78	envlen: 43	alilen: 30	hmmlen: 30	qlen: 218
+
+Running usearch -sort length -cluster_fast /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-5_hybrid.msa -id 0.9 -centroids /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-5_nr.msa -quiet
+
+108 hits found and accepted (101 in the previous iteration)
+
+---------------------------------------- Running hmmbuilder iteration 5 ----------------------------------------
+
+Running muscle -in /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-5_nr.msa -out /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-5_nr.clw -clw -quiet
+Running hmmbuild -o /dev/null -n A /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-5_nr.hmm /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-5_nr.clw
+Running hmmsearch -o /dev/null --domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-5_nr.domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-5_nr.hmm /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/mgg_70-15_8.fasta
+Parsing /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-5_nr.domtblout searching for domains meeting the following criteria:
+  - envlen >= qlen * 0.0 & dom_cval <= 0.001 & dom_ival <= 0.001 & acc >= 0.6
+
+ACCEPTED -> name: MGG_02351T0_1	cval: 4.1e-17	ival: 1.1e-14	score: 53.9	acc: 0.87	envlen: 192	alilen: 191	hmmlen: 229	qlen: 230
+ACCEPTED -> name: MGG_02351T0_2	cval: 2.2e-21	ival: 5.8e-19	score: 67.8	acc: 0.86	envlen: 269	alilen: 160	hmmlen: 124	qlen: 230
+ACCEPTED -> name: MGG_02351T0_3	cval: 1e-15	ival: 2.7e-13	score: 49.3	acc: 0.91	envlen: 191	alilen: 190	hmmlen: 229	qlen: 230
+ACCEPTED -> name: MGG_02351T0_4	cval: 5.8e-24	ival: 1.5e-21	score: 76.3	acc: 0.86	envlen: 238	alilen: 234	hmmlen: 226	qlen: 230
+ACCEPTED -> name: MGG_02351T0_5	cval: 1.2e-17	ival: 3.1e-15	score: 55.6	acc: 0.9	envlen: 194	alilen: 190	hmmlen: 226	qlen: 230
+ACCEPTED -> name: MGG_02351T0_6	cval: 2.7e-24	ival: 7.1e-22	score: 77.3	acc: 0.94	envlen: 210	alilen: 198	hmmlen: 203	qlen: 230
+ACCEPTED -> name: MGG_02351T0_7	cval: 1.8e-15	ival: 4.7e-13	score: 48.5	acc: 0.9	envlen: 203	alilen: 200	hmmlen: 226	qlen: 230
+ACCEPTED -> name: MGG_02351T0_8	cval: 1e-35	ival: 2.7e-33	score: 114.7	acc: 0.93	envlen: 228	alilen: 226	hmmlen: 228	qlen: 230
+ACCEPTED -> name: MGG_02351T0_9	cval: 2.7e-26	ival: 7.1e-24	score: 83.9	acc: 0.9	envlen: 195	alilen: 192	hmmlen: 227	qlen: 230
+ACCEPTED -> name: MGG_02351T0_10	cval: 9.4e-22	ival: 2.4e-19	score: 69.0	acc: 0.75	envlen: 229	alilen: 211	hmmlen: 210	qlen: 230
+ACCEPTED -> name: MGG_00022T0_1	cval: 4.3e-21	ival: 1.1e-18	score: 66.9	acc: 0.95	envlen: 199	alilen: 197	hmmlen: 228	qlen: 230
+ACCEPTED -> name: MGG_00022T0_2	cval: 9.5e-21	ival: 2.5e-18	score: 65.7	acc: 0.83	envlen: 198	alilen: 188	hmmlen: 195	qlen: 230
+ACCEPTED -> name: MGG_00022T0_3	cval: 9.2e-18	ival: 2.4e-15	score: 56.0	acc: 0.79	envlen: 207	alilen: 205	hmmlen: 227	qlen: 230
+ACCEPTED -> name: MGG_00022T0_4	cval: 9.5e-42	ival: 2.5e-39	score: 134.5	acc: 0.96	envlen: 139	alilen: 130	hmmlen: 123	qlen: 230
+ACCEPTED -> name: MGG_00022T0_5	cval: 5.4e-60	ival: 1.4e-57	score: 194.2	acc: 1.0	envlen: 557	alilen: 547	hmmlen: 148	qlen: 230
+ACCEPTED -> name: MGG_00022T0_6	cval: 1e-16	ival: 2.6e-14	score: 52.6	acc: 0.86	envlen: 197	alilen: 195	hmmlen: 227	qlen: 230
+ACCEPTED -> name: MGG_00022T0_7	cval: 1.1e-33	ival: 2.8e-31	score: 108.1	acc: 0.85	envlen: 217	alilen: 216	hmmlen: 229	qlen: 230
+ACCEPTED -> name: MGG_07858T0_1	cval: 8.3e-16	ival: 2.2e-13	score: 49.6	acc: 0.87	envlen: 189	alilen: 186	hmmlen: 227	qlen: 230
+ACCEPTED -> name: MGG_07858T0_2	cval: 1.4e-27	ival: 3.6e-25	score: 88.1	acc: 0.83	envlen: 241	alilen: 217	hmmlen: 206	qlen: 230
+ACCEPTED -> name: MGG_07858T0_3	cval: 4.3e-16	ival: 1.1e-13	score: 50.5	acc: 0.91	envlen: 184	alilen: 174	hmmlen: 216	qlen: 230
+ACCEPTED -> name: MGG_07858T0_4	cval: 5.1e-36	ival: 1.3e-33	score: 115.7	acc: 0.89	envlen: 230	alilen: 229	hmmlen: 229	qlen: 230
+ACCEPTED -> name: MGG_07858T0_5	cval: 2.4e-19	ival: 6.2e-17	score: 61.2	acc: 0.93	envlen: 196	alilen: 194	hmmlen: 228	qlen: 230
+ACCEPTED -> name: MGG_07858T0_6	cval: 1.6e-30	ival: 4.2e-28	score: 97.7	acc: 0.84	envlen: 228	alilen: 227	hmmlen: 229	qlen: 230
+ACCEPTED -> name: MGG_07858T0_7	cval: 8.1e-17	ival: 2.1e-14	score: 52.9	acc: 0.91	envlen: 191	alilen: 188	hmmlen: 226	qlen: 230
+ACCEPTED -> name: MGG_07858T0_8	cval: 2.2e-33	ival: 5.7e-31	score: 107.1	acc: 0.91	envlen: 230	alilen: 228	hmmlen: 228	qlen: 230
+ACCEPTED -> name: MGG_12175T0_1	cval: 1.3e-15	ival: 3.4e-13	score: 48.9	acc: 0.88	envlen: 199	alilen: 196	hmmlen: 226	qlen: 230
+ACCEPTED -> name: MGG_12175T0_2	cval: 2.9e-37	ival: 7.5e-35	score: 119.8	acc: 0.96	envlen: 218	alilen: 216	hmmlen: 228	qlen: 230
+ACCEPTED -> name: MGG_12175T0_3	cval: 7.1e-14	ival: 1.8e-11	score: 43.3	acc: 0.81	envlen: 195	alilen: 192	hmmlen: 227	qlen: 230
+ACCEPTED -> name: MGG_12175T0_4	cval: 2.5e-32	ival: 6.6e-30	score: 103.6	acc: 0.78	envlen: 224	alilen: 222	hmmlen: 227	qlen: 230
+ACCEPTED -> name: MGG_12175T0_5	cval: 1.8e-13	ival: 4.7e-11	score: 41.9	acc: 0.84	envlen: 192	alilen: 150	hmmlen: 183	qlen: 230
+ACCEPTED -> name: MGG_12175T0_6	cval: 1.2e-25	ival: 3e-23	score: 81.8	acc: 0.88	envlen: 223	alilen: 221	hmmlen: 228	qlen: 230
+ACCEPTED -> name: MGG_14967T0_1	cval: 4.8e-16	ival: 1.2e-13	score: 50.4	acc: 0.85	envlen: 193	alilen: 190	hmmlen: 226	qlen: 230
+ACCEPTED -> name: MGG_14967T0_2	cval: 1e-17	ival: 2.6e-15	score: 55.8	acc: 0.81	envlen: 211	alilen: 183	hmmlen: 205	qlen: 230
+ACCEPTED -> name: MGG_14967T0_3	cval: 1.2e-17	ival: 3.2e-15	score: 55.6	acc: 0.84	envlen: 233	alilen: 193	hmmlen: 227	qlen: 230
+ACCEPTED -> name: MGG_14967T0_4	cval: 2.7e-17	ival: 6.9e-15	score: 54.5	acc: 0.76	envlen: 203	alilen: 173	hmmlen: 206	qlen: 230
+ACCEPTED -> name: MGG_14967T0_5	cval: 1.7e-16	ival: 4.4e-14	score: 51.8	acc: 0.96	envlen: 213	alilen: 208	hmmlen: 223	qlen: 230
+ACCEPTED -> name: MGG_14967T0_6	cval: 1.8e-23	ival: 4.6e-21	score: 74.7	acc: 0.87	envlen: 231	alilen: 230	hmmlen: 229	qlen: 230
+ACCEPTED -> name: MGG_14967T0_7	cval: 1e-11	ival: 2.7e-09	score: 36.2	acc: 0.79	envlen: 201	alilen: 179	hmmlen: 204	qlen: 230
+ACCEPTED -> name: MGG_14967T0_8	cval: 6.1e-19	ival: 1.6e-16	score: 59.8	acc: 0.81	envlen: 213	alilen: 189	hmmlen: 203	qlen: 230
+ACCEPTED -> name: MGG_09589T0_1	cval: 3.6e-38	ival: 9.3e-36	score: 122.8	acc: 0.89	envlen: 154	alilen: 148	hmmlen: 176	qlen: 230
+ACCEPTED -> name: MGG_09589T0_2	cval: 1.2e-42	ival: 3.1e-40	score: 137.4	acc: 0.98	envlen: 360	alilen: 350	hmmlen: 156	qlen: 230
+ACCEPTED -> name: MGG_05196T0_1	cval: 1.1e-77	ival: 2.8e-75	score: 252.1	acc: 1.0	envlen: 326	alilen: 326	hmmlen: 230	qlen: 230
+ACCEPTED -> name: MGG_14767T0_1	cval: 2.1e-24	ival: 5.5e-22	score: 77.7	acc: 0.81	envlen: 217	alilen: 214	hmmlen: 227	qlen: 230
+ACCEPTED -> name: MGG_14767T0_2	cval: 1.5e-35	ival: 3.9e-33	score: 114.2	acc: 0.81	envlen: 241	alilen: 238	hmmlen: 227	qlen: 230
+REJECTED -> name: MGG_14767T0_3	cval: 0.01	ival: 2.7	score: 6.7	acc: 0.82	envlen: 199	alilen: 76	hmmlen: 79	qlen: 230
+ACCEPTED -> name: MGG_12999T0_1	cval: 5.6e-53	ival: 1.5e-50	score: 171.2	acc: 0.99	envlen: 290	alilen: 287	hmmlen: 227	qlen: 230
+REJECTED -> name: MGG_12999T0_2	cval: 1.9	ival: 490.0	score: -0.7	acc: 0.69	envlen: 186	alilen: 36	hmmlen: 29	qlen: 230
+ACCEPTED -> name: MGG_15097T0_1	cval: 7.8e-20	ival: 2e-17	score: 62.7	acc: 0.96	envlen: 193	alilen: 190	hmmlen: 226	qlen: 230
+ACCEPTED -> name: MGG_15097T0_2	cval: 7.8e-31	ival: 2e-28	score: 98.7	acc: 0.95	envlen: 217	alilen: 216	hmmlen: 228	qlen: 230
+ACCEPTED -> name: MGG_02611T0_1	cval: 2.8e-13	ival: 7.2e-11	score: 41.3	acc: 0.83	envlen: 221	alilen: 177	hmmlen: 181	qlen: 230
+ACCEPTED -> name: MGG_02611T0_2	cval: 2.6e-35	ival: 6.8e-33	score: 113.4	acc: 0.97	envlen: 236	alilen: 232	hmmlen: 210	qlen: 230
+REJECTED -> name: MGG_14897T0_1	cval: 5.7	ival: 1500.0	score: -2.2	acc: 0.7	envlen: 184	alilen: 87	hmmlen: 64	qlen: 230
+ACCEPTED -> name: MGG_14897T0_2	cval: 7.4e-23	ival: 1.9e-20	score: 72.6	acc: 0.85	envlen: 222	alilen: 219	hmmlen: 226	qlen: 230
+ACCEPTED -> name: MGG_14897T0_3	cval: 6.5e-26	ival: 1.7e-23	score: 82.6	acc: 0.83	envlen: 225	alilen: 222	hmmlen: 227	qlen: 230
+ACCEPTED -> name: MGG_03290T0_1	cval: 5.2e-22	ival: 1.3e-19	score: 69.9	acc: 0.76	envlen: 261	alilen: 209	hmmlen: 195	qlen: 230
+ACCEPTED -> name: MGG_03290T0_2	cval: 4.4e-24	ival: 1.1e-21	score: 76.7	acc: 0.91	envlen: 217	alilen: 180	hmmlen: 202	qlen: 230
+REJECTED -> name: MGG_03290T0_3	cval: 1.3	ival: 340.0	score: -0.2	acc: 0.8	envlen: 113	alilen: 76	hmmlen: 78	qlen: 230
+ACCEPTED -> name: MGG_02862T0_1	cval: 3.2e-16	ival: 8.2e-14	score: 51.0	acc: 0.86	envlen: 241	alilen: 211	hmmlen: 189	qlen: 230
+REJECTED -> name: MGG_02862T0_2	cval: 6.1	ival: 1600.0	score: -2.3	acc: 0.85	envlen: 52	alilen: 34	hmmlen: 34	qlen: 230
+ACCEPTED -> name: MGG_02862T0_3	cval: 1.1e-29	ival: 2.8e-27	score: 95.0	acc: 0.97	envlen: 244	alilen: 241	hmmlen: 223	qlen: 230
+ACCEPTED -> name: MGG_12447T0_1	cval: 1.4e-18	ival: 3.7e-16	score: 58.6	acc: 0.87	envlen: 192	alilen: 191	hmmlen: 228	qlen: 230
+ACCEPTED -> name: MGG_12447T0_2	cval: 3.2e-23	ival: 8.2e-21	score: 73.9	acc: 0.84	envlen: 223	alilen: 221	hmmlen: 228	qlen: 230
+ACCEPTED -> name: MGG_15248T0_1	cval: 7.1e-18	ival: 1.8e-15	score: 56.4	acc: 0.87	envlen: 192	alilen: 190	hmmlen: 227	qlen: 230
+ACCEPTED -> name: MGG_15248T0_2	cval: 5.5e-24	ival: 1.4e-21	score: 76.4	acc: 0.93	envlen: 198	alilen: 198	hmmlen: 230	qlen: 230
+ACCEPTED -> name: MGG_09647T0_1	cval: 1.7e-21	ival: 4.4e-19	score: 68.2	acc: 0.84	envlen: 259	alilen: 161	hmmlen: 181	qlen: 230
+ACCEPTED -> name: MGG_09647T0_2	cval: 5.2e-19	ival: 1.3e-16	score: 60.1	acc: 0.9	envlen: 190	alilen: 169	hmmlen: 203	qlen: 230
+ACCEPTED -> name: MGG_07803T0_1	cval: 4.8e-21	ival: 1.2e-18	score: 66.7	acc: 0.95	envlen: 189	alilen: 187	hmmlen: 228	qlen: 230
+ACCEPTED -> name: MGG_07803T0_2	cval: 6.6e-18	ival: 1.7e-15	score: 56.4	acc: 0.86	envlen: 204	alilen: 201	hmmlen: 226	qlen: 230
+ACCEPTED -> name: MGG_04590T0_1	cval: 3.8e-25	ival: 9.9e-23	score: 80.1	acc: 0.93	envlen: 271	alilen: 181	hmmlen: 178	qlen: 230
+ACCEPTED -> name: MGG_04590T0_2	cval: 1.8e-13	ival: 4.8e-11	score: 41.9	acc: 0.8	envlen: 156	alilen: 119	hmmlen: 151	qlen: 230
+ACCEPTED -> name: MGG_08288T0_1	cval: 1.5e-18	ival: 3.8e-16	score: 58.6	acc: 0.86	envlen: 300	alilen: 170	hmmlen: 181	qlen: 230
+ACCEPTED -> name: MGG_08288T0_2	cval: 2.6e-19	ival: 6.8e-17	score: 61.0	acc: 0.85	envlen: 192	alilen: 153	hmmlen: 186	qlen: 230
+ACCEPTED -> name: MGG_04203T0_1	cval: 3.4e-21	ival: 8.9e-19	score: 67.2	acc: 0.84	envlen: 226	alilen: 222	hmmlen: 218	qlen: 230
+ACCEPTED -> name: MGG_04203T0_2	cval: 1.8e-14	ival: 4.6e-12	score: 45.2	acc: 0.91	envlen: 167	alilen: 153	hmmlen: 186	qlen: 230
+ACCEPTED -> name: MGG_11685T0_1	cval: 2.5e-16	ival: 6.5e-14	score: 51.3	acc: 0.82	envlen: 304	alilen: 184	hmmlen: 183	qlen: 230
+ACCEPTED -> name: MGG_11685T0_2	cval: 1.1e-18	ival: 2.9e-16	score: 59.0	acc: 0.86	envlen: 160	alilen: 157	hmmlen: 185	qlen: 230
+ACCEPTED -> name: MGG_03201T0_1	cval: 2.6e-24	ival: 6.7e-22	score: 77.4	acc: 0.92	envlen: 288	alilen: 173	hmmlen: 178	qlen: 230
+ACCEPTED -> name: MGG_03201T0_2	cval: 1.7e-10	ival: 4.5e-08	score: 32.2	acc: 0.89	envlen: 127	alilen: 120	hmmlen: 151	qlen: 230
+ACCEPTED -> name: MGG_04646T0_1	cval: 2.8e-14	ival: 7.3e-12	score: 44.6	acc: 0.83	envlen: 204	alilen: 159	hmmlen: 183	qlen: 230
+ACCEPTED -> name: MGG_04646T0_2	cval: 1.3e-19	ival: 3.3e-17	score: 62.1	acc: 0.96	envlen: 187	alilen: 185	hmmlen: 186	qlen: 230
+ACCEPTED -> name: MGG_14943T0_1	cval: 1.5e-09	ival: 3.9e-07	score: 29.1	acc: 0.8	envlen: 183	alilen: 157	hmmlen: 194	qlen: 230
+ACCEPTED -> name: MGG_14943T0_2	cval: 3e-24	ival: 7.7e-22	score: 77.2	acc: 0.93	envlen: 230	alilen: 230	hmmlen: 230	qlen: 230
+REJECTED -> name: MGG_03810T0_1	cval: 6.1	ival: 1600.0	score: -2.3	acc: 0.67	envlen: 153	alilen: 49	hmmlen: 50	qlen: 230
+ACCEPTED -> name: MGG_03810T0_2	cval: 7.2e-14	ival: 1.9e-11	score: 43.2	acc: 0.83	envlen: 231	alilen: 155	hmmlen: 182	qlen: 230
+ACCEPTED -> name: MGG_03810T0_3	cval: 1.3e-21	ival: 3.5e-19	score: 68.5	acc: 0.81	envlen: 223	alilen: 204	hmmlen: 207	qlen: 230
+REJECTED -> name: MGG_03810T0_4	cval: 1.5	ival: 380.0	score: -0.3	acc: 0.87	envlen: 113	alilen: 67	hmmlen: 66	qlen: 230
+ACCEPTED -> name: MGG_00689T0_1	cval: 5.8e-20	ival: 1.5e-17	score: 63.2	acc: 0.94	envlen: 317	alilen: 176	hmmlen: 166	qlen: 230
+ACCEPTED -> name: MGG_00689T0_2	cval: 1e-11	ival: 2.7e-09	score: 36.2	acc: 0.84	envlen: 225	alilen: 147	hmmlen: 152	qlen: 230
+ACCEPTED -> name: MGG_06199T0_1	cval: 8.5e-13	ival: 2.2e-10	score: 39.7	acc: 0.83	envlen: 267	alilen: 165	hmmlen: 181	qlen: 230
+ACCEPTED -> name: MGG_06199T0_2	cval: 6.5e-18	ival: 1.7e-15	score: 56.5	acc: 0.86	envlen: 195	alilen: 172	hmmlen: 205	qlen: 230
+ACCEPTED -> name: MGG_04548T0_1	cval: 2.8e-17	ival: 7.2e-15	score: 54.4	acc: 0.77	envlen: 327	alilen: 154	hmmlen: 160	qlen: 230
+ACCEPTED -> name: MGG_04548T0_2	cval: 5.5e-13	ival: 1.4e-10	score: 40.4	acc: 0.85	envlen: 168	alilen: 150	hmmlen: 186	qlen: 230
+ACCEPTED -> name: MGG_12589T0_1	cval: 9.2e-14	ival: 2.4e-11	score: 42.9	acc: 0.79	envlen: 327	alilen: 148	hmmlen: 158	qlen: 230
+ACCEPTED -> name: MGG_12589T0_2	cval: 3.6e-16	ival: 9.5e-14	score: 50.8	acc: 0.83	envlen: 204	alilen: 178	hmmlen: 204	qlen: 230
+REJECTED -> name: MGG_03401T0_1	cval: 3.2	ival: 830.0	score: -1.4	acc: 0.57	envlen: 150	alilen: 113	hmmlen: 98	qlen: 230
+ACCEPTED -> name: MGG_03401T0_2	cval: 2.3e-15	ival: 6e-13	score: 48.1	acc: 0.86	envlen: 190	alilen: 189	hmmlen: 229	qlen: 230
+ACCEPTED -> name: MGG_03401T0_3	cval: 9.2e-13	ival: 2.4e-10	score: 39.6	acc: 0.87	envlen: 208	alilen: 195	hmmlen: 206	qlen: 230
+ACCEPTED -> name: MGG_01951T0_1	cval: 2.2e-15	ival: 5.8e-13	score: 48.2	acc: 0.88	envlen: 276	alilen: 183	hmmlen: 179	qlen: 230
+ACCEPTED -> name: MGG_01951T0_2	cval: 2.7e-11	ival: 7.1e-09	score: 34.8	acc: 0.92	envlen: 124	alilen: 99	hmmlen: 115	qlen: 230
+REJECTED -> name: MGG_01951T0_3	cval: 0.61	ival: 160.0	score: 0.9	acc: 0.9	envlen: 19	alilen: 15	hmmlen: 15	qlen: 230
+ACCEPTED -> name: MGG_15682T0_1	cval: 8.8e-20	ival: 2.3e-17	score: 62.6	acc: 0.88	envlen: 136	alilen: 101	hmmlen: 100	qlen: 230
+REJECTED -> name: MGG_15682T0_2	cval: 7.9e-05	ival: 0.02	score: 13.7	acc: 0.84	envlen: 70	alilen: 33	hmmlen: 33	qlen: 230
+REJECTED -> name: MGG_15682T0_3	cval: 0.45	ival: 120.0	score: 1.4	acc: 0.83	envlen: 145	alilen: 23	hmmlen: 24	qlen: 230
+ACCEPTED -> name: MGG_13662T0_1	cval: 3.2e-17	ival: 8.3e-15	score: 54.2	acc: 0.86	envlen: 333	alilen: 183	hmmlen: 185	qlen: 230
+ACCEPTED -> name: MGG_13662T0_2	cval: 2.2e-07	ival: 5.7e-05	score: 22.0	acc: 0.75	envlen: 152	alilen: 110	hmmlen: 130	qlen: 230
+ACCEPTED -> name: MGG_04956T0_1	cval: 8.3e-15	ival: 2.2e-12	score: 46.3	acc: 0.8	envlen: 307	alilen: 183	hmmlen: 182	qlen: 230
+ACCEPTED -> name: MGG_04956T0_2	cval: 1.5e-08	ival: 4e-06	score: 25.8	acc: 0.8	envlen: 175	alilen: 107	hmmlen: 139	qlen: 230
+ACCEPTED -> name: MGG_10188T0_1	cval: 2.8e-08	ival: 7.2e-06	score: 25.0	acc: 0.81	envlen: 306	alilen: 164	hmmlen: 174	qlen: 230
+ACCEPTED -> name: MGG_10188T0_2	cval: 1.6e-14	ival: 4.2e-12	score: 45.4	acc: 0.91	envlen: 171	alilen: 151	hmmlen: 186	qlen: 230
+ACCEPTED -> name: MGG_07019T0_1	cval: 3.3e-08	ival: 8.5e-06	score: 24.7	acc: 0.82	envlen: 208	alilen: 152	hmmlen: 157	qlen: 230
+ACCEPTED -> name: MGG_07019T0_2	cval: 1.2e-12	ival: 3e-10	score: 39.3	acc: 0.84	envlen: 192	alilen: 130	hmmlen: 154	qlen: 230
+ACCEPTED -> name: MGG_01551T0_1	cval: 1.5e-11	ival: 3.8e-09	score: 35.7	acc: 0.77	envlen: 247	alilen: 177	hmmlen: 182	qlen: 230
+ACCEPTED -> name: MGG_01551T0_2	cval: 1.3e-08	ival: 3.4e-06	score: 26.1	acc: 0.91	envlen: 137	alilen: 97	hmmlen: 122	qlen: 230
+ACCEPTED -> name: MGG_05025T0_1	cval: 7.5e-15	ival: 1.9e-12	score: 46.5	acc: 0.9	envlen: 229	alilen: 151	hmmlen: 165	qlen: 230
+REJECTED -> name: MGG_05025T0_2	cval: 0.0013	ival: 0.34	score: 9.7	acc: 0.8	envlen: 154	alilen: 71	hmmlen: 77	qlen: 230
+ACCEPTED -> name: MGG_15681T0_1	cval: 1.4e-16	ival: 3.5e-14	score: 52.2	acc: 0.8	envlen: 206	alilen: 162	hmmlen: 179	qlen: 230
+ACCEPTED -> name: MGG_08257T0_1	cval: 4.4e-10	ival: 1.1e-07	score: 30.9	acc: 0.81	envlen: 166	alilen: 149	hmmlen: 164	qlen: 230
+REJECTED -> name: MGG_08257T0_2	cval: 0.0042	ival: 1.1	score: 8.0	acc: 0.68	envlen: 145	alilen: 72	hmmlen: 90	qlen: 230
+ACCEPTED -> name: MGG_08257T1_1	cval: 4.4e-10	ival: 1.1e-07	score: 30.9	acc: 0.81	envlen: 166	alilen: 149	hmmlen: 164	qlen: 230
+REJECTED -> name: MGG_08257T1_2	cval: 0.0042	ival: 1.1	score: 8.0	acc: 0.68	envlen: 145	alilen: 72	hmmlen: 90	qlen: 230
+ACCEPTED -> name: MGG_07197T0_1	cval: 1e-07	ival: 2.7e-05	score: 23.1	acc: 0.75	envlen: 280	alilen: 61	hmmlen: 60	qlen: 230
+REJECTED -> name: MGG_07197T0_2	cval: 0.00013	ival: 0.033	score: 13.0	acc: 0.86	envlen: 197	alilen: 69	hmmlen: 80	qlen: 230
+ACCEPTED -> name: MGG_05491T0_1	cval: 1.8e-08	ival: 4.6e-06	score: 25.6	acc: 0.86	envlen: 162	alilen: 151	hmmlen: 164	qlen: 230
+REJECTED -> name: MGG_05491T0_2	cval: 0.48	ival: 120.0	score: 1.3	acc: 0.85	envlen: 245	alilen: 59	hmmlen: 62	qlen: 230
+ACCEPTED -> name: MGG_00385T0_1	cval: 2.1e-09	ival: 5.5e-07	score: 28.6	acc: 0.86	envlen: 365	alilen: 127	hmmlen: 139	qlen: 230
+REJECTED -> name: MGG_17747T0_1	cval: 0.00042	ival: 0.11	score: 11.3	acc: 0.69	envlen: 240	alilen: 144	hmmlen: 153	qlen: 230
+REJECTED -> name: MGG_17747T0_2	cval: 0.0097	ival: 2.5	score: 6.8	acc: 0.77	envlen: 135	alilen: 49	hmmlen: 48	qlen: 230
+ACCEPTED -> name: MGG_03831T0_1	cval: 6.5e-07	ival: 0.00017	score: 20.5	acc: 0.85	envlen: 528	alilen: 151	hmmlen: 174	qlen: 230
+ACCEPTED -> name: MGG_16971T0_1	cval: 1.6e-06	ival: 0.00042	score: 19.2	acc: 0.73	envlen: 303	alilen: 154	hmmlen: 172	qlen: 230
+REJECTED -> name: MGG_05645T0_1	cval: 0.0001	ival: 0.027	score: 13.3	acc: 0.75	envlen: 169	alilen: 73	hmmlen: 75	qlen: 230
+REJECTED -> name: MGG_03422T0_1	cval: 0.058	ival: 15.0	score: 4.3	acc: 0.87	envlen: 98	alilen: 41	hmmlen: 39	qlen: 230
+REJECTED -> name: MGG_03422T0_2	cval: 0.059	ival: 15.0	score: 4.3	acc: 0.82	envlen: 56	alilen: 24	hmmlen: 24	qlen: 230
+
+Running usearch -sort length -cluster_fast /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-6_hybrid.msa -id 0.9 -centroids /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-6_nr.msa -quiet
+
+109 hits found and accepted (108 in the previous iteration)
+
+---------------------------------------- Running hmmbuilder iteration 6 ----------------------------------------
+
+Running muscle -in /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-6_nr.msa -out /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-6_nr.clw -clw -quiet
+Running hmmbuild -o /dev/null -n A /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-6_nr.hmm /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-6_nr.clw
+Running hmmsearch -o /dev/null --domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-6_nr.domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-6_nr.hmm /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/mgg_70-15_8.fasta
+Parsing /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-6_nr.domtblout searching for domains meeting the following criteria:
+  - envlen >= qlen * 0.0 & dom_cval <= 0.001 & dom_ival <= 0.001 & acc >= 0.6
+
+ACCEPTED -> name: MGG_02351T0_1	cval: 4.8e-17	ival: 1.2e-14	score: 54.0	acc: 0.85	envlen: 191	alilen: 189	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_02351T0_2	cval: 8.8e-27	ival: 2.3e-24	score: 85.8	acc: 0.92	envlen: 175	alilen: 143	hmmlen: 135	qlen: 209
+ACCEPTED -> name: MGG_02351T0_3	cval: 5.3e-15	ival: 1.4e-12	score: 47.3	acc: 0.84	envlen: 190	alilen: 188	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_02351T0_4	cval: 8.3e-32	ival: 2.1e-29	score: 102.2	acc: 0.89	envlen: 237	alilen: 234	hmmlen: 206	qlen: 209
+ACCEPTED -> name: MGG_02351T0_5	cval: 2.7e-18	ival: 6.9e-16	score: 58.0	acc: 0.77	envlen: 193	alilen: 189	hmmlen: 205	qlen: 209
+ACCEPTED -> name: MGG_02351T0_6	cval: 1.2e-26	ival: 3.1e-24	score: 85.3	acc: 0.8	envlen: 234	alilen: 232	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_02351T0_7	cval: 4.5e-12	ival: 1.2e-09	score: 37.7	acc: 0.8	envlen: 202	alilen: 200	hmmlen: 206	qlen: 209
+ACCEPTED -> name: MGG_02351T0_8	cval: 1.1e-39	ival: 2.8e-37	score: 127.9	acc: 0.86	envlen: 226	alilen: 225	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_02351T0_9	cval: 3.6e-19	ival: 9.3e-17	score: 60.9	acc: 0.78	envlen: 194	alilen: 191	hmmlen: 206	qlen: 209
+ACCEPTED -> name: MGG_02351T0_10	cval: 7.9e-31	ival: 2e-28	score: 99.0	acc: 0.88	envlen: 229	alilen: 227	hmmlen: 206	qlen: 209
+ACCEPTED -> name: MGG_07858T0_1	cval: 7e-13	ival: 1.8e-10	score: 40.3	acc: 0.83	envlen: 188	alilen: 185	hmmlen: 206	qlen: 209
+ACCEPTED -> name: MGG_07858T0_2	cval: 2.4e-36	ival: 6.3e-34	score: 117.0	acc: 0.91	envlen: 240	alilen: 239	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_07858T0_3	cval: 3e-14	ival: 7.7e-12	score: 44.8	acc: 0.89	envlen: 187	alilen: 174	hmmlen: 196	qlen: 209
+ACCEPTED -> name: MGG_07858T0_4	cval: 1.2e-34	ival: 3.1e-32	score: 111.4	acc: 0.88	envlen: 229	alilen: 229	hmmlen: 209	qlen: 209
+ACCEPTED -> name: MGG_07858T0_5	cval: 1.4e-14	ival: 3.6e-12	score: 45.9	acc: 0.8	envlen: 195	alilen: 191	hmmlen: 205	qlen: 209
+ACCEPTED -> name: MGG_07858T0_6	cval: 3.5e-38	ival: 9.1e-36	score: 123.0	acc: 0.93	envlen: 227	alilen: 227	hmmlen: 209	qlen: 209
+ACCEPTED -> name: MGG_07858T0_7	cval: 8.9e-14	ival: 2.3e-11	score: 43.3	acc: 0.86	envlen: 190	alilen: 187	hmmlen: 205	qlen: 209
+ACCEPTED -> name: MGG_07858T0_8	cval: 2.4e-35	ival: 6.2e-33	score: 113.7	acc: 0.8	envlen: 229	alilen: 229	hmmlen: 209	qlen: 209
+ACCEPTED -> name: MGG_00022T0_1	cval: 8.7e-16	ival: 2.3e-13	score: 49.8	acc: 0.81	envlen: 198	alilen: 196	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_00022T0_2	cval: 8.4e-27	ival: 2.2e-24	score: 85.8	acc: 0.9	envlen: 204	alilen: 188	hmmlen: 171	qlen: 209
+ACCEPTED -> name: MGG_00022T0_3	cval: 5.9e-16	ival: 1.5e-13	score: 50.4	acc: 0.8	envlen: 206	alilen: 203	hmmlen: 205	qlen: 209
+ACCEPTED -> name: MGG_00022T0_4	cval: 3.1e-24	ival: 7.9e-22	score: 77.5	acc: 0.89	envlen: 182	alilen: 162	hmmlen: 157	qlen: 209
+ACCEPTED -> name: MGG_00022T0_5	cval: 4.7e-60	ival: 1.2e-57	score: 194.4	acc: 0.98	envlen: 497	alilen: 497	hmmlen: 209	qlen: 209
+ACCEPTED -> name: MGG_00022T0_6	cval: 2.6e-12	ival: 6.8e-10	score: 38.5	acc: 0.78	envlen: 196	alilen: 193	hmmlen: 205	qlen: 209
+ACCEPTED -> name: MGG_00022T0_7	cval: 2.5e-30	ival: 6.6e-28	score: 97.3	acc: 0.92	envlen: 216	alilen: 216	hmmlen: 209	qlen: 209
+ACCEPTED -> name: MGG_12175T0_1	cval: 1.2e-14	ival: 3.1e-12	score: 46.1	acc: 0.73	envlen: 197	alilen: 177	hmmlen: 188	qlen: 209
+ACCEPTED -> name: MGG_12175T0_2	cval: 1.7e-37	ival: 4.4e-35	score: 120.8	acc: 0.96	envlen: 217	alilen: 216	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_12175T0_3	cval: 7.7e-18	ival: 2e-15	score: 56.5	acc: 0.92	envlen: 194	alilen: 192	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_12175T0_4	cval: 3.8e-43	ival: 9.8e-41	score: 139.2	acc: 0.93	envlen: 224	alilen: 221	hmmlen: 206	qlen: 209
+ACCEPTED -> name: MGG_12175T0_5	cval: 1.3e-12	ival: 3.5e-10	score: 39.4	acc: 0.79	envlen: 194	alilen: 165	hmmlen: 182	qlen: 209
+ACCEPTED -> name: MGG_12175T0_6	cval: 1.8e-30	ival: 4.7e-28	score: 97.8	acc: 0.85	envlen: 222	alilen: 219	hmmlen: 206	qlen: 209
+ACCEPTED -> name: MGG_14967T0_1	cval: 1.8e-11	ival: 4.7e-09	score: 35.7	acc: 0.79	envlen: 191	alilen: 188	hmmlen: 204	qlen: 209
+ACCEPTED -> name: MGG_14967T0_2	cval: 1.7e-25	ival: 4.5e-23	score: 81.5	acc: 0.87	envlen: 213	alilen: 211	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_14967T0_3	cval: 6.1e-08	ival: 1.6e-05	score: 24.2	acc: 0.75	envlen: 233	alilen: 190	hmmlen: 204	qlen: 209
+ACCEPTED -> name: MGG_14967T0_4	cval: 3.2e-23	ival: 8.4e-21	score: 74.1	acc: 0.85	envlen: 202	alilen: 201	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_14967T0_5	cval: 1.2e-14	ival: 3.2e-12	score: 46.1	acc: 0.86	envlen: 212	alilen: 205	hmmlen: 200	qlen: 209
+ACCEPTED -> name: MGG_14967T0_6	cval: 9.4e-27	ival: 2.4e-24	score: 85.7	acc: 0.85	envlen: 230	alilen: 230	hmmlen: 209	qlen: 209
+REJECTED -> name: MGG_14967T0_7	cval: 4.5e-06	ival: 0.0012	score: 18.1	acc: 0.77	envlen: 250	alilen: 176	hmmlen: 185	qlen: 209
+ACCEPTED -> name: MGG_14967T0_8	cval: 6.5e-32	ival: 1.7e-29	score: 102.5	acc: 0.89	envlen: 220	alilen: 218	hmmlen: 206	qlen: 209
+ACCEPTED -> name: MGG_09589T0_1	cval: 3.4e-13	ival: 8.8e-11	score: 41.4	acc: 0.85	envlen: 194	alilen: 190	hmmlen: 203	qlen: 209
+ACCEPTED -> name: MGG_09589T0_2	cval: 2.8e-105	ival: 7.4e-103	score: 342.2	acc: 1.0	envlen: 218	alilen: 218	hmmlen: 209	qlen: 209
+ACCEPTED -> name: MGG_14767T0_1	cval: 2.5e-30	ival: 6.6e-28	score: 97.3	acc: 0.94	envlen: 216	alilen: 214	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_14767T0_2	cval: 1.7e-42	ival: 4.5e-40	score: 137.1	acc: 0.86	envlen: 239	alilen: 238	hmmlen: 207	qlen: 209
+REJECTED -> name: MGG_14767T0_3	cval: 0.0029	ival: 0.75	score: 8.9	acc: 0.79	envlen: 123	alilen: 81	hmmlen: 82	qlen: 209
+ACCEPTED -> name: MGG_14897T0_1	cval: 4e-10	ival: 1e-07	score: 31.3	acc: 0.71	envlen: 221	alilen: 212	hmmlen: 199	qlen: 209
+ACCEPTED -> name: MGG_14897T0_2	cval: 3e-49	ival: 7.7e-47	score: 159.2	acc: 0.92	envlen: 224	alilen: 223	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_15097T0_1	cval: 1.1e-11	ival: 2.9e-09	score: 36.4	acc: 0.86	envlen: 192	alilen: 189	hmmlen: 205	qlen: 209
+ACCEPTED -> name: MGG_15097T0_2	cval: 1.8e-40	ival: 4.6e-38	score: 130.5	acc: 0.94	envlen: 217	alilen: 214	hmmlen: 206	qlen: 209
+ACCEPTED -> name: MGG_12447T0_1	cval: 6.8e-13	ival: 1.8e-10	score: 40.4	acc: 0.81	envlen: 191	alilen: 184	hmmlen: 197	qlen: 209
+ACCEPTED -> name: MGG_12447T0_2	cval: 3e-37	ival: 7.8e-35	score: 119.9	acc: 0.9	envlen: 222	alilen: 221	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_02611T0_1	cval: 8.2e-11	ival: 2.1e-08	score: 33.6	acc: 0.82	envlen: 226	alilen: 184	hmmlen: 171	qlen: 209
+ACCEPTED -> name: MGG_02611T0_2	cval: 1.1e-35	ival: 2.8e-33	score: 114.9	acc: 0.85	envlen: 269	alilen: 268	hmmlen: 207	qlen: 209
+REJECTED -> name: MGG_15248T0_1	cval: 8.6	ival: 2200.0	score: -2.4	acc: 0.82	envlen: 61	alilen: 39	hmmlen: 36	qlen: 209
+ACCEPTED -> name: MGG_15248T0_2	cval: 7.4e-15	ival: 1.9e-12	score: 46.8	acc: 0.85	envlen: 191	alilen: 188	hmmlen: 205	qlen: 209
+ACCEPTED -> name: MGG_15248T0_3	cval: 1e-30	ival: 2.6e-28	score: 98.6	acc: 0.92	envlen: 197	alilen: 196	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_03290T0_1	cval: 2.9e-15	ival: 7.6e-13	score: 48.1	acc: 0.83	envlen: 190	alilen: 152	hmmlen: 164	qlen: 209
+ACCEPTED -> name: MGG_03290T0_2	cval: 1.5e-27	ival: 3.9e-25	score: 88.3	acc: 0.82	envlen: 217	alilen: 200	hmmlen: 194	qlen: 209
+REJECTED -> name: MGG_14943T0_1	cval: 4.2e-08	ival: 1.1e-05	score: 24.7	acc: 0.59	envlen: 186	alilen: 162	hmmlen: 172	qlen: 209
+ACCEPTED -> name: MGG_14943T0_2	cval: 1.4e-34	ival: 3.6e-32	score: 111.2	acc: 0.92	envlen: 229	alilen: 229	hmmlen: 209	qlen: 209
+ACCEPTED -> name: MGG_07803T0_1	cval: 7.8e-18	ival: 2e-15	score: 56.5	acc: 0.9	envlen: 188	alilen: 186	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_07803T0_2	cval: 8.4e-24	ival: 2.2e-21	score: 76.0	acc: 0.88	envlen: 204	alilen: 200	hmmlen: 205	qlen: 209
+ACCEPTED -> name: MGG_08288T0_1	cval: 2e-22	ival: 5.3e-20	score: 71.5	acc: 0.81	envlen: 213	alilen: 194	hmmlen: 188	qlen: 209
+ACCEPTED -> name: MGG_08288T0_2	cval: 6.8e-18	ival: 1.8e-15	score: 56.7	acc: 0.78	envlen: 202	alilen: 184	hmmlen: 189	qlen: 209
+REJECTED -> name: MGG_03810T0_1	cval: 5.1	ival: 1300.0	score: -1.7	acc: 0.71	envlen: 202	alilen: 102	hmmlen: 66	qlen: 209
+ACCEPTED -> name: MGG_03810T0_2	cval: 4.6e-14	ival: 1.2e-11	score: 44.2	acc: 0.87	envlen: 184	alilen: 144	hmmlen: 153	qlen: 209
+ACCEPTED -> name: MGG_03810T0_3	cval: 1.5e-27	ival: 4e-25	score: 88.2	acc: 0.75	envlen: 239	alilen: 231	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_04590T0_1	cval: 5.7e-23	ival: 1.5e-20	score: 73.3	acc: 0.85	envlen: 515	alilen: 513	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_02862T0_1	cval: 1.3e-06	ival: 0.00035	score: 19.8	acc: 0.77	envlen: 132	alilen: 72	hmmlen: 69	qlen: 209
+REJECTED -> name: MGG_02862T0_2	cval: 3.9e-05	ival: 0.01	score: 15.0	acc: 0.83	envlen: 101	alilen: 64	hmmlen: 63	qlen: 209
+ACCEPTED -> name: MGG_02862T0_3	cval: 4.1e-24	ival: 1.1e-21	score: 77.0	acc: 0.75	envlen: 260	alilen: 241	hmmlen: 187	qlen: 209
+ACCEPTED -> name: MGG_04203T0_1	cval: 1e-21	ival: 2.6e-19	score: 69.2	acc: 0.8	envlen: 226	alilen: 212	hmmlen: 187	qlen: 209
+ACCEPTED -> name: MGG_04203T0_2	cval: 3.7e-13	ival: 9.5e-11	score: 41.3	acc: 0.86	envlen: 158	alilen: 153	hmmlen: 162	qlen: 209
+ACCEPTED -> name: MGG_12999T0_1	cval: 3.5e-33	ival: 9.2e-31	score: 106.6	acc: 0.91	envlen: 288	alilen: 286	hmmlen: 206	qlen: 209
+REJECTED -> name: MGG_12999T0_2	cval: 0.075	ival: 19.0	score: 4.3	acc: 0.71	envlen: 140	alilen: 116	hmmlen: 117	qlen: 209
+ACCEPTED -> name: MGG_03201T0_1	cval: 3.7e-20	ival: 9.7e-18	score: 64.1	acc: 0.86	envlen: 196	alilen: 170	hmmlen: 158	qlen: 209
+ACCEPTED -> name: MGG_03201T0_2	cval: 1.4e-14	ival: 3.6e-12	score: 45.9	acc: 0.9	envlen: 145	alilen: 121	hmmlen: 124	qlen: 209
+ACCEPTED -> name: MGG_11685T0_1	cval: 3.1e-13	ival: 8.1e-11	score: 41.5	acc: 0.83	envlen: 199	alilen: 170	hmmlen: 151	qlen: 209
+ACCEPTED -> name: MGG_11685T0_2	cval: 3.2e-21	ival: 8.3e-19	score: 67.6	acc: 0.94	envlen: 160	alilen: 157	hmmlen: 161	qlen: 209
+ACCEPTED -> name: MGG_05196T0_1	cval: 8.2e-32	ival: 2.1e-29	score: 102.2	acc: 0.94	envlen: 325	alilen: 323	hmmlen: 207	qlen: 209
+REJECTED -> name: MGG_05196T0_2	cval: 0.028	ival: 7.2	score: 5.7	acc: 0.75	envlen: 184	alilen: 78	hmmlen: 75	qlen: 209
+ACCEPTED -> name: MGG_06199T0_1	cval: 7.7e-10	ival: 2e-07	score: 30.4	acc: 0.76	envlen: 212	alilen: 174	hmmlen: 173	qlen: 209
+ACCEPTED -> name: MGG_06199T0_2	cval: 2.8e-23	ival: 7.2e-21	score: 74.3	acc: 0.9	envlen: 195	alilen: 170	hmmlen: 186	qlen: 209
+ACCEPTED -> name: MGG_09647T0_1	cval: 2.8e-12	ival: 7.2e-10	score: 38.4	acc: 0.75	envlen: 241	alilen: 161	hmmlen: 164	qlen: 209
+ACCEPTED -> name: MGG_09647T0_2	cval: 5.8e-20	ival: 1.5e-17	score: 63.5	acc: 0.87	envlen: 187	alilen: 167	hmmlen: 176	qlen: 209
+ACCEPTED -> name: MGG_12589T0_1	cval: 4.8e-13	ival: 1.3e-10	score: 40.9	acc: 0.81	envlen: 263	alilen: 153	hmmlen: 142	qlen: 209
+ACCEPTED -> name: MGG_12589T0_2	cval: 5.6e-18	ival: 1.5e-15	score: 57.0	acc: 0.83	envlen: 208	alilen: 183	hmmlen: 185	qlen: 209
+ACCEPTED -> name: MGG_15682T0_1	cval: 2e-26	ival: 5.1e-24	score: 84.6	acc: 0.94	envlen: 142	alilen: 125	hmmlen: 125	qlen: 209
+REJECTED -> name: MGG_15682T0_2	cval: 0.00059	ival: 0.15	score: 11.2	acc: 0.85	envlen: 56	alilen: 29	hmmlen: 29	qlen: 209
+REJECTED -> name: MGG_03401T0_1	cval: 3.1	ival: 800.0	score: -1.0	acc: 0.8	envlen: 103	alilen: 48	hmmlen: 59	qlen: 209
+ACCEPTED -> name: MGG_03401T0_2	cval: 7.1e-12	ival: 1.8e-09	score: 37.1	acc: 0.85	envlen: 189	alilen: 187	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_03401T0_3	cval: 3.2e-17	ival: 8.4e-15	score: 54.5	acc: 0.77	envlen: 239	alilen: 202	hmmlen: 187	qlen: 209
+ACCEPTED -> name: MGG_04548T0_1	cval: 4.3e-15	ival: 1.1e-12	score: 47.6	acc: 0.8	envlen: 191	alilen: 173	hmmlen: 167	qlen: 209
+ACCEPTED -> name: MGG_04548T0_2	cval: 4.3e-14	ival: 1.1e-11	score: 44.3	acc: 0.84	envlen: 202	alilen: 171	hmmlen: 180	qlen: 209
+ACCEPTED -> name: MGG_04646T0_1	cval: 3.4e-06	ival: 0.00088	score: 18.5	acc: 0.77	envlen: 169	alilen: 131	hmmlen: 136	qlen: 209
+ACCEPTED -> name: MGG_04646T0_2	cval: 7.7e-20	ival: 2e-17	score: 63.1	acc: 0.91	envlen: 195	alilen: 184	hmmlen: 161	qlen: 209
+ACCEPTED -> name: MGG_07019T0_1	cval: 5.7e-09	ival: 1.5e-06	score: 27.6	acc: 0.8	envlen: 181	alilen: 164	hmmlen: 142	qlen: 209
+ACCEPTED -> name: MGG_07019T0_2	cval: 1.8e-16	ival: 4.6e-14	score: 52.1	acc: 0.85	envlen: 200	alilen: 173	hmmlen: 184	qlen: 209
+ACCEPTED -> name: MGG_00689T0_1	cval: 3.9e-12	ival: 1e-09	score: 37.9	acc: 0.67	envlen: 320	alilen: 180	hmmlen: 160	qlen: 209
+ACCEPTED -> name: MGG_00689T0_2	cval: 1.2e-12	ival: 3e-10	score: 39.6	acc: 0.77	envlen: 213	alilen: 133	hmmlen: 135	qlen: 209
+ACCEPTED -> name: MGG_01951T0_1	cval: 1.3e-10	ival: 3.5e-08	score: 32.9	acc: 0.79	envlen: 230	alilen: 173	hmmlen: 151	qlen: 209
+ACCEPTED -> name: MGG_01951T0_2	cval: 1.7e-11	ival: 4.3e-09	score: 35.9	acc: 0.75	envlen: 159	alilen: 107	hmmlen: 109	qlen: 209
+ACCEPTED -> name: MGG_10188T0_1	cval: 1.1e-07	ival: 2.8e-05	score: 23.4	acc: 0.79	envlen: 174	alilen: 164	hmmlen: 157	qlen: 209
+ACCEPTED -> name: MGG_10188T0_2	cval: 2.7e-14	ival: 7e-12	score: 45.0	acc: 0.87	envlen: 154	alilen: 151	hmmlen: 162	qlen: 209
+ACCEPTED -> name: MGG_13662T0_1	cval: 1.1e-11	ival: 3e-09	score: 36.4	acc: 0.81	envlen: 184	alilen: 171	hmmlen: 159	qlen: 209
+ACCEPTED -> name: MGG_13662T0_2	cval: 2.6e-10	ival: 6.8e-08	score: 31.9	acc: 0.79	envlen: 219	alilen: 161	hmmlen: 147	qlen: 209
+ACCEPTED -> name: MGG_04956T0_1	cval: 1.8e-10	ival: 4.8e-08	score: 32.4	acc: 0.81	envlen: 249	alilen: 189	hmmlen: 160	qlen: 209
+ACCEPTED -> name: MGG_04956T0_2	cval: 9.8e-12	ival: 2.5e-09	score: 36.6	acc: 0.76	envlen: 229	alilen: 123	hmmlen: 131	qlen: 209
+ACCEPTED -> name: MGG_01551T0_1	cval: 2.3e-11	ival: 6.1e-09	score: 35.4	acc: 0.75	envlen: 182	alilen: 175	hmmlen: 163	qlen: 209
+ACCEPTED -> name: MGG_01551T0_2	cval: 1.4e-07	ival: 3.5e-05	score: 23.1	acc: 0.82	envlen: 196	alilen: 105	hmmlen: 115	qlen: 209
+ACCEPTED -> name: MGG_08257T0_1	cval: 4.2e-11	ival: 1.1e-08	score: 34.5	acc: 0.87	envlen: 258	alilen: 150	hmmlen: 155	qlen: 209
+ACCEPTED -> name: MGG_08257T0_2	cval: 7.1e-07	ival: 0.00019	score: 20.7	acc: 0.81	envlen: 148	alilen: 134	hmmlen: 137	qlen: 209
+ACCEPTED -> name: MGG_08257T1_1	cval: 4.2e-11	ival: 1.1e-08	score: 34.5	acc: 0.87	envlen: 258	alilen: 150	hmmlen: 155	qlen: 209
+ACCEPTED -> name: MGG_08257T1_2	cval: 7.1e-07	ival: 0.00019	score: 20.7	acc: 0.81	envlen: 148	alilen: 134	hmmlen: 137	qlen: 209
+ACCEPTED -> name: MGG_15681T0_1	cval: 3.4e-14	ival: 8.8e-12	score: 44.6	acc: 0.72	envlen: 210	alilen: 160	hmmlen: 160	qlen: 209
+REJECTED -> name: MGG_17747T0_1	cval: 3.8e-05	ival: 0.0099	score: 15.1	acc: 0.77	envlen: 228	alilen: 154	hmmlen: 142	qlen: 209
+ACCEPTED -> name: MGG_17747T0_2	cval: 3.5e-09	ival: 9.2e-07	score: 28.2	acc: 0.79	envlen: 211	alilen: 129	hmmlen: 125	qlen: 209
+ACCEPTED -> name: MGG_05025T0_1	cval: 6.7e-07	ival: 0.00018	score: 20.8	acc: 0.75	envlen: 157	alilen: 151	hmmlen: 155	qlen: 209
+REJECTED -> name: MGG_05025T0_2	cval: 1.4e-05	ival: 0.0037	score: 16.5	acc: 0.69	envlen: 160	alilen: 133	hmmlen: 141	qlen: 209
+ACCEPTED -> name: MGG_07197T0_1	cval: 2.4e-06	ival: 0.00063	score: 19.0	acc: 0.77	envlen: 148	alilen: 40	hmmlen: 40	qlen: 209
+REJECTED -> name: MGG_07197T0_2	cval: 6e-05	ival: 0.016	score: 14.4	acc: 0.84	envlen: 102	alilen: 64	hmmlen: 73	qlen: 209
+REJECTED -> name: MGG_03831T0_1	cval: 9.2e-06	ival: 0.0024	score: 17.1	acc: 0.61	envlen: 181	alilen: 37	hmmlen: 36	qlen: 209
+REJECTED -> name: MGG_03831T0_2	cval: 0.5	ival: 130.0	score: 1.6	acc: 0.77	envlen: 161	alilen: 52	hmmlen: 50	qlen: 209
+ACCEPTED -> name: MGG_16971T0_1	cval: 6.8e-07	ival: 0.00018	score: 20.8	acc: 0.76	envlen: 203	alilen: 136	hmmlen: 143	qlen: 209
+REJECTED -> name: MGG_05491T0_1	cval: 5.9e-06	ival: 0.0015	score: 17.7	acc: 0.84	envlen: 186	alilen: 157	hmmlen: 160	qlen: 209
+REJECTED -> name: MGG_05491T0_2	cval: 1.2	ival: 310.0	score: 0.4	acc: 0.74	envlen: 83	alilen: 41	hmmlen: 41	qlen: 209
+REJECTED -> name: MGG_07705T0_1	cval: 0.14	ival: 36.0	score: 3.4	acc: 0.69	envlen: 209	alilen: 103	hmmlen: 74	qlen: 209
+REJECTED -> name: MGG_07705T0_2	cval: 0.32	ival: 84.0	score: 2.2	acc: 0.74	envlen: 139	alilen: 89	hmmlen: 78	qlen: 209
+REJECTED -> name: MGG_07705T0_3	cval: 0.015	ival: 3.8	score: 6.6	acc: 0.73	envlen: 168	alilen: 90	hmmlen: 76	qlen: 209
+REJECTED -> name: MGG_00385T0_1	cval: 3.5e-05	ival: 0.0091	score: 15.2	acc: 0.66	envlen: 222	alilen: 136	hmmlen: 135	qlen: 209
+REJECTED -> name: MGG_03422T0_1	cval: 0.0023	ival: 0.6	score: 9.3	acc: 0.82	envlen: 151	alilen: 24	hmmlen: 22	qlen: 209
+REJECTED -> name: MGG_03422T0_2	cval: 0.54	ival: 140.0	score: 1.5	acc: 0.72	envlen: 181	alilen: 93	hmmlen: 82	qlen: 209
+
+Running usearch -sort length -cluster_fast /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-7_hybrid.msa -id 0.9 -centroids /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-7_nr.msa -quiet
+
+105 hits found and accepted (109 in the previous iteration)
+
+---------------------------------------- Running hmmbuilder iteration 7 ----------------------------------------
+
+Running muscle -in /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-7_nr.msa -out /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-7_nr.clw -clw -quiet
+Running hmmbuild -o /dev/null -n A /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-7_nr.hmm /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-7_nr.clw
+Running hmmsearch -o /dev/null --domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-7_nr.domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-7_nr.hmm /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/mgg_70-15_8.fasta
+Parsing /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-7_nr.domtblout searching for domains meeting the following criteria:
+  - envlen >= qlen * 0.0 & dom_cval <= 0.001 & dom_ival <= 0.001 & acc >= 0.6
+
+ACCEPTED -> name: MGG_02351T0_1	cval: 9.8e-14	ival: 2.8e-11	score: 43.1	acc: 0.86	envlen: 169	alilen: 157	hmmlen: 172	qlen: 209
+ACCEPTED -> name: MGG_02351T0_2	cval: 6.3e-29	ival: 1.8e-26	score: 92.8	acc: 0.84	envlen: 274	alilen: 159	hmmlen: 148	qlen: 209
+ACCEPTED -> name: MGG_02351T0_3	cval: 4.4e-08	ival: 1.3e-05	score: 24.6	acc: 0.82	envlen: 167	alilen: 154	hmmlen: 170	qlen: 209
+ACCEPTED -> name: MGG_02351T0_4	cval: 1.9e-25	ival: 5.4e-23	score: 81.4	acc: 0.76	envlen: 235	alilen: 234	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_02351T0_5	cval: 1.5e-11	ival: 4.1e-09	score: 36.0	acc: 0.86	envlen: 170	alilen: 155	hmmlen: 168	qlen: 209
+ACCEPTED -> name: MGG_02351T0_6	cval: 1.6e-30	ival: 4.5e-28	score: 98.0	acc: 0.82	envlen: 232	alilen: 231	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_02351T0_7	cval: 1.2e-07	ival: 3.3e-05	score: 23.3	acc: 0.86	envlen: 187	alilen: 164	hmmlen: 168	qlen: 209
+ACCEPTED -> name: MGG_02351T0_8	cval: 1.9e-40	ival: 5.3e-38	score: 130.4	acc: 0.83	envlen: 225	alilen: 224	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_02351T0_9	cval: 1.3e-15	ival: 3.5e-13	score: 49.3	acc: 0.8	envlen: 168	alilen: 156	hmmlen: 168	qlen: 209
+ACCEPTED -> name: MGG_02351T0_10	cval: 1.8e-26	ival: 5.2e-24	score: 84.7	acc: 0.76	envlen: 229	alilen: 227	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_07858T0_1	cval: 6.2e-10	ival: 1.7e-07	score: 30.7	acc: 0.81	envlen: 184	alilen: 174	hmmlen: 197	qlen: 209
+ACCEPTED -> name: MGG_07858T0_2	cval: 4.7e-31	ival: 1.3e-28	score: 99.7	acc: 0.82	envlen: 238	alilen: 237	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_07858T0_3	cval: 3.1e-09	ival: 8.8e-07	score: 28.4	acc: 0.85	envlen: 167	alilen: 147	hmmlen: 165	qlen: 209
+ACCEPTED -> name: MGG_07858T0_4	cval: 4.9e-35	ival: 1.4e-32	score: 112.7	acc: 0.85	envlen: 227	alilen: 227	hmmlen: 209	qlen: 209
+ACCEPTED -> name: MGG_07858T0_5	cval: 1.9e-07	ival: 5.3e-05	score: 22.6	acc: 0.74	envlen: 163	alilen: 153	hmmlen: 165	qlen: 209
+ACCEPTED -> name: MGG_07858T0_6	cval: 1.5e-37	ival: 4.2e-35	score: 120.9	acc: 0.85	envlen: 225	alilen: 224	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_07858T0_7	cval: 1.3e-05	ival: 0.0037	score: 16.6	acc: 0.8	envlen: 181	alilen: 152	hmmlen: 167	qlen: 209
+ACCEPTED -> name: MGG_07858T0_8	cval: 5.8e-37	ival: 1.6e-34	score: 119.0	acc: 0.83	envlen: 227	alilen: 226	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_00022T0_1	cval: 6.7e-08	ival: 1.9e-05	score: 24.1	acc: 0.83	envlen: 181	alilen: 156	hmmlen: 164	qlen: 209
+ACCEPTED -> name: MGG_00022T0_2	cval: 6.1e-29	ival: 1.7e-26	score: 92.8	acc: 0.83	envlen: 218	alilen: 189	hmmlen: 177	qlen: 209
+ACCEPTED -> name: MGG_00022T0_3	cval: 1.9e-11	ival: 5.5e-09	score: 35.6	acc: 0.83	envlen: 191	alilen: 177	hmmlen: 173	qlen: 209
+ACCEPTED -> name: MGG_00022T0_4	cval: 3.1e-25	ival: 8.7e-23	score: 80.7	acc: 0.84	envlen: 195	alilen: 184	hmmlen: 170	qlen: 209
+ACCEPTED -> name: MGG_00022T0_5	cval: 1.8e-43	ival: 5.1e-41	score: 140.3	acc: 0.94	envlen: 483	alilen: 483	hmmlen: 209	qlen: 209
+ACCEPTED -> name: MGG_00022T0_6	cval: 8.5e-08	ival: 2.4e-05	score: 23.7	acc: 0.85	envlen: 162	alilen: 150	hmmlen: 159	qlen: 209
+ACCEPTED -> name: MGG_00022T0_7	cval: 2.6e-30	ival: 7.3e-28	score: 97.3	acc: 0.83	envlen: 214	alilen: 213	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_14967T0_1	cval: 4.3e-06	ival: 0.0012	score: 18.2	acc: 0.82	envlen: 184	alilen: 163	hmmlen: 187	qlen: 209
+ACCEPTED -> name: MGG_14967T0_2	cval: 1.2e-22	ival: 3.5e-20	score: 72.2	acc: 0.78	envlen: 224	alilen: 183	hmmlen: 186	qlen: 209
+REJECTED -> name: MGG_14967T0_3	cval: 1.3e-05	ival: 0.0036	score: 16.6	acc: 0.79	envlen: 180	alilen: 161	hmmlen: 172	qlen: 209
+ACCEPTED -> name: MGG_14967T0_4	cval: 2.2e-36	ival: 6.2e-34	score: 117.1	acc: 0.97	envlen: 201	alilen: 200	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_14967T0_5	cval: 5.9e-10	ival: 1.7e-07	score: 30.8	acc: 0.92	envlen: 190	alilen: 177	hmmlen: 169	qlen: 209
+ACCEPTED -> name: MGG_14967T0_6	cval: 2.2e-26	ival: 6.2e-24	score: 84.4	acc: 0.92	envlen: 228	alilen: 227	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_14967T0_7	cval: 0.023	ival: 6.4	score: 6.0	acc: 0.71	envlen: 181	alilen: 127	hmmlen: 138	qlen: 209
+ACCEPTED -> name: MGG_14967T0_8	cval: 2.2e-26	ival: 6.2e-24	score: 84.4	acc: 0.84	envlen: 219	alilen: 217	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_12175T0_1	cval: 7.8e-11	ival: 2.2e-08	score: 33.6	acc: 0.88	envlen: 180	alilen: 161	hmmlen: 166	qlen: 209
+ACCEPTED -> name: MGG_12175T0_2	cval: 1.6e-35	ival: 4.4e-33	score: 114.3	acc: 0.83	envlen: 215	alilen: 215	hmmlen: 209	qlen: 209
+ACCEPTED -> name: MGG_12175T0_3	cval: 2e-07	ival: 5.6e-05	score: 22.5	acc: 0.87	envlen: 178	alilen: 140	hmmlen: 156	qlen: 209
+ACCEPTED -> name: MGG_12175T0_4	cval: 1.5e-36	ival: 4.2e-34	score: 117.7	acc: 0.82	envlen: 222	alilen: 221	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_12175T0_5	cval: 5.3e-11	ival: 1.5e-08	score: 34.2	acc: 0.85	envlen: 155	alilen: 134	hmmlen: 149	qlen: 209
+ACCEPTED -> name: MGG_12175T0_6	cval: 5.7e-28	ival: 1.6e-25	score: 89.6	acc: 0.8	envlen: 231	alilen: 216	hmmlen: 205	qlen: 209
+ACCEPTED -> name: MGG_09589T0_1	cval: 8.6e-07	ival: 0.00024	score: 20.4	acc: 0.79	envlen: 208	alilen: 161	hmmlen: 172	qlen: 209
+ACCEPTED -> name: MGG_09589T0_2	cval: 2.6e-104	ival: 7.4e-102	score: 339.0	acc: 1.0	envlen: 216	alilen: 216	hmmlen: 209	qlen: 209
+REJECTED -> name: MGG_14897T0_1	cval: 1.2e-05	ival: 0.0034	score: 16.7	acc: 0.8	envlen: 216	alilen: 178	hmmlen: 166	qlen: 209
+ACCEPTED -> name: MGG_14897T0_2	cval: 2.7e-55	ival: 7.8e-53	score: 178.9	acc: 0.95	envlen: 222	alilen: 220	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_14767T0_1	cval: 8e-17	ival: 2.2e-14	score: 53.2	acc: 0.86	envlen: 195	alilen: 182	hmmlen: 172	qlen: 209
+REJECTED -> name: MGG_14767T0_2	cval: 6.1	ival: 1700.0	score: -1.9	acc: 0.63	envlen: 101	alilen: 91	hmmlen: 57	qlen: 209
+ACCEPTED -> name: MGG_14767T0_3	cval: 1.2e-42	ival: 3.3e-40	score: 137.6	acc: 0.87	envlen: 238	alilen: 237	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_14767T0_4	cval: 0.064	ival: 18.0	score: 4.5	acc: 0.84	envlen: 154	alilen: 81	hmmlen: 81	qlen: 209
+ACCEPTED -> name: MGG_04590T0_1	cval: 4.3e-11	ival: 1.2e-08	score: 34.5	acc: 0.69	envlen: 183	alilen: 178	hmmlen: 158	qlen: 209
+ACCEPTED -> name: MGG_04590T0_2	cval: 5.7e-43	ival: 1.6e-40	score: 138.6	acc: 0.93	envlen: 455	alilen: 453	hmmlen: 200	qlen: 209
+REJECTED -> name: MGG_12447T0_1	cval: 4e-05	ival: 0.011	score: 15.0	acc: 0.71	envlen: 180	alilen: 154	hmmlen: 169	qlen: 209
+ACCEPTED -> name: MGG_12447T0_2	cval: 1.8e-43	ival: 5e-41	score: 140.3	acc: 0.96	envlen: 220	alilen: 219	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_03810T0_1	cval: 3.8e-12	ival: 1.1e-09	score: 37.9	acc: 0.82	envlen: 159	alilen: 152	hmmlen: 162	qlen: 209
+ACCEPTED -> name: MGG_03810T0_2	cval: 2e-37	ival: 5.7e-35	score: 120.5	acc: 0.85	envlen: 237	alilen: 206	hmmlen: 188	qlen: 209
+ACCEPTED -> name: MGG_15097T0_1	cval: 3.2e-08	ival: 9.2e-06	score: 25.1	acc: 0.84	envlen: 187	alilen: 158	hmmlen: 172	qlen: 209
+ACCEPTED -> name: MGG_15097T0_2	cval: 1.2e-39	ival: 3.3e-37	score: 127.8	acc: 0.93	envlen: 215	alilen: 214	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_14943T0_1	cval: 1.2e-05	ival: 0.0035	score: 16.7	acc: 0.64	envlen: 165	alilen: 59	hmmlen: 68	qlen: 209
+ACCEPTED -> name: MGG_14943T0_2	cval: 2.4e-38	ival: 6.8e-36	score: 123.5	acc: 0.95	envlen: 227	alilen: 226	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_03290T0_1	cval: 3.4e-14	ival: 9.7e-12	score: 44.6	acc: 0.75	envlen: 235	alilen: 150	hmmlen: 162	qlen: 209
+ACCEPTED -> name: MGG_03290T0_2	cval: 4.6e-29	ival: 1.3e-26	score: 93.2	acc: 0.85	envlen: 214	alilen: 183	hmmlen: 186	qlen: 209
+ACCEPTED -> name: MGG_02611T0_1	cval: 6.5e-10	ival: 1.8e-07	score: 30.6	acc: 0.8	envlen: 205	alilen: 175	hmmlen: 162	qlen: 209
+ACCEPTED -> name: MGG_02611T0_2	cval: 3.4e-31	ival: 9.7e-29	score: 100.1	acc: 0.74	envlen: 268	alilen: 268	hmmlen: 209	qlen: 209
+ACCEPTED -> name: MGG_08288T0_1	cval: 3.2e-16	ival: 9.1e-14	score: 51.2	acc: 0.83	envlen: 211	alilen: 178	hmmlen: 172	qlen: 209
+ACCEPTED -> name: MGG_08288T0_2	cval: 6.6e-25	ival: 1.9e-22	score: 79.6	acc: 0.89	envlen: 208	alilen: 199	hmmlen: 202	qlen: 209
+ACCEPTED -> name: MGG_15248T0_1	cval: 1.4e-09	ival: 3.8e-07	score: 29.6	acc: 0.83	envlen: 192	alilen: 158	hmmlen: 172	qlen: 209
+ACCEPTED -> name: MGG_15248T0_2	cval: 3.2e-31	ival: 9e-29	score: 100.2	acc: 0.92	envlen: 195	alilen: 194	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_07803T0_1	cval: 2.1e-12	ival: 5.8e-10	score: 38.8	acc: 0.85	envlen: 183	alilen: 154	hmmlen: 172	qlen: 209
+ACCEPTED -> name: MGG_07803T0_2	cval: 1.7e-26	ival: 4.8e-24	score: 84.8	acc: 0.85	envlen: 202	alilen: 200	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_03201T0_1	cval: 3.7e-15	ival: 1.1e-12	score: 47.8	acc: 0.92	envlen: 185	alilen: 170	hmmlen: 158	qlen: 209
+ACCEPTED -> name: MGG_03201T0_2	cval: 8.9e-08	ival: 2.5e-05	score: 23.7	acc: 0.78	envlen: 207	alilen: 110	hmmlen: 63	qlen: 209
+ACCEPTED -> name: MGG_03201T0_3	cval: 4.7e-15	ival: 1.3e-12	score: 47.4	acc: 0.87	envlen: 130	alilen: 120	hmmlen: 129	qlen: 209
+ACCEPTED -> name: MGG_12589T0_1	cval: 1.1e-08	ival: 3.2e-06	score: 26.6	acc: 0.76	envlen: 203	alilen: 155	hmmlen: 144	qlen: 209
+ACCEPTED -> name: MGG_12589T0_2	cval: 1.1e-25	ival: 3.2e-23	score: 82.1	acc: 0.84	envlen: 207	alilen: 184	hmmlen: 188	qlen: 209
+ACCEPTED -> name: MGG_11685T0_1	cval: 1.4e-09	ival: 3.9e-07	score: 29.6	acc: 0.84	envlen: 203	alilen: 160	hmmlen: 149	qlen: 209
+ACCEPTED -> name: MGG_11685T0_2	cval: 2.7e-25	ival: 7.8e-23	score: 80.9	acc: 0.8	envlen: 229	alilen: 203	hmmlen: 186	qlen: 209
+ACCEPTED -> name: MGG_04203T0_1	cval: 1.5e-14	ival: 4.2e-12	score: 45.8	acc: 0.81	envlen: 238	alilen: 207	hmmlen: 183	qlen: 209
+ACCEPTED -> name: MGG_04203T0_2	cval: 1.9e-18	ival: 5.3e-16	score: 58.5	acc: 0.78	envlen: 204	alilen: 155	hmmlen: 169	qlen: 209
+ACCEPTED -> name: MGG_12999T0_1	cval: 2.5e-29	ival: 7.2e-27	score: 94.0	acc: 0.93	envlen: 252	alilen: 250	hmmlen: 207	qlen: 209
+REJECTED -> name: MGG_12999T0_2	cval: 0.0021	ival: 0.58	score: 9.4	acc: 0.71	envlen: 204	alilen: 174	hmmlen: 144	qlen: 209
+ACCEPTED -> name: MGG_15682T0_1	cval: 7.9e-32	ival: 2.2e-29	score: 102.2	acc: 0.87	envlen: 190	alilen: 188	hmmlen: 206	qlen: 209
+ACCEPTED -> name: MGG_05196T0_1	cval: 1.8e-29	ival: 5e-27	score: 94.6	acc: 0.89	envlen: 323	alilen: 311	hmmlen: 201	qlen: 209
+REJECTED -> name: MGG_05196T0_2	cval: 0.027	ival: 7.5	score: 5.8	acc: 0.63	envlen: 215	alilen: 188	hmmlen: 163	qlen: 209
+ACCEPTED -> name: MGG_04646T0_1	cval: 8.8e-07	ival: 0.00025	score: 20.4	acc: 0.71	envlen: 289	alilen: 262	hmmlen: 163	qlen: 209
+ACCEPTED -> name: MGG_04646T0_2	cval: 1.7e-24	ival: 4.7e-22	score: 78.3	acc: 0.93	envlen: 241	alilen: 184	hmmlen: 166	qlen: 209
+ACCEPTED -> name: MGG_06199T0_1	cval: 2.8e-06	ival: 0.00079	score: 18.8	acc: 0.76	envlen: 188	alilen: 169	hmmlen: 168	qlen: 209
+ACCEPTED -> name: MGG_06199T0_2	cval: 1.4e-24	ival: 4e-22	score: 78.5	acc: 0.83	envlen: 193	alilen: 166	hmmlen: 187	qlen: 209
+ACCEPTED -> name: MGG_02862T0_1	cval: 3e-08	ival: 8.5e-06	score: 25.2	acc: 0.76	envlen: 224	alilen: 68	hmmlen: 69	qlen: 209
+ACCEPTED -> name: MGG_02862T0_2	cval: 6.6e-22	ival: 1.9e-19	score: 69.8	acc: 0.77	envlen: 260	alilen: 241	hmmlen: 205	qlen: 209
+ACCEPTED -> name: MGG_09647T0_1	cval: 5.6e-07	ival: 0.00016	score: 21.0	acc: 0.77	envlen: 193	alilen: 159	hmmlen: 162	qlen: 209
+ACCEPTED -> name: MGG_09647T0_2	cval: 8.9e-21	ival: 2.5e-18	score: 66.1	acc: 0.84	envlen: 209	alilen: 167	hmmlen: 181	qlen: 209
+ACCEPTED -> name: MGG_07019T0_1	cval: 3.9e-08	ival: 1.1e-05	score: 24.8	acc: 0.85	envlen: 204	alilen: 170	hmmlen: 157	qlen: 209
+ACCEPTED -> name: MGG_07019T0_2	cval: 4.4e-21	ival: 1.2e-18	score: 67.1	acc: 0.85	envlen: 218	alilen: 171	hmmlen: 187	qlen: 209
+ACCEPTED -> name: MGG_04548T0_1	cval: 7.1e-10	ival: 2e-07	score: 30.5	acc: 0.77	envlen: 184	alilen: 170	hmmlen: 164	qlen: 209
+ACCEPTED -> name: MGG_04548T0_2	cval: 1.8e-18	ival: 5e-16	score: 58.6	acc: 0.84	envlen: 197	alilen: 173	hmmlen: 187	qlen: 209
+ACCEPTED -> name: MGG_03401T0_1	cval: 1.8e-09	ival: 5.2e-07	score: 29.2	acc: 0.82	envlen: 143	alilen: 57	hmmlen: 58	qlen: 209
+ACCEPTED -> name: MGG_03401T0_2	cval: 1.6e-18	ival: 4.5e-16	score: 58.8	acc: 0.86	envlen: 233	alilen: 186	hmmlen: 178	qlen: 209
+ACCEPTED -> name: MGG_13662T0_1	cval: 3.6e-08	ival: 1e-05	score: 25.0	acc: 0.86	envlen: 230	alilen: 166	hmmlen: 154	qlen: 209
+ACCEPTED -> name: MGG_13662T0_2	cval: 1.1e-17	ival: 3.2e-15	score: 56.0	acc: 0.84	envlen: 228	alilen: 211	hmmlen: 202	qlen: 209
+ACCEPTED -> name: MGG_00689T0_1	cval: 1.8e-08	ival: 5.2e-06	score: 25.9	acc: 0.69	envlen: 213	alilen: 180	hmmlen: 161	qlen: 209
+ACCEPTED -> name: MGG_00689T0_2	cval: 3.1e-16	ival: 8.8e-14	score: 51.3	acc: 0.85	envlen: 236	alilen: 181	hmmlen: 188	qlen: 209
+ACCEPTED -> name: MGG_04956T0_1	cval: 5.5e-08	ival: 1.6e-05	score: 24.3	acc: 0.64	envlen: 195	alilen: 183	hmmlen: 165	qlen: 209
+ACCEPTED -> name: MGG_04956T0_2	cval: 8.2e-16	ival: 2.3e-13	score: 49.9	acc: 0.82	envlen: 195	alilen: 123	hmmlen: 136	qlen: 209
+ACCEPTED -> name: MGG_01951T0_1	cval: 1.7e-06	ival: 0.00047	score: 19.5	acc: 0.71	envlen: 196	alilen: 168	hmmlen: 154	qlen: 209
+ACCEPTED -> name: MGG_01951T0_2	cval: 3.3e-17	ival: 9.4e-15	score: 54.5	acc: 0.88	envlen: 155	alilen: 151	hmmlen: 159	qlen: 209
+REJECTED -> name: MGG_10188T0_1	cval: 0.00033	ival: 0.094	score: 12.0	acc: 0.66	envlen: 182	alilen: 63	hmmlen: 68	qlen: 209
+ACCEPTED -> name: MGG_10188T0_2	cval: 1.3e-16	ival: 3.6e-14	score: 52.5	acc: 0.88	envlen: 203	alilen: 161	hmmlen: 171	qlen: 209
+ACCEPTED -> name: MGG_05025T0_1	cval: 1.8e-07	ival: 5.1e-05	score: 22.6	acc: 0.66	envlen: 247	alilen: 149	hmmlen: 153	qlen: 209
+ACCEPTED -> name: MGG_05025T0_2	cval: 7.4e-12	ival: 2.1e-09	score: 37.0	acc: 0.72	envlen: 164	alilen: 132	hmmlen: 145	qlen: 209
+ACCEPTED -> name: MGG_08257T0_1	cval: 7.1e-09	ival: 2e-06	score: 27.3	acc: 0.82	envlen: 265	alilen: 150	hmmlen: 155	qlen: 209
+ACCEPTED -> name: MGG_08257T0_2	cval: 1e-11	ival: 2.9e-09	score: 36.5	acc: 0.85	envlen: 154	alilen: 145	hmmlen: 149	qlen: 209
+ACCEPTED -> name: MGG_08257T1_1	cval: 7.1e-09	ival: 2e-06	score: 27.3	acc: 0.82	envlen: 265	alilen: 150	hmmlen: 155	qlen: 209
+ACCEPTED -> name: MGG_08257T1_2	cval: 1e-11	ival: 2.9e-09	score: 36.5	acc: 0.85	envlen: 154	alilen: 145	hmmlen: 149	qlen: 209
+ACCEPTED -> name: MGG_01551T0_1	cval: 1.1e-07	ival: 3.2e-05	score: 23.3	acc: 0.62	envlen: 189	alilen: 179	hmmlen: 167	qlen: 209
+ACCEPTED -> name: MGG_01551T0_2	cval: 8e-12	ival: 2.3e-09	score: 36.9	acc: 0.8	envlen: 200	alilen: 98	hmmlen: 112	qlen: 209
+ACCEPTED -> name: MGG_15681T0_1	cval: 1.8e-15	ival: 5.1e-13	score: 48.8	acc: 0.81	envlen: 163	alilen: 159	hmmlen: 159	qlen: 209
+REJECTED -> name: MGG_07197T0_1	cval: 0.00062	ival: 0.17	score: 11.1	acc: 0.78	envlen: 99	alilen: 38	hmmlen: 35	qlen: 209
+ACCEPTED -> name: MGG_07197T0_2	cval: 3.1e-09	ival: 8.6e-07	score: 28.4	acc: 0.8	envlen: 251	alilen: 97	hmmlen: 113	qlen: 209
+REJECTED -> name: MGG_17747T0_1	cval: 1.1	ival: 310.0	score: 0.5	acc: 0.73	envlen: 175	alilen: 24	hmmlen: 27	qlen: 209
+ACCEPTED -> name: MGG_17747T0_2	cval: 1.2e-11	ival: 3.4e-09	score: 36.3	acc: 0.77	envlen: 235	alilen: 165	hmmlen: 149	qlen: 209
+REJECTED -> name: MGG_07705T0_1	cval: 1.2	ival: 320.0	score: 0.4	acc: 0.65	envlen: 178	alilen: 118	hmmlen: 94	qlen: 209
+REJECTED -> name: MGG_07705T0_2	cval: 0.62	ival: 170.0	score: 1.3	acc: 0.75	envlen: 162	alilen: 84	hmmlen: 76	qlen: 209
+REJECTED -> name: MGG_07705T0_3	cval: 6.9	ival: 1900.0	score: -2.1	acc: 0.76	envlen: 65	alilen: 53	hmmlen: 53	qlen: 209
+ACCEPTED -> name: MGG_07705T0_4	cval: 3.4e-06	ival: 0.00096	score: 18.5	acc: 0.81	envlen: 264	alilen: 125	hmmlen: 103	qlen: 209
+REJECTED -> name: MGG_02483T0_1	cval: 0.00074	ival: 0.21	score: 10.9	acc: 0.87	envlen: 110	alilen: 82	hmmlen: 83	qlen: 209
+
+Running usearch -sort length -cluster_fast /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-8_hybrid.msa -id 0.9 -centroids /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-8_nr.msa -quiet
+
+102 hits found and accepted (105 in the previous iteration)
+
+---------------------------------------- Running hmmbuilder iteration 8 ----------------------------------------
+
+Running muscle -in /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-8_nr.msa -out /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-8_nr.clw -clw -quiet
+Running hmmbuild -o /dev/null -n A /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-8_nr.hmm /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-8_nr.clw
+Running hmmsearch -o /dev/null --domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-8_nr.domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-8_nr.hmm /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/mgg_70-15_8.fasta
+Parsing /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-8_nr.domtblout searching for domains meeting the following criteria:
+  - envlen >= qlen * 0.0 & dom_cval <= 0.001 & dom_ival <= 0.001 & acc >= 0.6
+
+REJECTED -> name: MGG_02351T0_1	cval: 0.024	ival: 6.9	score: 6.1	acc: 0.7	envlen: 145	alilen: 79	hmmlen: 120	qlen: 209
+ACCEPTED -> name: MGG_02351T0_2	cval: 1.1e-31	ival: 3e-29	score: 102.0	acc: 0.83	envlen: 389	alilen: 182	hmmlen: 153	qlen: 209
+ACCEPTED -> name: MGG_02351T0_3	cval: 3.2e-30	ival: 9.1e-28	score: 97.2	acc: 0.88	envlen: 235	alilen: 234	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_02351T0_4	cval: 0.027	ival: 7.7	score: 6.0	acc: 0.77	envlen: 215	alilen: 117	hmmlen: 129	qlen: 209
+ACCEPTED -> name: MGG_02351T0_5	cval: 8.4e-29	ival: 2.4e-26	score: 92.5	acc: 0.89	envlen: 232	alilen: 231	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_02351T0_6	cval: 0.82	ival: 240.0	score: 1.1	acc: 0.61	envlen: 158	alilen: 99	hmmlen: 151	qlen: 209
+ACCEPTED -> name: MGG_02351T0_7	cval: 5.1e-40	ival: 1.5e-37	score: 129.2	acc: 0.92	envlen: 225	alilen: 224	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_02351T0_8	cval: 4.6e-08	ival: 1.3e-05	score: 24.8	acc: 0.78	envlen: 149	alilen: 130	hmmlen: 160	qlen: 209
+ACCEPTED -> name: MGG_02351T0_9	cval: 1.4e-30	ival: 4.2e-28	score: 98.3	acc: 0.88	envlen: 228	alilen: 227	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_07858T0_1	cval: 8.4e-05	ival: 0.024	score: 14.1	acc: 0.7	envlen: 144	alilen: 138	hmmlen: 203	qlen: 209
+ACCEPTED -> name: MGG_07858T0_2	cval: 6.2e-36	ival: 1.8e-33	score: 115.8	acc: 0.82	envlen: 238	alilen: 237	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_07858T0_3	cval: 0.00061	ival: 0.18	score: 11.3	acc: 0.76	envlen: 164	alilen: 90	hmmlen: 123	qlen: 209
+ACCEPTED -> name: MGG_07858T0_4	cval: 1.9e-38	ival: 5.5e-36	score: 124.0	acc: 0.86	envlen: 227	alilen: 227	hmmlen: 209	qlen: 209
+REJECTED -> name: MGG_07858T0_5	cval: 0.36	ival: 100.0	score: 2.3	acc: 0.83	envlen: 132	alilen: 31	hmmlen: 29	qlen: 209
+ACCEPTED -> name: MGG_07858T0_6	cval: 2.2e-40	ival: 6.4e-38	score: 130.4	acc: 0.93	envlen: 225	alilen: 224	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_07858T0_7	cval: 0.081	ival: 23.0	score: 4.4	acc: 0.72	envlen: 124	alilen: 115	hmmlen: 149	qlen: 209
+ACCEPTED -> name: MGG_07858T0_8	cval: 1e-33	ival: 3e-31	score: 108.6	acc: 0.81	envlen: 226	alilen: 226	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_00022T0_1	cval: 0.04	ival: 11.0	score: 5.4	acc: 0.76	envlen: 135	alilen: 125	hmmlen: 152	qlen: 209
+ACCEPTED -> name: MGG_00022T0_2	cval: 1e-28	ival: 2.9e-26	score: 92.3	acc: 0.94	envlen: 219	alilen: 199	hmmlen: 184	qlen: 209
+REJECTED -> name: MGG_00022T0_3	cval: 0.017	ival: 5.0	score: 6.6	acc: 0.78	envlen: 169	alilen: 159	hmmlen: 205	qlen: 209
+ACCEPTED -> name: MGG_00022T0_4	cval: 2.8e-22	ival: 8.1e-20	score: 71.2	acc: 0.83	envlen: 185	alilen: 165	hmmlen: 162	qlen: 209
+ACCEPTED -> name: MGG_00022T0_5	cval: 2.2e-63	ival: 6.3e-61	score: 205.5	acc: 0.98	envlen: 483	alilen: 483	hmmlen: 209	qlen: 209
+REJECTED -> name: MGG_00022T0_6	cval: 0.023	ival: 6.7	score: 6.2	acc: 0.79	envlen: 152	alilen: 148	hmmlen: 204	qlen: 209
+ACCEPTED -> name: MGG_00022T0_7	cval: 4.2e-29	ival: 1.2e-26	score: 93.5	acc: 0.86	envlen: 214	alilen: 213	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_12175T0_1	cval: 0.0035	ival: 1.0	score: 8.8	acc: 0.8	envlen: 159	alilen: 131	hmmlen: 159	qlen: 209
+ACCEPTED -> name: MGG_12175T0_2	cval: 9.8e-35	ival: 2.8e-32	score: 111.9	acc: 0.89	envlen: 215	alilen: 215	hmmlen: 209	qlen: 209
+REJECTED -> name: MGG_12175T0_3	cval: 0.03	ival: 8.7	score: 5.8	acc: 0.78	envlen: 208	alilen: 97	hmmlen: 83	qlen: 209
+ACCEPTED -> name: MGG_12175T0_4	cval: 5.5e-39	ival: 1.6e-36	score: 125.8	acc: 0.9	envlen: 222	alilen: 220	hmmlen: 207	qlen: 209
+REJECTED -> name: MGG_12175T0_5	cval: 0.043	ival: 13.0	score: 5.3	acc: 0.73	envlen: 128	alilen: 122	hmmlen: 155	qlen: 209
+ACCEPTED -> name: MGG_12175T0_6	cval: 4.7e-34	ival: 1.3e-31	score: 109.7	acc: 0.94	envlen: 219	alilen: 216	hmmlen: 205	qlen: 209
+REJECTED -> name: MGG_09589T0_1	cval: 2.9	ival: 830.0	score: -0.7	acc: 0.7	envlen: 121	alilen: 37	hmmlen: 35	qlen: 209
+ACCEPTED -> name: MGG_09589T0_2	cval: 7.5e-112	ival: 2.2e-109	score: 363.8	acc: 1.0	envlen: 216	alilen: 216	hmmlen: 209	qlen: 209
+REJECTED -> name: MGG_14967T0_1	cval: 5.1	ival: 1500.0	score: -1.5	acc: 0.6	envlen: 147	alilen: 68	hmmlen: 80	qlen: 209
+ACCEPTED -> name: MGG_14967T0_2	cval: 9.7e-23	ival: 2.8e-20	score: 72.7	acc: 0.85	envlen: 211	alilen: 186	hmmlen: 176	qlen: 209
+ACCEPTED -> name: MGG_14967T0_3	cval: 1.6e-21	ival: 4.7e-19	score: 68.7	acc: 0.86	envlen: 201	alilen: 200	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_14967T0_4	cval: 0.034	ival: 9.9	score: 5.6	acc: 0.75	envlen: 188	alilen: 29	hmmlen: 27	qlen: 209
+ACCEPTED -> name: MGG_14967T0_5	cval: 4.9e-24	ival: 1.4e-21	score: 77.0	acc: 0.88	envlen: 228	alilen: 227	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_14967T0_6	cval: 1.1	ival: 310.0	score: 0.7	acc: 0.77	envlen: 124	alilen: 45	hmmlen: 57	qlen: 209
+ACCEPTED -> name: MGG_14967T0_7	cval: 1.6e-28	ival: 4.7e-26	score: 91.6	acc: 0.83	envlen: 219	alilen: 217	hmmlen: 207	qlen: 209
+REJECTED -> name: MGG_14767T0_1	cval: 6.5	ival: 1900.0	score: -1.9	acc: 0.63	envlen: 77	alilen: 57	hmmlen: 51	qlen: 209
+ACCEPTED -> name: MGG_14767T0_2	cval: 9.2e-11	ival: 2.7e-08	score: 33.6	acc: 0.81	envlen: 171	alilen: 169	hmmlen: 206	qlen: 209
+ACCEPTED -> name: MGG_14767T0_3	cval: 4e-45	ival: 1.2e-42	score: 145.9	acc: 0.84	envlen: 238	alilen: 237	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_14767T0_4	cval: 0.0015	ival: 0.44	score: 10.0	acc: 0.84	envlen: 104	alilen: 77	hmmlen: 78	qlen: 209
+REJECTED -> name: MGG_14897T0_1	cval: 0.17	ival: 50.0	score: 3.3	acc: 0.87	envlen: 155	alilen: 58	hmmlen: 56	qlen: 209
+ACCEPTED -> name: MGG_14897T0_2	cval: 3e-55	ival: 8.6e-53	score: 178.9	acc: 0.96	envlen: 222	alilen: 220	hmmlen: 207	qlen: 209
+REJECTED -> name: MGG_04590T0_1	cval: 0.39	ival: 110.0	score: 2.2	acc: 0.84	envlen: 61	alilen: 51	hmmlen: 90	qlen: 209
+ACCEPTED -> name: MGG_04590T0_2	cval: 1.9e-33	ival: 5.3e-31	score: 107.7	acc: 0.92	envlen: 291	alilen: 284	hmmlen: 181	qlen: 209
+ACCEPTED -> name: MGG_04590T0_3	cval: 1.1e-16	ival: 3.1e-14	score: 53.0	acc: 0.82	envlen: 160	alilen: 128	hmmlen: 136	qlen: 209
+ACCEPTED -> name: MGG_04203T0_1	cval: 1.5e-18	ival: 4.3e-16	score: 59.1	acc: 0.95	envlen: 191	alilen: 169	hmmlen: 170	qlen: 209
+ACCEPTED -> name: MGG_04203T0_2	cval: 4.6e-26	ival: 1.3e-23	score: 83.6	acc: 0.81	envlen: 204	alilen: 174	hmmlen: 175	qlen: 209
+REJECTED -> name: MGG_02611T0_1	cval: 0.004	ival: 1.1	score: 8.7	acc: 0.75	envlen: 172	alilen: 84	hmmlen: 100	qlen: 209
+ACCEPTED -> name: MGG_02611T0_2	cval: 3e-38	ival: 8.8e-36	score: 123.4	acc: 0.92	envlen: 268	alilen: 267	hmmlen: 208	qlen: 209
+ACCEPTED -> name: MGG_04646T0_1	cval: 2e-13	ival: 5.8e-11	score: 42.3	acc: 0.93	envlen: 251	alilen: 243	hmmlen: 206	qlen: 209
+ACCEPTED -> name: MGG_04646T0_2	cval: 6.9e-26	ival: 2e-23	score: 83.0	acc: 0.85	envlen: 243	alilen: 241	hmmlen: 207	qlen: 209
+REJECTED -> name: MGG_12589T0_1	cval: 4.5e-05	ival: 0.013	score: 15.0	acc: 0.84	envlen: 153	alilen: 144	hmmlen: 155	qlen: 209
+ACCEPTED -> name: MGG_12589T0_2	cval: 5.8e-30	ival: 1.7e-27	score: 96.3	acc: 0.86	envlen: 206	alilen: 206	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_12447T0_1	cval: 0.73	ival: 210.0	score: 1.3	acc: 0.59	envlen: 124	alilen: 97	hmmlen: 119	qlen: 209
+ACCEPTED -> name: MGG_12447T0_2	cval: 9.4e-34	ival: 2.7e-31	score: 108.7	acc: 0.86	envlen: 220	alilen: 219	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_11685T0_1	cval: 0.14	ival: 39.0	score: 3.6	acc: 0.72	envlen: 174	alilen: 140	hmmlen: 148	qlen: 209
+ACCEPTED -> name: MGG_11685T0_2	cval: 6.8e-33	ival: 2e-30	score: 105.9	acc: 0.84	envlen: 207	alilen: 203	hmmlen: 205	qlen: 209
+REJECTED -> name: MGG_15097T0_1	cval: 0.9	ival: 260.0	score: 1.0	acc: 0.78	envlen: 149	alilen: 27	hmmlen: 26	qlen: 209
+ACCEPTED -> name: MGG_15097T0_2	cval: 1.4e-32	ival: 4e-30	score: 104.9	acc: 0.91	envlen: 215	alilen: 214	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_14943T0_1	cval: 3.6	ival: 1000.0	score: -1.0	acc: 0.84	envlen: 174	alilen: 29	hmmlen: 27	qlen: 209
+ACCEPTED -> name: MGG_14943T0_2	cval: 2.5e-31	ival: 7.3e-29	score: 100.8	acc: 0.89	envlen: 227	alilen: 226	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_03290T0_1	cval: 0.0066	ival: 1.9	score: 7.9	acc: 0.65	envlen: 170	alilen: 109	hmmlen: 156	qlen: 209
+ACCEPTED -> name: MGG_03290T0_2	cval: 3.1e-28	ival: 9e-26	score: 90.7	acc: 0.87	envlen: 207	alilen: 169	hmmlen: 169	qlen: 209
+REJECTED -> name: MGG_03290T0_3	cval: 3.6	ival: 1000.0	score: -1.0	acc: 0.73	envlen: 115	alilen: 41	hmmlen: 35	qlen: 209
+REJECTED -> name: MGG_15248T0_1	cval: 3.3e-05	ival: 0.0095	score: 15.5	acc: 0.91	envlen: 147	alilen: 128	hmmlen: 159	qlen: 209
+ACCEPTED -> name: MGG_15248T0_2	cval: 1.2e-25	ival: 3.3e-23	score: 82.3	acc: 0.82	envlen: 195	alilen: 194	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_04548T0_1	cval: 5.1e-05	ival: 0.015	score: 14.8	acc: 0.78	envlen: 152	alilen: 68	hmmlen: 80	qlen: 209
+ACCEPTED -> name: MGG_04548T0_2	cval: 7.6e-25	ival: 2.2e-22	score: 79.6	acc: 0.82	envlen: 201	alilen: 171	hmmlen: 184	qlen: 209
+REJECTED -> name: MGG_13662T0_1	cval: 2.9e-05	ival: 0.0085	score: 15.6	acc: 0.84	envlen: 201	alilen: 159	hmmlen: 170	qlen: 209
+ACCEPTED -> name: MGG_13662T0_2	cval: 4.7e-25	ival: 1.4e-22	score: 80.3	acc: 0.94	envlen: 195	alilen: 194	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_03201T0_1	cval: 0.0074	ival: 2.1	score: 7.8	acc: 0.84	envlen: 107	alilen: 81	hmmlen: 90	qlen: 209
+ACCEPTED -> name: MGG_03201T0_2	cval: 4.5e-13	ival: 1.3e-10	score: 41.1	acc: 0.85	envlen: 268	alilen: 220	hmmlen: 171	qlen: 209
+ACCEPTED -> name: MGG_03201T0_3	cval: 4.2e-14	ival: 1.2e-11	score: 44.5	acc: 0.95	envlen: 130	alilen: 120	hmmlen: 127	qlen: 209
+REJECTED -> name: MGG_03810T0_1	cval: 0.2	ival: 57.0	score: 3.1	acc: 0.75	envlen: 157	alilen: 72	hmmlen: 82	qlen: 209
+ACCEPTED -> name: MGG_03810T0_2	cval: 2.1e-27	ival: 6e-25	score: 88.0	acc: 0.87	envlen: 241	alilen: 236	hmmlen: 208	qlen: 209
+REJECTED -> name: MGG_07803T0_1	cval: 0.099	ival: 28.0	score: 4.1	acc: 0.85	envlen: 100	alilen: 33	hmmlen: 31	qlen: 209
+ACCEPTED -> name: MGG_07803T0_2	cval: 1.3e-26	ival: 3.7e-24	score: 85.4	acc: 0.82	envlen: 202	alilen: 200	hmmlen: 207	qlen: 209
+ACCEPTED -> name: MGG_15682T0_1	cval: 4.7e-28	ival: 1.3e-25	score: 90.1	acc: 0.92	envlen: 191	alilen: 188	hmmlen: 206	qlen: 209
+REJECTED -> name: MGG_02862T0_1	cval: 0.088	ival: 25.0	score: 4.3	acc: 0.47	envlen: 217	alilen: 183	hmmlen: 162	qlen: 209
+ACCEPTED -> name: MGG_02862T0_2	cval: 7e-26	ival: 2e-23	score: 83.0	acc: 0.94	envlen: 260	alilen: 258	hmmlen: 207	qlen: 209
+REJECTED -> name: MGG_01951T0_1	cval: 0.0032	ival: 0.92	score: 9.0	acc: 0.82	envlen: 171	alilen: 151	hmmlen: 156	qlen: 209
+ACCEPTED -> name: MGG_01951T0_2	cval: 1.2e-24	ival: 3.5e-22	score: 79.0	acc: 0.88	envlen: 219	alilen: 155	hmmlen: 160	qlen: 209
+REJECTED -> name: MGG_08288T0_1	cval: 0.042	ival: 12.0	score: 5.3	acc: 0.51	envlen: 168	alilen: 61	hmmlen: 73	qlen: 209
+ACCEPTED -> name: MGG_08288T0_2	cval: 2e-24	ival: 5.8e-22	score: 78.2	acc: 0.82	envlen: 198	alilen: 177	hmmlen: 174	qlen: 209
+REJECTED -> name: MGG_07019T0_1	cval: 0.18	ival: 52.0	score: 3.2	acc: 0.54	envlen: 196	alilen: 47	hmmlen: 46	qlen: 209
+ACCEPTED -> name: MGG_07019T0_2	cval: 3.9e-24	ival: 1.1e-21	score: 77.3	acc: 0.84	envlen: 199	alilen: 169	hmmlen: 184	qlen: 209
+REJECTED -> name: MGG_06199T0_1	cval: 1.3	ival: 380.0	score: 0.4	acc: 0.74	envlen: 113	alilen: 24	hmmlen: 22	qlen: 209
+ACCEPTED -> name: MGG_06199T0_2	cval: 2.1e-24	ival: 6e-22	score: 78.2	acc: 0.8	envlen: 194	alilen: 158	hmmlen: 169	qlen: 209
+REJECTED -> name: MGG_03401T0_1	cval: 0.0071	ival: 2.0	score: 7.8	acc: 0.72	envlen: 140	alilen: 113	hmmlen: 119	qlen: 209
+ACCEPTED -> name: MGG_03401T0_2	cval: 2.6e-20	ival: 7.6e-18	score: 64.8	acc: 0.84	envlen: 211	alilen: 191	hmmlen: 180	qlen: 209
+REJECTED -> name: MGG_04956T0_1	cval: 0.00062	ival: 0.18	score: 11.3	acc: 0.74	envlen: 207	alilen: 170	hmmlen: 167	qlen: 209
+ACCEPTED -> name: MGG_04956T0_2	cval: 4.2e-17	ival: 1.2e-14	score: 54.3	acc: 0.81	envlen: 184	alilen: 103	hmmlen: 102	qlen: 209
+REJECTED -> name: MGG_09647T0_1	cval: 0.082	ival: 24.0	score: 4.4	acc: 0.84	envlen: 162	alilen: 37	hmmlen: 36	qlen: 209
+ACCEPTED -> name: MGG_09647T0_2	cval: 2.2e-19	ival: 6.3e-17	score: 61.8	acc: 0.87	envlen: 183	alilen: 164	hmmlen: 176	qlen: 209
+ACCEPTED -> name: MGG_05196T0_1	cval: 1.6e-18	ival: 4.7e-16	score: 58.9	acc: 0.91	envlen: 275	alilen: 260	hmmlen: 206	qlen: 209
+REJECTED -> name: MGG_05196T0_2	cval: 0.021	ival: 6.1	score: 6.3	acc: 0.7	envlen: 136	alilen: 97	hmmlen: 101	qlen: 209
+ACCEPTED -> name: MGG_01551T0_1	cval: 2.4e-06	ival: 0.0007	score: 19.2	acc: 0.72	envlen: 197	alilen: 161	hmmlen: 167	qlen: 209
+ACCEPTED -> name: MGG_01551T0_2	cval: 6.2e-14	ival: 1.8e-11	score: 44.0	acc: 0.79	envlen: 185	alilen: 123	hmmlen: 135	qlen: 209
+ACCEPTED -> name: MGG_10188T0_1	cval: 3.9e-16	ival: 1.1e-13	score: 51.1	acc: 0.78	envlen: 179	alilen: 152	hmmlen: 165	qlen: 209
+REJECTED -> name: MGG_05025T0_1	cval: 7.9	ival: 2300.0	score: -2.1	acc: 0.79	envlen: 52	alilen: 20	hmmlen: 20	qlen: 209
+ACCEPTED -> name: MGG_05025T0_2	cval: 2.2e-15	ival: 6.4e-13	score: 48.7	acc: 0.8	envlen: 194	alilen: 147	hmmlen: 152	qlen: 209
+REJECTED -> name: MGG_00689T0_1	cval: 6.7	ival: 1900.0	score: -1.9	acc: 0.8	envlen: 78	alilen: 21	hmmlen: 21	qlen: 209
+REJECTED -> name: MGG_00689T0_2	cval: 3.5	ival: 1000.0	score: -1.0	acc: 0.84	envlen: 34	alilen: 24	hmmlen: 22	qlen: 209
+ACCEPTED -> name: MGG_00689T0_3	cval: 6.6e-15	ival: 1.9e-12	score: 47.1	acc: 0.85	envlen: 227	alilen: 169	hmmlen: 169	qlen: 209
+ACCEPTED -> name: MGG_08257T0_1	cval: 1.2e-14	ival: 3.6e-12	score: 46.2	acc: 0.9	envlen: 157	alilen: 134	hmmlen: 139	qlen: 209
+ACCEPTED -> name: MGG_08257T1_1	cval: 1.2e-14	ival: 3.6e-12	score: 46.2	acc: 0.9	envlen: 157	alilen: 134	hmmlen: 139	qlen: 209
+ACCEPTED -> name: MGG_17747T0_1	cval: 4.3e-14	ival: 1.2e-11	score: 44.5	acc: 0.84	envlen: 133	alilen: 126	hmmlen: 130	qlen: 209
+REJECTED -> name: MGG_07705T0_1	cval: 0.54	ival: 160.0	score: 1.7	acc: 0.64	envlen: 128	alilen: 114	hmmlen: 94	qlen: 209
+ACCEPTED -> name: MGG_07705T0_2	cval: 2.9e-12	ival: 8.5e-10	score: 38.5	acc: 0.76	envlen: 359	alilen: 127	hmmlen: 89	qlen: 209
+REJECTED -> name: MGG_07197T0_1	cval: 4.0	ival: 1200.0	score: -1.2	acc: 0.76	envlen: 111	alilen: 17	hmmlen: 17	qlen: 209
+ACCEPTED -> name: MGG_07197T0_2	cval: 1.4e-12	ival: 4.1e-10	score: 39.5	acc: 0.84	envlen: 189	alilen: 88	hmmlen: 87	qlen: 209
+REJECTED -> name: MGG_12999T0_1	cval: 7.7e-05	ival: 0.022	score: 14.2	acc: 0.79	envlen: 290	alilen: 194	hmmlen: 171	qlen: 209
+REJECTED -> name: MGG_12999T0_2	cval: 3.2e-05	ival: 0.0092	score: 15.5	acc: 0.82	envlen: 198	alilen: 175	hmmlen: 173	qlen: 209
+REJECTED -> name: MGG_09632T0_1	cval: 0.00034	ival: 0.097	score: 12.2	acc: 0.81	envlen: 286	alilen: 122	hmmlen: 87	qlen: 209
+
+Running usearch -sort length -cluster_fast /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-9_hybrid.msa -id 0.9 -centroids /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-9_nr.msa -quiet
+
+64 hits found and accepted (102 in the previous iteration)
+
+---------------------------------------- Running hmmbuilder iteration 9 ----------------------------------------
+
+Running muscle -in /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-9_nr.msa -out /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-9_nr.clw -clw -quiet
+Running hmmbuild -o /dev/null -n A /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-9_nr.hmm /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-9_nr.clw
+Running hmmsearch -o /dev/null --domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-9_nr.domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-9_nr.hmm /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/mgg_70-15_8.fasta
+Parsing /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-9_nr.domtblout searching for domains meeting the following criteria:
+  - envlen >= qlen * 0.0 & dom_cval <= 0.001 & dom_ival <= 0.001 & acc >= 0.6
+
+ACCEPTED -> name: MGG_02351T0_1	cval: 6.4e-34	ival: 1.9e-31	score: 109.3	acc: 0.85	envlen: 201	alilen: 198	hmmlen: 186	qlen: 211
+ACCEPTED -> name: MGG_02351T0_2	cval: 8.7e-38	ival: 2.6e-35	score: 121.9	acc: 0.83	envlen: 234	alilen: 234	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_02351T0_3	cval: 6.6e-38	ival: 2e-35	score: 122.3	acc: 0.84	envlen: 231	alilen: 231	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_02351T0_4	cval: 9.2e-49	ival: 2.7e-46	score: 157.7	acc: 0.85	envlen: 224	alilen: 224	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_02351T0_5	cval: 3.9e-37	ival: 1.2e-34	score: 119.7	acc: 0.85	envlen: 227	alilen: 227	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_07858T0_1	cval: 2.5e-42	ival: 7.2e-40	score: 136.8	acc: 0.87	envlen: 237	alilen: 237	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_07858T0_2	cval: 1.9e-51	ival: 5.7e-49	score: 166.5	acc: 0.89	envlen: 226	alilen: 226	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_07858T0_3	cval: 4e-49	ival: 1.2e-46	score: 158.9	acc: 0.91	envlen: 224	alilen: 224	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_07858T0_4	cval: 7.9e-47	ival: 2.3e-44	score: 151.4	acc: 0.91	envlen: 226	alilen: 226	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_00022T0_1	cval: 1.4e-37	ival: 4.2e-35	score: 121.2	acc: 0.9	envlen: 228	alilen: 206	hmmlen: 187	qlen: 211
+ACCEPTED -> name: MGG_00022T0_2	cval: 1.2e-35	ival: 3.4e-33	score: 114.9	acc: 0.88	envlen: 199	alilen: 177	hmmlen: 176	qlen: 211
+ACCEPTED -> name: MGG_00022T0_3	cval: 1.6e-39	ival: 4.7e-37	score: 127.6	acc: 0.88	envlen: 426	alilen: 426	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_00022T0_4	cval: 2.2e-44	ival: 6.6e-42	score: 143.4	acc: 0.95	envlen: 213	alilen: 213	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_14967T0_1	cval: 3.3e-34	ival: 9.9e-32	score: 110.2	acc: 0.85	envlen: 210	alilen: 209	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_14967T0_2	cval: 8.7e-36	ival: 2.6e-33	score: 115.4	acc: 0.91	envlen: 200	alilen: 200	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_14967T0_3	cval: 3.8e-39	ival: 1.1e-36	score: 126.3	acc: 0.88	envlen: 227	alilen: 227	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_14967T0_4	cval: 5.2e-42	ival: 1.5e-39	score: 135.7	acc: 0.93	envlen: 218	alilen: 217	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_12175T0_1	cval: 5.5e-54	ival: 1.6e-51	score: 174.8	acc: 0.94	envlen: 214	alilen: 214	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_12175T0_2	cval: 2.1e-52	ival: 6.2e-50	score: 169.6	acc: 0.89	envlen: 221	alilen: 220	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_12175T0_3	cval: 5.2e-43	ival: 1.5e-40	score: 139.0	acc: 0.87	envlen: 218	alilen: 216	hmmlen: 208	qlen: 211
+ACCEPTED -> name: MGG_09589T0_1	cval: 1.1e-111	ival: 3.2e-109	score: 363.3	acc: 1.0	envlen: 215	alilen: 215	hmmlen: 211	qlen: 211
+REJECTED -> name: MGG_14767T0_1	cval: 3.5	ival: 1000.0	score: -1.0	acc: 0.62	envlen: 89	alilen: 35	hmmlen: 33	qlen: 211
+ACCEPTED -> name: MGG_14767T0_2	cval: 6.2e-55	ival: 1.8e-52	score: 177.9	acc: 0.89	envlen: 237	alilen: 237	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_14767T0_3	cval: 1.7e-06	ival: 0.00051	score: 19.6	acc: 0.73	envlen: 218	alilen: 144	hmmlen: 98	qlen: 211
+REJECTED -> name: MGG_14897T0_1	cval: 5.1	ival: 1500.0	score: -1.5	acc: 0.84	envlen: 70	alilen: 44	hmmlen: 45	qlen: 211
+ACCEPTED -> name: MGG_14897T0_2	cval: 6.4e-59	ival: 1.9e-56	score: 190.9	acc: 0.94	envlen: 221	alilen: 220	hmmlen: 210	qlen: 211
+REJECTED -> name: MGG_04646T0_1	cval: 2.6e-05	ival: 0.0078	score: 15.8	acc: 0.73	envlen: 273	alilen: 155	hmmlen: 121	qlen: 211
+ACCEPTED -> name: MGG_04646T0_2	cval: 8e-45	ival: 2.4e-42	score: 144.9	acc: 0.94	envlen: 242	alilen: 241	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_12447T0_1	cval: 8.1e-49	ival: 2.4e-46	score: 157.9	acc: 0.93	envlen: 219	alilen: 219	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_15097T0_1	cval: 2.7e-47	ival: 7.9e-45	score: 153.0	acc: 0.9	envlen: 214	alilen: 214	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_02611T0_1	cval: 1.3e-46	ival: 3.8e-44	score: 150.7	acc: 0.91	envlen: 267	alilen: 266	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_02862T0_1	cval: 7.1e-46	ival: 2.1e-43	score: 148.3	acc: 0.88	envlen: 259	alilen: 258	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_04590T0_1	cval: 4e-18	ival: 1.2e-15	score: 57.6	acc: 0.9	envlen: 243	alilen: 232	hmmlen: 190	qlen: 211
+ACCEPTED -> name: MGG_04590T0_2	cval: 2e-25	ival: 5.8e-23	score: 81.5	acc: 0.82	envlen: 165	alilen: 124	hmmlen: 129	qlen: 211
+ACCEPTED -> name: MGG_11685T0_1	cval: 2.6e-43	ival: 7.8e-41	score: 139.9	acc: 0.91	envlen: 206	alilen: 206	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_03290T0_1	cval: 5.1e-43	ival: 1.5e-40	score: 139.0	acc: 0.93	envlen: 213	alilen: 196	hmmlen: 194	qlen: 211
+ACCEPTED -> name: MGG_15682T0_1	cval: 1.1e-42	ival: 3.3e-40	score: 137.9	acc: 0.94	envlen: 190	alilen: 188	hmmlen: 209	qlen: 211
+ACCEPTED -> name: MGG_14943T0_1	cval: 1.9e-42	ival: 5.7e-40	score: 137.1	acc: 0.9	envlen: 226	alilen: 226	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_07803T0_1	cval: 2.4e-41	ival: 7e-39	score: 133.5	acc: 0.9	envlen: 201	alilen: 201	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_03810T0_1	cval: 6.3e-40	ival: 1.9e-37	score: 128.9	acc: 0.87	envlen: 236	alilen: 236	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_08288T0_1	cval: 5.6e-40	ival: 1.7e-37	score: 129.0	acc: 0.89	envlen: 208	alilen: 207	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_12589T0_1	cval: 1.4e-39	ival: 4.2e-37	score: 127.7	acc: 0.89	envlen: 206	alilen: 206	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_15248T0_1	cval: 8e-39	ival: 2.4e-36	score: 125.3	acc: 0.91	envlen: 194	alilen: 193	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_04548T0_1	cval: 9.3e-38	ival: 2.7e-35	score: 121.8	acc: 0.96	envlen: 201	alilen: 201	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_07019T0_1	cval: 2.9e-35	ival: 8.7e-33	score: 113.6	acc: 0.89	envlen: 198	alilen: 181	hmmlen: 192	qlen: 211
+ACCEPTED -> name: MGG_09647T0_1	cval: 7.1e-35	ival: 2.1e-32	score: 112.4	acc: 0.85	envlen: 202	alilen: 201	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_06199T0_1	cval: 9.9e-35	ival: 2.9e-32	score: 111.9	acc: 0.87	envlen: 193	alilen: 192	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_03201T0_1	cval: 4.2e-12	ival: 1.3e-09	score: 38.0	acc: 0.85	envlen: 237	alilen: 208	hmmlen: 169	qlen: 211
+ACCEPTED -> name: MGG_03201T0_2	cval: 4.4e-22	ival: 1.3e-19	score: 70.6	acc: 0.88	envlen: 152	alilen: 122	hmmlen: 126	qlen: 211
+ACCEPTED -> name: MGG_04203T0_1	cval: 1.9e-33	ival: 5.5e-31	score: 107.7	acc: 0.9	envlen: 204	alilen: 204	hmmlen: 211	qlen: 211
+REJECTED -> name: MGG_03401T0_1	cval: 2.5	ival: 750.0	score: -0.5	acc: 0.88	envlen: 44	alilen: 21	hmmlen: 21	qlen: 211
+ACCEPTED -> name: MGG_03401T0_2	cval: 7.5e-29	ival: 2.2e-26	score: 92.7	acc: 0.85	envlen: 209	alilen: 202	hmmlen: 188	qlen: 211
+ACCEPTED -> name: MGG_13662T0_1	cval: 1.7e-27	ival: 5.1e-25	score: 88.2	acc: 0.88	envlen: 194	alilen: 194	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_01951T0_1	cval: 1.6e-27	ival: 4.6e-25	score: 88.4	acc: 0.9	envlen: 182	alilen: 155	hmmlen: 158	qlen: 211
+ACCEPTED -> name: MGG_05025T0_1	cval: 1.6e-26	ival: 4.8e-24	score: 85.1	acc: 0.86	envlen: 182	alilen: 158	hmmlen: 164	qlen: 211
+ACCEPTED -> name: MGG_07705T0_1	cval: 7.2e-08	ival: 2.1e-05	score: 24.1	acc: 0.79	envlen: 204	alilen: 121	hmmlen: 108	qlen: 211
+ACCEPTED -> name: MGG_07705T0_2	cval: 4.2e-17	ival: 1.2e-14	score: 54.3	acc: 0.83	envlen: 205	alilen: 147	hmmlen: 125	qlen: 211
+ACCEPTED -> name: MGG_10188T0_1	cval: 8e-25	ival: 2.4e-22	score: 79.5	acc: 0.78	envlen: 217	alilen: 155	hmmlen: 162	qlen: 211
+ACCEPTED -> name: MGG_04956T0_1	cval: 4.2e-23	ival: 1.3e-20	score: 73.9	acc: 0.75	envlen: 202	alilen: 166	hmmlen: 169	qlen: 211
+ACCEPTED -> name: MGG_00689T0_1	cval: 5e-22	ival: 1.5e-19	score: 70.4	acc: 0.88	envlen: 203	alilen: 193	hmmlen: 198	qlen: 211
+ACCEPTED -> name: MGG_08257T0_1	cval: 6.1e-22	ival: 1.8e-19	score: 70.1	acc: 0.92	envlen: 171	alilen: 135	hmmlen: 138	qlen: 211
+ACCEPTED -> name: MGG_08257T1_1	cval: 6.1e-22	ival: 1.8e-19	score: 70.1	acc: 0.92	envlen: 171	alilen: 135	hmmlen: 138	qlen: 211
+ACCEPTED -> name: MGG_01551T0_1	cval: 1.9e-21	ival: 5.7e-19	score: 68.5	acc: 0.83	envlen: 184	alilen: 151	hmmlen: 162	qlen: 211
+ACCEPTED -> name: MGG_07197T0_1	cval: 3.8e-18	ival: 1.1e-15	score: 57.7	acc: 0.86	envlen: 183	alilen: 105	hmmlen: 115	qlen: 211
+ACCEPTED -> name: MGG_17747T0_1	cval: 3.3e-17	ival: 9.8e-15	score: 54.6	acc: 0.88	envlen: 163	alilen: 125	hmmlen: 126	qlen: 211
+REJECTED -> name: MGG_12999T0_1	cval: 1.2e-05	ival: 0.0035	score: 16.9	acc: 0.75	envlen: 193	alilen: 171	hmmlen: 167	qlen: 211
+REJECTED -> name: MGG_05491T0_1	cval: 2.7e-05	ival: 0.0079	score: 15.7	acc: 0.71	envlen: 114	alilen: 86	hmmlen: 89	qlen: 211
+
+Running usearch -sort length -cluster_fast /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-10_hybrid.msa -id 0.9 -centroids /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-10_nr.msa -quiet
+
+60 hits found and accepted (64 in the previous iteration)
+
+---------------------------------------- Running hmmbuilder iteration 10 ----------------------------------------
+
+Running muscle -in /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-10_nr.msa -out /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-10_nr.clw -clw -quiet
+Running hmmbuild -o /dev/null -n A /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-10_nr.hmm /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-10_nr.clw
+Running hmmsearch -o /dev/null --domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-10_nr.domtblout /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-10_nr.hmm /home/nicolas.chevrollier/herbiFun_project/hmmbuilder/datas/mgg_70-15_8.fasta
+Parsing /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-10_nr.domtblout searching for domains meeting the following criteria:
+  - envlen >= qlen * 0.0 & dom_cval <= 0.001 & dom_ival <= 0.001 & acc >= 0.6
+
+ACCEPTED -> name: MGG_02351T0_1	cval: 2.9e-36	ival: 8e-34	score: 116.9	acc: 0.88	envlen: 200	alilen: 150	hmmlen: 143	qlen: 211
+ACCEPTED -> name: MGG_02351T0_2	cval: 4.8e-42	ival: 1.3e-39	score: 135.8	acc: 0.93	envlen: 234	alilen: 234	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_02351T0_3	cval: 1.3e-41	ival: 3.6e-39	score: 134.4	acc: 0.89	envlen: 231	alilen: 231	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_02351T0_4	cval: 3.3e-52	ival: 9.2e-50	score: 169.0	acc: 0.96	envlen: 224	alilen: 224	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_02351T0_5	cval: 3.5e-40	ival: 9.7e-38	score: 129.7	acc: 0.9	envlen: 227	alilen: 227	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_07858T0_1	cval: 1.4e-43	ival: 3.8e-41	score: 140.8	acc: 0.92	envlen: 237	alilen: 237	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_07858T0_2	cval: 2.3e-52	ival: 6.3e-50	score: 169.5	acc: 0.91	envlen: 226	alilen: 226	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_07858T0_3	cval: 1.1e-49	ival: 3e-47	score: 160.7	acc: 0.9	envlen: 224	alilen: 224	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_07858T0_4	cval: 7.5e-47	ival: 2.1e-44	score: 151.5	acc: 0.87	envlen: 226	alilen: 226	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_00022T0_1	cval: 4.7e-36	ival: 1.3e-33	score: 116.2	acc: 0.86	envlen: 228	alilen: 228	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_00022T0_2	cval: 1.7e-37	ival: 4.7e-35	score: 120.9	acc: 0.86	envlen: 200	alilen: 175	hmmlen: 176	qlen: 211
+ACCEPTED -> name: MGG_00022T0_3	cval: 2.2e-48	ival: 6.1e-46	score: 156.5	acc: 0.95	envlen: 405	alilen: 404	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_00022T0_4	cval: 3.6e-45	ival: 1e-42	score: 146.0	acc: 0.91	envlen: 213	alilen: 213	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_14967T0_1	cval: 5.4e-35	ival: 1.5e-32	score: 112.8	acc: 0.83	envlen: 210	alilen: 209	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_14967T0_2	cval: 4.1e-38	ival: 1.1e-35	score: 122.9	acc: 0.95	envlen: 200	alilen: 200	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_14967T0_3	cval: 1.5e-42	ival: 4.3e-40	score: 137.4	acc: 0.94	envlen: 227	alilen: 227	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_14967T0_4	cval: 7.8e-40	ival: 2.2e-37	score: 128.6	acc: 0.92	envlen: 218	alilen: 217	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_12175T0_1	cval: 2.5e-52	ival: 6.8e-50	score: 169.4	acc: 0.93	envlen: 214	alilen: 214	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_12175T0_2	cval: 3.8e-55	ival: 1.1e-52	score: 178.6	acc: 0.93	envlen: 221	alilen: 220	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_12175T0_3	cval: 2.9e-45	ival: 8e-43	score: 146.3	acc: 0.92	envlen: 218	alilen: 217	hmmlen: 209	qlen: 211
+ACCEPTED -> name: MGG_09589T0_1	cval: 4e-111	ival: 1.1e-108	score: 361.5	acc: 1.0	envlen: 215	alilen: 215	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_14767T0_1	cval: 4.4e-53	ival: 1.2e-50	score: 171.8	acc: 0.94	envlen: 237	alilen: 237	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_14767T0_2	cval: 1.6e-08	ival: 4.4e-06	score: 26.3	acc: 0.86	envlen: 122	alilen: 79	hmmlen: 79	qlen: 211
+ACCEPTED -> name: MGG_14897T0_1	cval: 3.7e-58	ival: 1e-55	score: 188.4	acc: 0.94	envlen: 221	alilen: 220	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_02862T0_1	cval: 6.6e-53	ival: 1.8e-50	score: 171.3	acc: 0.91	envlen: 259	alilen: 258	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_02611T0_1	cval: 3.5e-50	ival: 9.7e-48	score: 162.4	acc: 0.95	envlen: 267	alilen: 266	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_04646T0_1	cval: 1.3e-48	ival: 3.6e-46	score: 157.2	acc: 0.97	envlen: 242	alilen: 241	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_08288T0_1	cval: 1.9e-47	ival: 5.3e-45	score: 153.4	acc: 0.97	envlen: 208	alilen: 207	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_12447T0_1	cval: 8.3e-47	ival: 2.3e-44	score: 151.3	acc: 0.9	envlen: 219	alilen: 219	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_11685T0_1	cval: 2.9e-46	ival: 7.9e-44	score: 149.6	acc: 0.96	envlen: 206	alilen: 206	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_15097T0_1	cval: 9.5e-46	ival: 2.6e-43	score: 147.9	acc: 0.84	envlen: 214	alilen: 214	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_14943T0_1	cval: 2.2e-45	ival: 6e-43	score: 146.7	acc: 0.95	envlen: 226	alilen: 226	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_07803T0_1	cval: 6.5e-45	ival: 1.8e-42	score: 145.2	acc: 0.93	envlen: 201	alilen: 200	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_03290T0_1	cval: 3.3e-44	ival: 9.1e-42	score: 142.8	acc: 0.91	envlen: 213	alilen: 211	hmmlen: 208	qlen: 211
+ACCEPTED -> name: MGG_15682T0_1	cval: 1.3e-43	ival: 3.6e-41	score: 140.9	acc: 0.9	envlen: 190	alilen: 188	hmmlen: 209	qlen: 211
+ACCEPTED -> name: MGG_12589T0_1	cval: 6.4e-44	ival: 1.8e-41	score: 141.9	acc: 0.96	envlen: 206	alilen: 206	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_03810T0_1	cval: 1.8e-43	ival: 4.9e-41	score: 140.5	acc: 0.91	envlen: 236	alilen: 236	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_15248T0_1	cval: 7.4e-43	ival: 2e-40	score: 138.4	acc: 0.94	envlen: 194	alilen: 193	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_06199T0_1	cval: 8.1e-43	ival: 2.2e-40	score: 138.3	acc: 0.94	envlen: 193	alilen: 193	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_09647T0_1	cval: 4.7e-41	ival: 1.3e-38	score: 132.6	acc: 0.96	envlen: 202	alilen: 201	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_04548T0_1	cval: 5.8e-41	ival: 1.6e-38	score: 132.3	acc: 0.94	envlen: 201	alilen: 201	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_07019T0_1	cval: 1.9e-38	ival: 5.2e-36	score: 124.0	acc: 0.95	envlen: 198	alilen: 197	hmmlen: 210	qlen: 211
+ACCEPTED -> name: MGG_04203T0_1	cval: 1.3e-37	ival: 3.7e-35	score: 121.2	acc: 0.93	envlen: 204	alilen: 204	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_04590T0_1	cval: 1.2e-07	ival: 3.4e-05	score: 23.3	acc: 0.86	envlen: 195	alilen: 136	hmmlen: 123	qlen: 211
+ACCEPTED -> name: MGG_04590T0_2	cval: 8e-29	ival: 2.2e-26	score: 92.6	acc: 0.9	envlen: 162	alilen: 133	hmmlen: 138	qlen: 211
+REJECTED -> name: MGG_03401T0_1	cval: 3.0	ival: 830.0	score: -0.8	acc: 0.85	envlen: 65	alilen: 21	hmmlen: 21	qlen: 211
+ACCEPTED -> name: MGG_03401T0_2	cval: 4.3e-31	ival: 1.2e-28	score: 100.0	acc: 0.86	envlen: 224	alilen: 203	hmmlen: 187	qlen: 211
+REJECTED -> name: MGG_03401T0_3	cval: 2.2	ival: 610.0	score: -0.3	acc: 0.73	envlen: 99	alilen: 43	hmmlen: 42	qlen: 211
+REJECTED -> name: MGG_03201T0_1	cval: 3.4e-05	ival: 0.0094	score: 15.4	acc: 0.79	envlen: 208	alilen: 162	hmmlen: 154	qlen: 211
+ACCEPTED -> name: MGG_03201T0_2	cval: 1.2e-26	ival: 3.4e-24	score: 85.4	acc: 0.92	envlen: 164	alilen: 129	hmmlen: 132	qlen: 211
+REJECTED -> name: MGG_00689T0_1	cval: 6.8	ival: 1900.0	score: -1.9	acc: 0.76	envlen: 62	alilen: 25	hmmlen: 21	qlen: 211
+ACCEPTED -> name: MGG_00689T0_2	cval: 8.2e-31	ival: 2.3e-28	score: 99.1	acc: 0.92	envlen: 201	alilen: 195	hmmlen: 198	qlen: 211
+ACCEPTED -> name: MGG_10188T0_1	cval: 1.1e-30	ival: 3.1e-28	score: 98.6	acc: 0.82	envlen: 217	alilen: 173	hmmlen: 174	qlen: 211
+ACCEPTED -> name: MGG_01951T0_1	cval: 4.8e-30	ival: 1.3e-27	score: 96.6	acc: 0.93	envlen: 166	alilen: 155	hmmlen: 156	qlen: 211
+ACCEPTED -> name: MGG_05025T0_1	cval: 9.1e-30	ival: 2.5e-27	score: 95.7	acc: 0.9	envlen: 173	alilen: 161	hmmlen: 165	qlen: 211
+ACCEPTED -> name: MGG_13662T0_1	cval: 3.5e-27	ival: 9.6e-25	score: 87.2	acc: 0.92	envlen: 194	alilen: 194	hmmlen: 211	qlen: 211
+ACCEPTED -> name: MGG_01551T0_1	cval: 2.6e-26	ival: 7.3e-24	score: 84.3	acc: 0.83	envlen: 187	alilen: 157	hmmlen: 162	qlen: 211
+ACCEPTED -> name: MGG_04956T0_1	cval: 4.3e-26	ival: 1.2e-23	score: 83.7	acc: 0.82	envlen: 195	alilen: 161	hmmlen: 162	qlen: 211
+ACCEPTED -> name: MGG_08257T0_1	cval: 8.1e-23	ival: 2.3e-20	score: 72.9	acc: 0.79	envlen: 189	alilen: 148	hmmlen: 148	qlen: 211
+ACCEPTED -> name: MGG_08257T1_1	cval: 8.1e-23	ival: 2.3e-20	score: 72.9	acc: 0.79	envlen: 189	alilen: 148	hmmlen: 148	qlen: 211
+REJECTED -> name: MGG_07705T0_1	cval: 5.3e-06	ival: 0.0015	score: 18.0	acc: 0.76	envlen: 138	alilen: 76	hmmlen: 68	qlen: 211
+ACCEPTED -> name: MGG_07705T0_2	cval: 9.2e-16	ival: 2.5e-13	score: 49.9	acc: 0.86	envlen: 182	alilen: 140	hmmlen: 128	qlen: 211
+ACCEPTED -> name: MGG_07197T0_1	cval: 2.4e-20	ival: 6.7e-18	score: 64.9	acc: 0.8	envlen: 185	alilen: 121	hmmlen: 114	qlen: 211
+REJECTED -> name: MGG_17747T0_1	cval: 3.9	ival: 1100.0	score: -1.2	acc: 0.66	envlen: 71	alilen: 67	hmmlen: 60	qlen: 211
+ACCEPTED -> name: MGG_17747T0_2	cval: 3.7e-19	ival: 1e-16	score: 61.0	acc: 0.87	envlen: 130	alilen: 126	hmmlen: 126	qlen: 211
+ACCEPTED -> name: MGG_12999T0_1	cval: 2.4e-08	ival: 6.6e-06	score: 25.7	acc: 0.74	envlen: 204	alilen: 172	hmmlen: 166	qlen: 211
+ACCEPTED -> name: MGG_05491T0_1	cval: 4.7e-08	ival: 1.3e-05	score: 24.7	acc: 0.74	envlen: 142	alilen: 64	hmmlen: 64	qlen: 211
+REJECTED -> name: MGG_16971T0_1	cval: 0.007	ival: 1.9	score: 7.8	acc: 0.87	envlen: 140	alilen: 37	hmmlen: 41	qlen: 211
+REJECTED -> name: MGG_03422T0_1	cval: 0.00047	ival: 0.13	score: 11.6	acc: 0.73	envlen: 192	alilen: 121	hmmlen: 120	qlen: 211
+REJECTED -> name: MGG_03831T0_1	cval: 0.00062	ival: 0.17	score: 11.3	acc: 0.69	envlen: 156	alilen: 115	hmmlen: 103	qlen: 211
+
+Running usearch -sort length -cluster_fast /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-11_hybrid.msa -id 0.9 -centroids /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/runs_output/A-11_nr.msa -quiet
+
+60 hits found and accepted (60 in the previous iteration)
+
+---------------------------------------- Computation has finished ! No new hits have been found ----------------------------------------
+
+Output files:
+	- HMM profile: /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/A.hmm
+	- Seeds'alignment: /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/A.seed
+	- Seed sequences: /media/home/nicolas/herbiFun_project/hmmbuilder/datas/A_hmmbuild_2018-08-14_18-10-50/A.msa
+

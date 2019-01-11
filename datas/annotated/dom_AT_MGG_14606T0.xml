@@ -1,0 +1,23 @@
+<protein>
+  <proteome>mgg_70-15_8.fasta</proteome>
+  <id>MGG_14606T0</id>
+  <class>dom_AT</class>
+  <sequence>MGIFTGQGAQWPAMLAVACNSPESATLSGDKNVLEEILEILQDEQKFARLLLVDRAYHSHHMFPCSDPYITALNQCGCGVPDGQDKGLLKWYSSVRDGKLVGFADITPGYWRDNLVSPVLFSHASGQDTLENGLDVAVEVGPHPSLEAPASTIISACTAEEVPYTGCLQRGSDDVAIFAAALGYIWKRFAAFKPLDATAFVEAVHGASPTDMSKLVPAYAWDHTQVLWAGPRATKINFNSYTFTDIWPAFFEKARDRFSMHLDRMEFGKLDITKPPSEQGLKTHAYDLIIASSVLHATPKLVEGRRVHRWVARQADLCHGVHFGHRPALRRGEPCSQRHRRGCACRLVGVVV</sequence>
+  <length>352</length>
+  <domain>
+    <name>AT</name>
+    <length>14</length>
+    <from>3</from>
+    <to>16</to>
+    <score>8.5</score>
+    <i-eval>0.00022</i-eval>
+  </domain>
+  <domain>
+    <name>AT</name>
+    <length>157</length>
+    <from>15</from>
+    <to>171</to>
+    <score>151.6</score>
+    <i-eval>5.8e-48</i-eval>
+  </domain>
+</protein>

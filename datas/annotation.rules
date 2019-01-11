@@ -1,0 +1,7 @@
+#Class | Name | dom1,dom2
+PKS | Polyketide Synthase | KS,AT,PP
+PKS-like | Polyketide Synthase | KS, AT
+dom_PP | PP-binding domain | PP
+dom_KS | Ketoacyl synthase domain | KS
+dom_AT | Acyltransferase domain | AT
+NRPS | Non-Ribosomal Peptide Synthase | C,A,PP

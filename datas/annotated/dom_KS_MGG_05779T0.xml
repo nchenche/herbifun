@@ -1,0 +1,23 @@
+<protein>
+  <proteome>mgg_70-15_8.fasta</proteome>
+  <id>MGG_05779T0</id>
+  <class>dom_KS</class>
+  <sequence>MRFSDADGYARGESVVCFMLKTISQTLADGDHIYAIVRETGAHGTGTPAGDRLEAQAIWDASVPS</sequence>
+  <length>65</length>
+  <domain>
+    <name>KS</name>
+    <length>38</length>
+    <from>4</from>
+    <to>41</to>
+    <score>44.9</score>
+    <i-eval>1.3e-15</i-eval>
+  </domain>
+  <domain>
+    <name>KS</name>
+    <length>20</length>
+    <from>42</from>
+    <to>61</to>
+    <score>19.9</score>
+    <i-eval>4.9e-08</i-eval>
+  </domain>
+</protein>

@@ -1,0 +1,195 @@
+---------------------------------------
+About
+---------------------------------------
+- hmmbuilder.py : build hmm profile with an iterative search protocole
+	- requirement:
+		- hmmer (must be installed: sudo apt install hmmer)
+		- muscle (must be installed: sudo apt install muscle)
+		- usearch (already included)
+		
+- annotater.py: annotate your favorite proteins with your personnal specified rules
+	- require hmmer
+
+
+---------------------------------------
+Installation
+---------------------------------------
+1 - create a virtual environment:
+virtualenv -p python2.7 ~/hmm_tools
+
+2 - activate your virtual environment:
+source ~/hmm_tools/bin/activate
+
+From now, everything you will install for python will be specifically located in this environment (see https://virtualenv.pypa.io/en/stable).
+
+3 - go in HMMbuilder-0.0.0/ and install the package:
+python setup.py install
+
+
+
+Now, both hmmbuilder.py and annotater.py should be executable. Let's test this.
+After typing 'hmmbuilder.py -h' you should see:
+
+"
+usage: hmmbuilder.py [-h] -seqdb [SEQDB] -fasta [FASTA] -dir [DIR]
+                     [-identity IDENTITY] [-cov COV] [-cval CVAL] [-ival IVAL]
+                     [-acc ACC]
+
+Iterative building of hmm profiles
+
+optional arguments:
+  -h, --help          show this help message and exit
+  -seqdb [SEQDB]      Sequences used to learn hmm profile (fasta format)
+  -fasta [FASTA]      Sequence(s) used as first seed (fasta format)
+  -dir [DIR]          Output directory
+  -identity IDENTITY  Sequence identity threshold to remove redundancy in
+                      seeds'sequences
+  -cov COV            Minimum percentage of coverage alignment between hmm hit
+                      and hmm profile (0.0)
+  -cval CVAL          hmmer conditional e-value cutoff (0.01)
+  -ival IVAL          hmmer independant e-value cutoff (0.01)
+  -acc ACC            hmmer mean probability of the alignment accuracy between
+                      each residues of the target and the corresponding hmm
+                      state (0.6)
+"
+
+
+
+After typing 'annotater.py -h' you should see: 
+
+"
+usage: annotater.py [-h] -proteome [PROTEOME] -hmmdb [HMMDB] -rules [RULES]
+                    -dir [DIR] [-cov COV] [-cval CVAL] [-ival IVAL] [-acc ACC]
+
+Iterative building of hmm profiles
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -proteome [PROTEOME]  Proteome fasta file
+  -hmmdb [HMMDB]        HMM profile database
+  -rules [RULES]        File containing rules
+  -dir [DIR]            Output directory
+  -cov COV              Minimum percentage of coverage alignment between hmm
+                        hit and hmm profile (0.0)
+  -cval CVAL            hmmer conditional e-value cutoff (0.01)
+  -ival IVAL            hmmer independant e-value cutoff (0.01)
+  -acc ACC              hmmer mean probability of the alignment accuracy
+                        between each residues of the target and the
+                        corresponding hmm state (0.6)
+
+"
+
+
+Note: you can exit from the virtual environment by typing 'deactivate'. Once it's done, annotater.py and hmmbuilder.py won't be executable until you reactivate the virtual environment (source ~/hmm_tools/bin/activate).
+
+
+---------------------------------------
+Example of usage for hmmbuilder.py (datas in datas/)
+---------------------------------------
+Go to datas/ and type:
+hmmbuilder.py -seqdb mgg_70-15_8.fasta -fasta A.msa -dir ./
+
+The output directory will look like this:
+A_hmmbuild_2018-08-14_18-10-50/
+├── A.hmm 				-> (resulting hmm profile)
+├── A_hmmbuild_2018-08-14_18-10-50.log	-> (log file)
+├── A.msa				-> (list of sequences (fasta format) used for the resulting hmm)
+├── A.seed				-> (sequence alignment of A.msa)
+└── runs_output				-> (output files for each iteration)
+    ├── A-1_nr.clw
+    ├── A-1_nr.domtblout
+    ├── A-1_nr.hmm
+    ├── A-1_nr.msa
+    ├── A-2_hybrid.msa
+    ├── A-2_new.msa
+    ├── A-2_nr.clw
+    ├── A-2_nr.domtblout
+    ├── A-2_nr.hmm
+    ├── A-2_nr.msa
+    ├── A-3_hybrid.msa
+    ├── A-3_new.msa
+    ├── A-3_nr.clw
+    ├── A-3_nr.domtblout
+    ├── A-3_nr.hmm
+    ├── A-3_nr.msa
+	...
+
+
+---------------------------------------
+Example of usage for annotater.py (datas in datas/)
+---------------------------------------
+Note: 
+
+1 - you must have an HMM profile database generated.
+
+For this, once you have generated all your desired hmm profiles, concatenate them:
+cat A_hmmbuild_date-time/A.hmm AT_hmmbuild_date-time/AT.hmm KS_hmmbuild_date-time/KS.hmm PP_hmmbuild_date-time/PP.hmm > database.hmm
+and then:
+hmmpress database.hmm
+
+2 - you'll need to create a file containing the rules. 
+
+The file must contain 3 fields separated by '|'.
+- 1st field: class name you want to give to your protein
+- 2nd field: Description name of your protein (or anything you want)
+- 3rd field: domain(s) required to annotate your protein (each domain must be comma separated)
+
+For instance, go to datas/ and type:
+cat annotation.rules
+
+#Class | Name | dom1,dom2
+PKS | Polyketide Synthase | KS,AT,PP
+PKS-like | Polyketide Synthase | KS, AT
+dom_PP | PP-binding domain | PP
+dom_KS | Ketoacyl synthase domain | KS
+dom_AT | Acyltransferase domain | AT
+NRPS | Non-Ribosomal Peptide Synthase | C,A,PP
+
+
+Once you have all required files, you can type:
+annotater.py -proteome mgg_70-15_8.fasta -hmmdb database.hmm -rules annotation.rules -dir annotated/
+
+The ouputs are xml files in annotated/. For instance:
+cat annotated/PKS_MGG_00241T0.xml
+
+<protein>
+  <proteome>mgg_70-15_8.fasta</proteome>
+  <id>MGG_00241T0</id>
+  <class>PKS</class>
+  <sequence>MEPKANGQSMESTKLFLFGDQTIEFRFPDAQHCREVWATLSE...KALERFLS</sequence>
+  <length>2152</length>
+  <domain>
+    <name>KS</name>
+    <length>424</length>
+    <from>381</from>
+    <to>804</to>
+    <score>486.3</score>
+    <i-eval>1.3e-149</i-eval>
+  </domain>
+  <domain>
+    <name>AT</name>
+    <length>92</length>
+    <from>914</from>
+    <to>1005</to>
+    <score>50.0</score>
+    <i-eval>5.1e-17</i-eval>
+  </domain>
+  <domain>
+    <name>AT</name>
+    <length>244</length>
+    <from>1016</from>
+    <to>1259</to>
+    <score>181.0</score>
+    <i-eval>6.7e-57</i-eval>
+  </domain>
+  <domain>
+    <name>PP</name>
+    <length>66</length>
+    <from>1728</from>
+    <to>1793</to>
+    <score>37.8</score>
+    <i-eval>2.7e-13</i-eval>
+  </domain>
+</protein>
+
+
