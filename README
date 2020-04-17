@@ -1,6 +1,5 @@
----------------------------------------
 About
----------------------------------------
+=====
 - hmmbuilder.py : build hmm profile with an iterative search protocole
 	- requirement:
 		- hmmer (must be installed: sudo apt install hmmer)
